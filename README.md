@@ -6,7 +6,7 @@ Background processing is a standard way of improving the performance and respons
 In past years, I have used multi-threading and cron jobs to run background tasks, but my favorite mechanism is to use async message queues.
 
 ## Prerequisite:
-We will use followingg technology stack for this project
+We will use following technology stack for this project
 * Docker
 * RabbitMQ
 * Ubuntu
@@ -58,8 +58,8 @@ Now create docker-compose.yml in root folder.
 
 > See details with docker composer [Docker Composer](docker-compose.yaml)
 
-Folder Structure of Directory  
-![Folder Structure](img/project_structure.png)
+**Folder Structure of Directory**  
+<img src="img/project_structure.png" height="300" width="300">
 
 ### Run Application
 
@@ -68,7 +68,6 @@ Use the following command to run the docker and start all the processes:
 ```bash
 $ docker-compose up -d
 ```
-
 
 ## References:
 * https://dhruvadave5297.medium.com/demo-application-for-background-processing-with-rabbitmq-python-flask-c3402bdcf7f0
