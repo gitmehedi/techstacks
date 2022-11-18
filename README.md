@@ -10,8 +10,9 @@ We will use followingg technology stack for this project
 * Docker
 * RabbitMQ
 * Ubuntu
-* Flask  
-please ensure installation before using those software.
+* Flask
+
+Please ensure installation before using those software.
 
 ### What Is Docker?
 
@@ -58,7 +59,7 @@ Now create docker-compose.yml in root folder.
 > See details with docker composer [Docker Composer](docker-compose.yaml)
 
 Folder Structure of Directory  
-![Folder Structure](img/structure.png)
+![Folder Structure](img/project_structure.png)
 
 ### Run Application
 
@@ -67,4 +68,9 @@ Use the following command to run the docker and start all the processes:
 ```bash
 $ docker-compose up -d
 ```
+
+
+## References:
+* https://dhruvadave5297.medium.com/demo-application-for-background-processing-with-rabbitmq-python-flask-c3402bdcf7f0
+
 
