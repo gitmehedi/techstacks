@@ -12,7 +12,23 @@ We will use following technology stack for this project
 * Ubuntu
 * Flask
 
-Please ensure installation before using those software.
+**Please ensure installation before using those software.**
+## Project Layout
+
+Create project directory as shown
+
+<img src="img/project_structure.png" height="300" width="300">
+
+Use following commands
+```bash
+$ mkdir server worker
+$ touch server/apps.py server/Dockerfile server/requirements.txt
+$ touch worker/apps.py worker/Dockerfile
+```
+The project directory will contain:
+* **/server**, a python producer which will generate data for RabbitMQ 
+* **/worker**, a python consumer which will receive data from RabbitMQ
+* **docker-composer.yaml**, it will automate whole application.
 
 ### What Is Docker?
 
@@ -58,8 +74,8 @@ Now create docker-compose.yml in root folder.
 
 > See details with docker composer [Docker Composer](docker-compose.yaml)
 
-**Folder Structure of Directory**  
-<img src="img/project_structure.png" height="300" width="300">
+
+
 
 ### Run Application
 
