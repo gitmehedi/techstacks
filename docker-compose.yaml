@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: 'rabbitmq:3-management'
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    container_name: rabbitmq
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:15672" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  worker:
+    build: worker
+    volumes:
+      - ./worker:/app
+    depends_on:
+      - rabbitmq
+    environment:
+      - PYTHONUNBUFFERED=1
+    container_name: worker
+    restart: always
+
+  server:
+    build: server
+    volumes:
+      - ./server:/app
+    ports:
+      - 5500:5000
+    depends_on:
+      - rabbitmq
+    restart: always
+    container_name: server
