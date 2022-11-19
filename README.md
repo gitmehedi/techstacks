@@ -19,7 +19,7 @@ Create project directory as shown
 
 <img src="img/project_structure.png" height="300" width="300">
 
-Use following commands
+Use following commands to generate proposed layout
 ```bash
 $ mkdir server worker
 $ touch server/apps.py server/Dockerfile server/requirements.txt

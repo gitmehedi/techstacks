@@ -28,7 +28,7 @@ def add(msg):
         ))
 
     connection.close()
-    return " ___ Sent: %s" % msg
+    return " ___ Sent: %s \n" % msg
 
 
 if __name__ == '__main__':
