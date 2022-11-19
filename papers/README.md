@@ -179,7 +179,7 @@ So far we have learned how basic rabbitmq application works
 
 An exchange, receives message from producer and pushed those message to 
 queue depending on rules for what are defined by the exchange type.  
-There are few exchage types available
+There are few exchange types available
 * Direct
 * Topic
 * Headers
@@ -198,4 +198,56 @@ channel.basic_publish(exchange='logs',
                       body=message)
 ```
 
+### Bindings
+We've already created a fanout exchange and a queue.
+Now we need to tell the exchange to send messages to our queue. 
+That relationship between exchange and a queue is called a binding.
+```bash
+channel.queue_bind(exchange='logs',queue=result.method.queue)
+```
+### Putting it all together
 
+Publisher
+```bash
+import pika
+import sys
+
+connection = pika.BlockingConnection(
+    pika.ConnectionParameters(host='localhost'))
+channel = connection.channel()
+
+channel.exchange_declare(exchange='logs', exchange_type='fanout')
+
+message = ' '.join(sys.argv[1:]) or "info: Hello World!"
+channel.basic_publish(exchange='logs', routing_key='', body=message)
+print(" [x] Sent %r" % message)
+connection.close()
+
+```
+
+Subscriber
+
+```bash
+import pika
+
+connection = pika.BlockingConnection(
+    pika.ConnectionParameters(host='localhost'))
+channel = connection.channel()
+
+channel.exchange_declare(exchange='logs', exchange_type='fanout')
+
+result = channel.queue_declare(queue='', exclusive=True)
+queue_name = result.method.queue
+
+channel.queue_bind(exchange='logs', queue=queue_name)
+
+print(' [*] Waiting for logs. To exit press CTRL+C')
+
+def callback(ch, method, properties, body):
+    print(" [x] %r" % body)
+
+channel.basic_consume(
+    queue=queue_name, on_message_callback=callback, auto_ack=True)
+
+channel.start_consuming()
+```

@@ -1,5 +1,5 @@
-from flask import Flask
 import pika
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -29,6 +29,26 @@ def add(msg):
 
     connection.close()
     return " ___ Sent: %s \n" % msg
+
+
+@app.route('/publish-job/<msg>')
+def add(msg):
+    try:
+        connection = pika.BlockingConnection(pika.ConnectionParameters(host="rabbitmq"))
+    except pika.exceptions.AMQPConnectionError as exc:
+        print("Failed to connect to RabbitMQ service. Message wont be sent.")
+        return 'None'
+
+    channel = connection.channel()
+    channel.exchange_declare(exchange='logs', exchange_type='fanout')
+
+    channel.basic_publish(exchange='logs',
+                          routing_key='',
+                          body=msg
+                          )
+
+    connection.close()
+    return " ___ Message Publish: %s \n" % msg
 
 
 if __name__ == '__main__':
