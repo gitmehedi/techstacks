@@ -90,26 +90,54 @@ In this case, if you terminate a worker, the message it was just processing is l
 The messages that were dispatched to this particular worker but were not yet handled are also lost.
 
 In order to make sure a message is never lost, RabbitMQ supports message acknowledgments. 
-An ack(nowledgement) is sent back by the consumer to tell RabbitMQ that a particular message had been received, 
+An ack(nowledgement) `auto_ack=True` is sent back by the consumer to tell RabbitMQ that a particular message had been received, 
 processed and that RabbitMQ is free to delete it.
+
+```bash
+def callback(ch, method, properties, body):
+    print(" [x] Received %r" % body.decode())
+    time.sleep(body.count(b'.') )
+    print(" [x] Done")
+    ch.basic_ack(delivery_tag = method.delivery_tag)
+
+channel.basic_consume(queue='hello', on_message_callback=callback)
+```
 
 ### Message Durability
 When RabbitMQ quits or crashes it will forget the queues and messages unless you tell it not to. 
-Two things are required to make sure that messages aren't lost: we need to mark both the queue and 
-messages as durable.
+Two things are required to make sure that messages aren't lost and we need to mark both queue and message durable
+* Queue
+* Messages 
 
-* First, we need to make sure that the queue will survive a RabbitMQ node restart. 
-In order to do so, we need to declare it as durable `derable=True`:
+
+* First, we need to make sure that the queue will survive if a RabbitMQ node restart. 
+In order to do so, we need to declare it as durable `derable=True` when we define a queue:
 ```channel.queue_declare(queue='hello', durable=True)```  
 This queue_declare change needs to be applied to both the producer and consumer code.
+
+__Note__:RabbitMQ doesn't allow you to redefine an existing queue with different 
+parameters and will return an error to any program that tries to do that.
+
+* Second, we need to mark our messages as persistent - by supplying a `delivery_mode` property with the value of 
+`pika.spec.PERSISTENT_DELIVERY_MODE`
+```bash
+channel.basic_publish(exchange='',
+                      routing_key="task_queue",
+                      body=message,
+                      properties=pika.BasicProperties(
+                         delivery_mode = pika.spec.PERSISTENT_DELIVERY_MODE
+                      )) 
+```
 
 ### Fair dispatch
 RabbitMQ just dispatches a message when the message enters the queue. 
 It doesn't look at the number of unacknowledged messages for a consumer. 
 It just blindly dispatches every n-th message to the n-th consumer.
-
-don't dispatch a new message to a worker until it has processed and acknowledged the previous one. 
+In order to defeat that we can use the Channel#basic_qos channel method with the prefetch_count=1 setting. 
+This uses the basic.qos protocol method to tell RabbitMQ not to give more than one message to a worker at a time. 
+Or, in other words, don't dispatch a new message to a worker until it has processed and acknowledged the previous one. 
 Instead, it will dispatch it to the next worker that is not still busy.
+
 ```bash
 channel.basic_qos(prefetch_count=1)
 ```
@@ -197,6 +225,9 @@ channel.basic_publish(exchange='logs',
                       routing_key='',
                       body=message)
 ```
+
+### [Temporary Queues](https://www.rabbitmq.com/tutorials/tutorial-three-python.html)
+
 
 ### Bindings
 We've already created a fanout exchange and a queue.
