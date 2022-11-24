@@ -35,6 +35,23 @@ You will need an Ubuntu 20.04 server with a non-root superuser account. And foll
 * Ubuntu 20.04
 * [Java 8 /Java 11](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04)  
 
+Install Python and its related packages
+```bash
+# update os
+$ sudo apt-get update -y
+
+# install pre-requisite software
+$ sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget -y
+
+# install pip 
+$ apt install python3-pip
+```
+
+Install Kafka on top of python
+```bash
+$ pip3 install kafka-python
+```
+
 
 **STEP 1: GET KAFKA**  
 First, download and extract the kafka version
@@ -52,12 +69,23 @@ Kafka with ZooKeeper
 ```bash
 # Start the ZooKeeper service
 $ bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Start the Kafka broker service
+$ bin/kafka-server-start.sh config/server-101.properties
 ```
+Once all services have successfully launched, you will have a basic Kafka environment running and ready to use.
 
 Open another terminal session and run:
 ```bash
 # Start the Kafka broker service
 $ bin/kafka-server-start.sh config/server.properties
+# OR
+```
+
+
+```bash
+# create kafka topics
+$ bin/kafka-topics.sh --create --zookeeper hostname:2181 --partitions 3 --replication-factor 3 --topics numtest
 ```
 
 ### Docker
@@ -77,6 +105,7 @@ $ docker compose -f zk_kafka.yaml -d
 
 
 ## References:
+* https://kafka.apache.org/quickstart
 * https://kafka.apache.org/
 * https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-20-04
 * https://www.conduktor.io/kafka/how-to-start-kafka-using-docker
@@ -85,3 +114,6 @@ $ docker compose -f zk_kafka.yaml -d
 * https://docs.confluent.io/platform/current/platform-quickstart.html#ce-docker-quickstart
 * https://raw.githubusercontent.com/confluentinc/cp-all-in-one/7.3.0-post/cp-all-in-one/docker-compose.yml
 * https://docs.confluent.io/platform/current/platform-quickstart.html#ce-docker-quickstart
+* https://dev.to/boyu1997/intro-to-kafka-4hn2
+* https://dev.to/sats268842/create-and-delete-kafka-topic-using-python-3ni
+
