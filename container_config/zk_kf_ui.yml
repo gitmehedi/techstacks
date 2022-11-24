@@ -12,6 +12,7 @@ services:
     volumes:
       - ./data/zookeeper/data:/data
       - ./data/zookeeper/datalog:/datalog
+    restart: always
   kafka1:
     image: confluentinc/cp-kafka:5.3.0
     hostname: kafka1
@@ -27,6 +28,7 @@ services:
       - ./data/kafka1/data:/var/lib/kafka/data
     depends_on:
       - zookeeper
+    restart: always
   kafka2:
     image: confluentinc/cp-kafka:5.3.0
     hostname: kafka2
@@ -42,6 +44,7 @@ services:
       - ./data/kafka2/data:/var/lib/kafka/data
     depends_on:
       - zookeeper 
+    restart: always
   kafka3:
     image: confluentinc/cp-kafka:5.3.0
     hostname: kafka3
@@ -57,6 +60,7 @@ services:
       - ./data/kafka3/data:/var/lib/kafka/data
     depends_on:
       - zookeeper
+    restart: always
   kafdrop:
     image: obsidiandynamics/kafdrop
     restart: "no"
@@ -68,3 +72,4 @@ services:
       - kafka1
       - kafka2
       - kafka3
+    restart: always
