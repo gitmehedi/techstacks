@@ -101,7 +101,7 @@ $ docker compose -f zk_kafka.yaml -d
 ```
 
 ## Tutorials
-### [1. Apache Kafka Architecture – Cluster](blogs/apache_kafka_architecture_cluster.md)
+### [1. Apache Kafka Architecture – Cluster](blogs/apache_kafka_architecture _cluster.md)
 ### [2. Kafka Architecture – Apache Kafka APIs](blogs/kafka_architecture_apache_kafka_apis.md)
 
 
