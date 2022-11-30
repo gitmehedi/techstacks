@@ -16,7 +16,7 @@
     - [Docker](#docker)
         - [Prerequisite](#prerequisite)
 - [Tutorials](#tutorials)
-    - [1. Set Default Credentials for Git](#1-set-default-credentials-for-git)
+    - [1. Components of Kafka](#1-components-of-kafka)
 - [References:](#references)
 
 <!-- /TOC -->
@@ -100,7 +100,7 @@ $ docker compose -f zk_kafka.yaml -d
 ```
 
 ## Tutorials
-### [1. Set Default Credentials for Git](blogs/set_default_credentials_for_git.md)
+### [1. Components of Kafka](blogs/components_of_kafka.md)
 
 
 
