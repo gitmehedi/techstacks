@@ -18,7 +18,7 @@
     - [Kafka Topics](#kafka-topics)
     - [Replication Factor](#replication-factor)
     - [Consumer Group](#consumer-group)
-- [References:](#references)
+- [References](#references)
 
 <!-- /TOC -->
 
@@ -117,7 +117,7 @@ Some key points –
 
 So, this was all about Apache Kafka Architecture. Hope you like our explanation.
 
-# References:
+# References
 * https://www.javatpoint.com/apache-kafka-architecture
 * https://data-flair.training/blogs/kafka-architecture/
 * https://cloudinfrastructureservices.co.uk/kafka-architecture-cluster-topics-producers-partitions-consumers-zookeeper/

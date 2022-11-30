@@ -12,7 +12,7 @@
     - [Consumer API](#consumer-api)
     - [Streams API](#streams-api)
     - [Connector API](#connector-api)
-- [References:](#references)
+- [References](#references)
 
 <!-- /TOC -->
 
@@ -21,10 +21,10 @@
 
 # Kafka Architecture – Apache Kafka APIs
 Apache Kafka Architecture has four core APIs, 
-* Producer API
-* Consumer API
-* Streams API
-* Connector API
+* [Producer API](#1-producer-api)
+* [Consumer API](#2-consumer-api)
+* [Streams API](#3-streams-api)
+* [Connector API](#4-connector-api)
 
 **__Let’s discuss them one by one__**
 
@@ -41,5 +41,5 @@ Moreover, to act as a stream processor, consuming an input stream from one or mo
 While it comes to building and running reusable producers or consumers that connect Kafka topics to existing applications or data systems, we use the Connector API. For example, a connector to a relational database might capture every change to a table.
 
 
-# References:
+# References
 * https://data-flair.training/blogs/kafka-architecture/
