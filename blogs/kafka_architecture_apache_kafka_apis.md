@@ -31,7 +31,7 @@ Apache Kafka Architecture has four core APIs,
 ## 1. Producer API
 In order to publish a stream of records to one or more Kafka topics, the Producer API allows an application. 
 
-```bash
+```python3
 # Manually assign a list of TopicPartitions to this consumer.
 assign(partitions)
 
