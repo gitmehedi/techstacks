@@ -1,8 +1,8 @@
 
 
 <div align="center">
-    <h1>Components of Kafka</h1>
-    <strong>Components of Stream Processing System</strong>
+    <h1>Apache Kafka Architecture – Cluster</h1>
+    <strong>Apache Kafka Architecture – Cluster</strong>
 </div>
 <br/>
 

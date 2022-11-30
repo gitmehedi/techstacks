@@ -16,7 +16,8 @@
     - [Docker](#docker)
         - [Prerequisite](#prerequisite)
 - [Tutorials](#tutorials)
-    - [1. Components of Kafka](#1-components-of-kafka)
+    - [1. Apache Kafka Architecture – Cluster](#1-apache-kafka-architecture--cluster)
+    - [2. Kafka Architecture – Apache Kafka APIs](#2-kafka-architecture--apache-kafka-apis)
 - [References:](#references)
 
 <!-- /TOC -->
@@ -100,7 +101,8 @@ $ docker compose -f zk_kafka.yaml -d
 ```
 
 ## Tutorials
-### [1. Components of Kafka](blogs/components_of_kafka.md)
+### [1. Apache Kafka Architecture – Cluster](blogs/apache_kafka_architecture_cluster.md)
+### [2. Kafka Architecture – Apache Kafka APIs](blogs/kafka_architecture_apache_kafka_apis.md)
 
 
 
