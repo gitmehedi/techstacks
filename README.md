@@ -120,9 +120,9 @@ That is, while there is value in the items on the right, we value the items on t
 
 Agile, an iterative and incremental methods
 |Method|Description|
-|-----|------|
+|-----|--------|
 | Incremental | This is a development approach that slices the system functionality into increments (portions). |
-|Iterative|This is a development approach that breaks the process of developing a large product into smaller parts. Each part, called “iteration”, represents the whole development process and contains planning, design, development, and testing steps.|
+| Iterative | This is a development approach that breaks the process of developing a large product into smaller parts. Each part, called “iteration”, represents the whole development process and contains planning, design, development, and testing steps.|
 
 # References
 
