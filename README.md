@@ -12,6 +12,7 @@
         - [What is Agile?](#what-is-agile)
     - [Agile Manifesto](#agile-manifesto)
     - [Agile Principles](#agile-principles)
+    - [Agile Frameworks](#agile-frameworks)
 - [References](#references)
 
 <!-- /TOC -->
@@ -114,6 +115,14 @@ That is, while there is value in the items on the right, we value the items on t
 | 10 | Simplicity--the art of maximizing the amount of work not done--is essential.                                                                  |
 | 11 | The best architectures, requirements, and designs emerge from self-organizing teams.                                                          |
 | 12 | At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.                     |
+
+## Agile Frameworks
+
+Agile, an iterative and incremental methods
+|Method|Description|
+|-----|------|
+| Incremental | This is a development approach that slices the system functionality into increments (portions). |
+|Iterative|This is a development approach that breaks the process of developing a large product into smaller parts. Each part, called “iteration”, represents the whole development process and contains planning, design, development, and testing steps.|
 
 # References
 
