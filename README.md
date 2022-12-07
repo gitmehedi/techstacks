@@ -334,6 +334,14 @@ As stated in Merriam-Webster dictionary
   </tr>
 </table>
 
+<img src="img/scrum_framework_draw.png" height="400" width="830" alt="Scrum Values">
+
+
+
+
+
+
+
 ## Scrum Disadvantages
 
 - It’s hard!
