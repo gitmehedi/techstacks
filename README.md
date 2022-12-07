@@ -291,6 +291,7 @@ As stated in Merriam-Webster dictionary
 | **Courage**    | Courage means the mental or moral strength to venture, persevere, and withstand danger, fear, or difficulty.         |
 | **Commitment** | Commitment means an agreement or pledge to do something in the future, or an act of committing to a charge or trust. |
 
+<h4 stype="color:red;">Scrum Framework is recommended as 3-5-3</h4>
 
 
 
