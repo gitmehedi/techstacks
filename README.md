@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="img/logo.png" height="320" width="830" alt="Tech Stacks">
+    <img src="img/scrum_process.jpg" height="320" width="830" alt="Tech Stacks">
     <h1>Agile</h1>
     <strong></strong>
 </div>
