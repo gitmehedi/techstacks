@@ -32,7 +32,7 @@
 
 <!-- /TOC -->
 
-# Agile 
+# Agile
 
 ## Introduction
 
@@ -193,7 +193,7 @@ Based on:
 
 ### FDD
 
-Feature Drive Development (FDD) is customer-centric, iterative, and incremental, with the goal of 
+Feature Drive Development (FDD) is customer-centric, iterative, and incremental, with the goal of
 delivering tangible software results often and efficiently
 
 There are lots of framework available depending on agile mindset.
@@ -230,7 +230,8 @@ Transparency enables Inspection. Inspection without transparency is misleading a
 
 #### Inspection
 
-Progress toward agreed goals must be inspected frequently and diligently to detect potentially undesirable variances or problems.
+Progress toward agreed goals must be inspected frequently and diligently to detect potentially undesirable variances or
+problems.
 
 Inspection enables Adaptation. Inspection without adaptation is considered pointless.
 
@@ -244,41 +245,48 @@ Adjustment must be made as soon as possible to minimize further deviation.
 <img src="img/empirical_process.png" height="400" width="830" alt="Empirical Process">
 
 ##### Evolutionary Product Planning
+
 <img src="img/product_planning.png" height="400" width="830" alt="Product Planning">
 
 **Traditional Fixed Planning Versus Evolutionary Product Planning**  
 Evolutionary product planning in an empirical environment differs from traditional fixed planning in the following ways:
+
 - Processes are not repeatable, are visible, and promote inspection and adaptation.
 - Work/process steps may not be understood.
 - Impacted by factors such as past performance and capacity differences.
 - Improvement and direction guided by experiments and experience.
 
 # Scrum
+
 Scrum is a lightweight framework that helps people, teams and organizations
-generate value through adaptive solutions for complex problems. The Scrum framework is immutable. 
-While implementing only parts of Scrum is possible, the result is not Scrum. 
+generate value through adaptive solutions for complex problems. The Scrum framework is immutable.
+While implementing only parts of Scrum is possible, the result is not Scrum.
 Scrum exists only in its entirety and functions well as a container for other techniques, methodologies, and
 practices.
 
 - Scrum is an Agile framework for completing complex projects.
-- Scrum originally was formalized for software development projects, but it works well for any complex, innovative scope of work. The
-possibilities are endless. The Scrum framework is deceptively simple.
+- Scrum originally was formalized for software development projects, but it works well for any complex, innovative scope
+  of work. The
+  possibilities are endless. The Scrum framework is deceptively simple.
 - An Iterative and Incremental method from Agile Family
 
 <img src="img/scrum_process.jpg" alt="Scrum Process">
 
 Main scrum characteristics
+
 - Simple.
 - Purposefully incomplete, only defining the parts required to implement Empiricism and Lean thinking.
 - Built upon by the collective intelligence of the people using it.
 - Wraps around existing practices or renders them unnecessary.
 
 History
+
 - Since early 1990s.
 - First time presented in 1995.
 - Latest update in Nov 2020.
 
 ## Scrum Values
+
 <img src="img/scrum_values.png" height="400" width="830" alt="Scrum Values">
 
 As stated in Merriam-Webster dictionary
@@ -291,28 +299,43 @@ As stated in Merriam-Webster dictionary
 | **Courage**    | Courage means the mental or moral strength to venture, persevere, and withstand danger, fear, or difficulty.         |
 | **Commitment** | Commitment means an agreement or pledge to do something in the future, or an act of committing to a charge or trust. |
 
-<h4 stype="color:red;">Scrum Framework is recommended as 3-5-3</h4>
+<h3 style="color:red;">Scrum Framework is recommended as 3-5-3</h3>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<table>
+  <tr>
+    <th>Accountabilities (3)</th>
+    <th>Events (5)</th>
+    <th>Artifacts (3)</th>
+  </tr>
+  <tr>
+    <td>
+        <ol>
+          <li>Product Owner</li> 
+          <li>Scrum Master</li>
+          <li>Developers</li>
+        </ol>    
+    </td>
+    <td>
+      <ol>
+        <li>Sprint Planning</li>
+        <li>Daily Scrum</li>
+        <li>Sprint Review</li>
+        <li>Sprint Retrospective</li>
+        <li>Sprint</li>
+    </ol>
+    </td>
+    <td>
+        <ol>
+            <li>Product Backlog</li>
+            <li>Sprint Backlog</li>
+            <li>Increment</li>
+        </ol>
+    </td>
+  </tr>
+</table>
 
 ## Scrum Disadvantages
+
 - It’s hard!
 - Makes all dysfunction visible
 - Scrum doesn’t fix anything: the team has to do it
@@ -327,8 +350,8 @@ As stated in Merriam-Webster dictionary
 - Partial adoption may be worse than none at all
 - If adoption fails, time will have been wasted, and some people may leave
 
-
 # References
+
 * https://agilemanifesto.org/
 * https://agilemanifesto.org/principles.html
 
