@@ -7,12 +7,27 @@
 
 <!-- TOC -->
 
-- [Agile and Scrum](#agile-and-scrum)
+- [Agile](#agile)
     - [Introduction](#introduction)
         - [What is Agile?](#what-is-agile)
     - [Agile Manifesto](#agile-manifesto)
     - [Agile Principles](#agile-principles)
     - [Agile Frameworks](#agile-frameworks)
+        - [Scrum](#scrum)
+        - [Kanban](#kanban)
+        - [Extreme Programming XP](#extreme-programming-xp)
+        - [Crystal](#crystal)
+        - [FDD](#fdd)
+    - [Empiricism](#empiricism)
+        - [Empirical Process](#empirical-process)
+        - [Defined Process](#defined-process)
+            - [Transparency](#transparency)
+            - [Inspection](#inspection)
+            - [Adaptation](#adaptation)
+                - [Evolutionary Product Planning](#evolutionary-product-planning)
+- [Scrum](#scrum)
+    - [Scrum Values](#scrum-values)
+            - [Scrum Disadvantages](#scrum-disadvantages)
 - [References](#references)
 
 <!-- /TOC -->
