@@ -17,7 +17,7 @@
 
 <!-- /TOC -->
 
-# Agile and Scrum
+# Agile 
 
 ## Introduction
 
@@ -145,6 +145,8 @@ Main characteristics of Agile Framework
 
 Popular agile framework used for which used for various domain and complexity
 
+<img src="img/agile_methodology.png" alt="Agile Methodology"/>
+
 ### Scrum
 
 Scrum is a framework within which people can address
@@ -156,15 +158,12 @@ complex products.
 
 ### Kanban
 
-Kanban is a lean method to manage and improve work
-across human systems. This approach aims to manage
-work by balancing demands with available capacity, and
-by improving the handling of system-level bottlenecks.
+Kanban is a lean method to manage and improve work across human systems. This approach aims to manage
+work by balancing demands with available capacity, and by improving the handling of system-level bottlenecks.
 
 ### Extreme Programming (XP)
 
-XP is a software development methodology which is
-intended to improve software quality and
+XP is a software development methodology which is intended to improve software quality and
 responsiveness to changing customer requirements.
 
 ### Crystal
@@ -179,9 +178,8 @@ Based on:
 
 ### FDD
 
-Feature Drive Development (FDD) is customer-centric,
-iterative, and incremental, with the goal of delivering
-tangible software results often and efficiently
+Feature Drive Development (FDD) is customer-centric, iterative, and incremental, with the goal of 
+delivering tangible software results often and efficiently
 
 There are lots of framework available depending on agile mindset.
 
@@ -204,7 +202,9 @@ variance range, given the same inputs.
 
 Scrum is based on Empirical Process Control
 
-Three Pillars of Empirical Process Control
+<img src="img/defined_process.png" alt="Defined Process"/>
+
+**Three Pillars of Empirical Process Control**
 
 #### Transparency
 
@@ -215,8 +215,7 @@ Transparency enables Inspection. Inspection without transparency is misleading a
 
 #### Inspection
 
-Progress toward agreed goals must be inspected frequently and digligently to detect potentially undesirable variances or
-problems.
+Progress toward agreed goals must be inspected frequently and diligently to detect potentially undesirable variances or problems.
 
 Inspection enables Adaptation. Inspection without adaptation is considered pointless.
 
@@ -233,15 +232,87 @@ Adjustment must be made as soon as possible to minimize further deviation.
 <img src="img/product_planning.png" height="400" width="830" alt="Product Planning">
 
 **Traditional Fixed Planning Versus Evolutionary Product Planning**  
-Evolutionary product planning in an empirical environment differs from
-traditional fixed planning in the following ways:
+Evolutionary product planning in an empirical environment differs from traditional fixed planning in the following ways:
 - Processes are not repeatable, are visible, and promote inspection and adaptation.
 - Work/process steps may not be understood.
 - Impacted by factors such as past performance and capacity differences.
 - Improvement and direction guided by experiments and experience.
 
-# References
+# Scrum
+Scrum is a lightweight framework that helps people, teams and organizations
+generate value through adaptive solutions for complex problems. The Scrum framework is immutable. 
+While implementing only parts of Scrum is possible, the result is not Scrum. 
+Scrum exists only in its entirety and functions well as a container for other techniques, methodologies, and
+practices.
 
+- Scrum is an Agile framework for completing complex projects.
+- Scrum originally was formalized for software development projects, but it works well for any complex, innovative scope of work. The
+possibilities are endless. The Scrum framework is deceptively simple.
+- An Iterative and Incremental method from Agile Family
+
+<img src="img/scrum_process.jpg" alt="Scrum Process">
+
+Main scrum characteristics
+- Simple.
+- Purposefully incomplete, only defining the parts required to implement Empiricism and Lean thinking.
+- Built upon by the collective intelligence of the people using it.
+- Wraps around existing practices or renders them unnecessary.
+
+History
+- Since early 1990s.
+- First time presented in 1995.
+- Latest update in Nov 2020.
+
+## Scrum Values
+<img src="img/scrum_values.png" height="400" width="830" alt="Scrum Values">
+
+As stated in Merriam-Webster dictionary
+
+| Values     | Descriptions                                                                                                         |
+|------------|----------------------------------------------------------------------------------------------------------------------|
+| **Focus**  | Focus means a center of activity, attraction, or attention, a point of concentration.                                |
+| **Openness**   | Openness means having no enclosing or confining barrier: accessible on all or nearly all sides.                      |
+| **Respect**    | Respect means the act of giving particular attention or high or special regard.                                      |
+| **Courage**    | Courage means the mental or moral strength to venture, persevere, and withstand danger, fear, or difficulty.         |
+| **Commitment** | Commitment means an agreement or pledge to do something in the future, or an act of committing to a charge or trust. |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### Scrum Disadvantages
+- It’s hard!
+- Makes all dysfunction visible
+- Scrum doesn’t fix anything: the team has to do it
+- Feels like things are worse at the beginning
+- Bad products will be delivered sooner, and doomed projects will fail faster
+- Some teams and organizations are not right or ready for it
+- Team willingness, capabilities
+- Management buy-in
+- Risk of turnover during adoption
+- Some people will refuse to stay on a Scrum team
+- Some people will refuse to stay if Scrum is abandoned
+- Partial adoption may be worse than none at all
+- If adoption fails, time will have been wasted, and some people may leave
+
+
+# References
 * https://agilemanifesto.org/
 * https://agilemanifesto.org/principles.html
 
