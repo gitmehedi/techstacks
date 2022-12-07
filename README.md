@@ -27,7 +27,7 @@
                 - [Evolutionary Product Planning](#evolutionary-product-planning)
 - [Scrum](#scrum)
     - [Scrum Values](#scrum-values)
-            - [Scrum Disadvantages](#scrum-disadvantages)
+    - [Scrum Disadvantages](#scrum-disadvantages)
 - [References](#references)
 
 <!-- /TOC -->
@@ -311,7 +311,7 @@ As stated in Merriam-Webster dictionary
 
 
 
-#### Scrum Disadvantages
+## Scrum Disadvantages
 - It’s hard!
 - Makes all dysfunction visible
 - Scrum doesn’t fix anything: the team has to do it
