@@ -79,10 +79,10 @@ To understand above state you need to understand following terms
 
 </table>
 
-<img src="img/activity.png" height="320" width="830" alt="Tech Stacks">
+<img src="img/activity.png" height="320" width="830" alt="Activity">
 
 **History**
-<img src="img/history.png" height="320" width="830" alt="Tech Stacks">
+<img src="img/history.png" height="320" width="830" alt="Agile History">
 
 ## Agile Manifesto
 
@@ -118,11 +118,127 @@ That is, while there is value in the items on the right, we value the items on t
 
 ## Agile Frameworks
 
-Agile, an iterative and incremental methods
+**Agile frameworks use Incremental & Iterative approaches together.**  
+The idea is to develop a system through repeated cycles (iterative) and in smaller
+portions at a time (incremental), allowing developers to take advantage of what
+was learnt during development of earlier parts or versions of the system.
+
+Incremental and Iterative approach describe as
+
 |Method|Description|
 |-----|--------|
 | Incremental | This is a development approach that slices the system functionality into increments (portions). |
 | Iterative | This is a development approach that breaks the process of developing a large product into smaller parts. Each part, called “iteration”, represents the whole development process and contains planning, design, development, and testing steps.|
+
+<img src="img/agile_umbrella.png" height="400" width="830" alt="Agile Umbrella">
+
+Main characteristics of Agile Framework
+
+* Collaboration
+* Communication
+* Focus on Quality
+* Discipline
+* Eliminate State
+* Team Work - no hero
+* Short Feedback Loops
+* Lots of Planning
+
+Popular agile framework used for which used for various domain and complexity
+
+### Scrum
+
+Scrum is a framework within which people can address
+complex adaptive problems, while productively and
+creatively delivering products of the highest possible
+value.
+A simple framework for effective team collaboration on
+complex products.
+
+### Kanban
+
+Kanban is a lean method to manage and improve work
+across human systems. This approach aims to manage
+work by balancing demands with available capacity, and
+by improving the handling of system-level bottlenecks.
+
+### Extreme Programming (XP)
+
+XP is a software development methodology which is
+intended to improve software quality and
+responsiveness to changing customer requirements.
+
+### Crystal
+
+Crystal allows teams to work the way they deem most effective.
+
+Based on:
+
+- Human-powered
+- Adaptive
+- Ultra-light
+
+### FDD
+
+Feature Drive Development (FDD) is customer-centric,
+iterative, and incremental, with the goal of delivering
+tangible software results often and efficiently
+
+There are lots of framework available depending on agile mindset.
+
+## Empiricism
+
+There are two main process available
+
+### Empirical Process
+
+An empirical process is implemented where progress is based on observation and experimentation instead of
+detailed, upfront planning and defined processes. Using empirical process control is working in a fact-based,
+experience-based, and evidence-based manner,
+not fictitious plans.
+
+### Defined Process
+
+A defined process is one with a set of steps that should
+produce the same output every time within a defined
+variance range, given the same inputs.
+
+Scrum is based on Empirical Process Control
+
+Three Pillars of Empirical Process Control
+
+#### Transparency
+
+The emergent process and work must be visible to those performing the
+work as well as those receiving the work.
+
+Transparency enables Inspection. Inspection without transparency is misleading and wasteful.
+
+#### Inspection
+
+Progress toward agreed goals must be inspected frequently and digligently to detect potentially undesirable variances or
+problems.
+
+Inspection enables Adaptation. Inspection without adaptation is considered pointless.
+
+#### Adaptation
+
+If any aspects of a process deviate outside acceptable limits or if the resulting product is
+unacceptable, the process being applied or the materials being produced must be adjusted.
+
+Adjustment must be made as soon as possible to minimize further deviation.
+
+<img src="img/empirical_process.png" height="400" width="830" alt="Empirical Process">
+
+##### Evolutionary Product Planning
+<img src="img/product_planning.png" height="400" width="830" alt="Product Planning">
+
+**Traditional Fixed Planning Versus Evolutionary Product Planning**  
+Evolutionary product planning in an empirical environment differs from
+traditional fixed planning in the following ways:
+- Processes are not repeatable, are visible, and promote inspection and adaptation.
+- Work/process steps may not be understood.
+- Impacted by factors such as past performance and capacity differences.
+- Improvement and direction guided by experiments and experience.
 
 # References
 
