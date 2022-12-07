@@ -334,6 +334,9 @@ As stated in Merriam-Webster dictionary
   </tr>
 </table>
 
+> Sprint is considered as a Container Event.  
+> Product Backlog Refinement is a recommended activity.
+
 <img src="img/scrum_framework_draw.png" height="400" width="830" alt="Scrum Values">
 
 
