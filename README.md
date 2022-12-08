@@ -731,4 +731,9 @@ month Sprint. For shorter Sprints, the event is usually shorter.
 
 * https://agilemanifesto.org/
 * https://agilemanifesto.org/principles.html
+* https://github.com/gitmehedi/techstacks/tree/scrum/resource/0500-CSM-Class-Charts.pdf
+* https://github.com/gitmehedi/techstacks/tree/scrum/resource/2020-Scrum-Guide.pdf
+* https://github.com/gitmehedi/techstacks/tree/scrum/resource/PremierAgile_CSM_Workbook v2.1.pdf
+* https://github.com/gitmehedi/techstacks/tree/scrum/resource/scrum-short-course.pdf
+
 
