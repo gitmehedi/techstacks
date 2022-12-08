@@ -826,7 +826,13 @@ Definition of Done appropriate for the product.
 The Developers are required to conform to the Definition of Done. If there are multiple Scrum Teams
 working together on a product, they must mutually define and comply with the same Definition of Done.
 
-<img src="img/definition_of_done.png" height="400" width="830" alt="Sprint Retrospective">
+- The Definition of Done is a formal description of the state of the
+Increment when it meets the quality measures required for the product.
+- The moment a Product Backlog item meets the Definition of Done, an
+Increment is born.
+
+
+- <img src="img/definition_of_done.png" height="400" width="830" alt="Sprint Retrospective">
 
 # References
 
