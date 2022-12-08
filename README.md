@@ -665,6 +665,7 @@ the event is usually shorter.
 
 <img src="img/sprint_planning.png" height="400" width="830" alt="Sprint Planning">
 
+
 **_Sprint Goal_**
 The Sprint Goal is the objective for the Sprint. Creates coherence and focus.
 
