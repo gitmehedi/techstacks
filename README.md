@@ -27,14 +27,21 @@
                 - [Evolutionary Product Planning](#evolutionary-product-planning)
 - [Scrum](#scrum)
     - [Scrum Values](#scrum-values)
+    - [Scrum Framework](#scrum-framework)
         - [Scrum Accountabilities](#scrum-accountabilities)
             - [Scrum Team Member](#scrum-team-member)
             - [Characteristics of Scrum Team](#characteristics-of-scrum-team)
             - [Developers](#developers)
             - [The Product Owner](#the-product-owner)
             - [The Scrum Master](#the-scrum-master)
-        - [Servant Leadership](#servant-leadership)
-    - [Scrum Disadvantages](#scrum-disadvantages)
+                - [Servant Leadership](#servant-leadership)
+            - [Scrum Disadvantages](#scrum-disadvantages)
+        - [Scrum Events](#scrum-events)
+            - [Sprint](#sprint)
+            - [Sprint Planning](#sprint-planning)
+            - [Daily Scrum](#daily-scrum)
+            - [Sprint Review](#sprint-review)
+            - [Sprint Retrospective](#sprint-retrospective)
 - [References](#references)
 
 <!-- /TOC -->
@@ -306,6 +313,8 @@ As stated in Merriam-Webster dictionary
 | **Courage**    | Courage means the mental or moral strength to venture, persevere, and withstand danger, fear, or difficulty.         |
 | **Commitment** | Commitment means an agreement or pledge to do something in the future, or an act of committing to a charge or trust. |
 
+## Scrum Framework
+
 <h3 style="color:red;">Scrum Framework is recommended as 3-5-3</h3>
 
 <table>
@@ -567,7 +576,7 @@ Master should have great listening skills.
 <img src="img/faciliation_technique.png" height="400" width="830" alt="Faciliation Technique">
 
 
-## Scrum Disadvantages
+#### Scrum Disadvantages
 - It’s hard!
 - Makes all dysfunction visible
 - Scrum doesn’t fix anything: the team has to do it
@@ -581,6 +590,51 @@ Master should have great listening skills.
 - Some people will refuse to stay if Scrum is abandoned
 - Partial adoption may be worse than none at all
 - If adoption fails, time will have been wasted, and some people may leave
+
+### Scrum Events
+The Sprint is a container for all other events. Each event in Scrum is a formal opportunity to inspect and
+adapt Scrum artifacts. These events are specifically designed to enable the transparency required.
+Failure to operate any events as prescribed results in lost opportunities to inspect and adapt. Events are
+used in Scrum to create regularity and to minimize the need for meetings not defined in Scrum.
+Optimally, all events are held at the same time and place to reduce complexity.
+
+There are Five Sprint Events which are describe below
+
+#### Sprint
+Sprints are the heartbeat of Scrum, where ideas are turned into value.
+They are fixed length events of one month or less to create consistency. A new Sprint starts immediately
+after the conclusion of the previous Sprint.
+
+All the work necessary to achieve the Product Goal, including Sprint Planning, Daily Scrums, Sprint
+Review, and Sprint Retrospective, happen within Sprints.
+
+During the Sprint:
+- No changes are made that would endanger the Sprint Goal;
+- Quality does not decrease;
+- The Product Backlog is refined as needed; and,
+- Scope may be clarified and renegotiated with the Product Owner as more is learned.
+
+Sprints enable predictability by ensuring inspection and adaptation of progress toward a Product Goal at
+least every calendar month. When a Sprint’s horizon is too long the Sprint Goal may become invalid,
+complexity may rise, and risk may increase. Shorter Sprints can be employed to generate more learning
+7cycles and limit risk of cost and effort to a smaller time frame. Each Sprint may be considered a short
+project.
+
+Various practices exist to forecast progress, like burn-downs, burn-ups, or cumulative flows. While
+proven useful, these do not replace the importance of empiricism. In complex environments, what will
+happen is unknown. Only what has already happened may be used for forward-looking decision making.
+A Sprint could be cancelled if the Sprint Goal becomes obsolete. Only the Product Owner has the
+authority to cancel the Sprint.
+
+#### Sprint Planning
+
+#### Daily Scrum 
+
+#### Sprint Review
+
+#### Sprint Retrospective
+
+
 
 # References
 
