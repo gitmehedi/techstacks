@@ -468,6 +468,37 @@ Going beyond the responsibilities is about becoming a great Scrum Master.
 - Sprint Backlog
 - Increment
 
+
+
+<img src="img/scrum_master_more.png" height="400" width="830" alt="Scrum Master">
+
+<img src="img/servant_leader.png" height="400" width="830" alt="Servant Leader">
+
+##### Servant Leadership
+Servant leadership is a leadership philosophy in which the leader serves. Unlike
+traditional leadership, where the primary goal of the leader is to focus only on
+the success of the organization, a servant leader shares power, decision making,
+the needs and requirements of the employees, and helps them perform as a
+high-productive team.
+
+Servant Leadership means leading the Scrum Team by serving them – removing
+high-priority blockers.
+
+Leadership is no longer a given authority but provided as a service. A Scrum
+Master accountability is not performed as ‘command and control’ leadership
+but by ‘empowering and enabling’ teams. Scrum Master role is to improve the
+efficiency of Developers, Product Owner, other Scrum Teams and, in fact the
+entire organization. The main focus of a Scrum Master is to enable an open
+mindset among various roles, units and leaders.
+
+
+
+
+
+<img src="img/servant_leader_serve.png" height="400" width="830" alt="Scrum Master">
+
+
+
 **_The Scrum Master serves the Scrum Team in several ways, including:_**
 - Coaching the team members in self-management and cross-functionality;
 - Helping the Scrum Team focus on creating high-value Increments that meet the Definition of Done;
@@ -495,28 +526,45 @@ Going beyond the responsibilities is about becoming a great Scrum Master.
 - The ScrumMaster does not overrule team-members
 - The ScrumMaster does not direct product strategy, decide technical issues, etc.
 
+**_Different Hats of a Scrum Master_**  
+**_Facilitation:_**  
+A Scrum Master helps Scrum Teams and leaders in decision making. Thus,
+Facilitator is the hat a Scrum Master wears, almost every day.
+Facilitation includes several responsibilities such as:
+- Facilitating Scrum events.
+- Facilitating decision making for Developers, Product Owner and stakeholders.
+- Facilitating difficult conversations.
 
-<img src="img/scrum_master_more.png" height="400" width="830" alt="Scrum Master">
+**_Teaching:_**  
+A Scrum Master helps Scrum Teams and leaders in decision making. Thus,
+The Scrum Master wears the hat of a teacher at times. You may have to teach
+the Scrum Team, the organization, stakeholders about the following:
+- Agile Manifesto – Values and Principles
+- Scrum Framework
+- Scrum Values
+- How to do Scrum right?
+- And many more...
+The Scrum Master also helps the organization to plan and adopt Scrum in the
+organization.
 
+**_Mentoring:_**  
+A Scrum Master acts as a mentor at times, based on the experience gathered
+over the years. During a difficult situation, the Developers may look up to
+Scrum Master as a mentor to resolve their impediments.
 
-### Servant Leadership
-Servant leadership is a leadership philosophy in which the leader serves. Unlike
-traditional leadership, where the primary goal of the leader is to focus only on
-the success of the organization, a servant leader shares power, decision making,
-the needs and requirements of the employees, and helps them perform as a
-high-productive team.
+**_Coaching:_**
+A Scrum Master acts as a coach at times. Rather than providing decisions to
+the Scrum Team or the organization, the Scrum Master helps to decide what is
+the best course of action to be taken in a given situation. The ultimate goal is
+to help people and organizations grow and become better. A Scrum Master
+needs to guide people without being bossy or authoritative, which is
+considered as one of the most challenging facets of the job. To perform this
+responsibility better, a Scrum Master should have good analytical skills, good
+negotiation skills, good communication skills. But more importantly, the Scrum
+Master should have great listening skills.
 
-Servant Leadership means leading the Scrum Team by serving them – removing
-high-priority blockers.
-
-Leadership is no longer a given authority but provided as a service. A Scrum
-Master accountability is not performed as ‘command and control’ leadership
-but by ‘empowering and enabling’ teams. Scrum Master role is to improve the
-efficiency of Developers, Product Owner, other Scrum Teams and, in fact the
-entire organization. The main focus of a Scrum Master is to enable an open
-mindset among various roles, units and leaders.
-
-
+**_Facilitation techniques for a Scrum Master_**
+<img src="img/faciliation_technique.png" height="400" width="830" alt="Faciliation Technique">
 
 
 ## Scrum Disadvantages
