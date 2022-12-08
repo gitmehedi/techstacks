@@ -726,6 +726,79 @@ month Sprint. For shorter Sprints, the event is usually shorter.
 
 <img src="img/sprint_retrospective.png" height="800" width="830" alt="Sprint Retrospective">
 
+### <span style="color: yellowgreen;">Scrum Artifacts</span>
+
+#### Product Backlog
+The Product Backlog is an emergent, ordered list of what is needed to improve the product. It is the
+single source of work undertaken by the Scrum Team.
+
+Product Backlog items that can be Done by the Scrum Team within one Sprint are deemed ready for
+selection in a Sprint Planning event. They usually acquire this degree of transparency after refining
+activities. Product Backlog refinement is the act of breaking down and further defining Product Backlog
+items into smaller more precise items. This is an ongoing activity to add details, such as a description,
+order, and size. Attributes often vary with the domain of work.
+
+The Developers who will be doing the work are responsible for the sizing. The Product Owner may
+influence the Developers by helping them understand and select trade-offs.
+**_Commitment: Product Goal_**
+The Product Goal describes a future state of the product which can serve as a target for the Scrum Team
+to plan against. The Product Goal is in the Product Backlog. The rest of the Product Backlog emerges to
+define “what” will fulfill the Product Goal.
+
+>A product is a vehicle to deliver value. It has a clear boundary, known stakeholders, well-defined
+users or customers. A product could be a service, a physical product, or something more abstract.
+
+The Product Goal is the long-term objective for the Scrum Team. They must fulfill (or abandon) one
+objective before taking on the next.
+#### Sprint Backlog
+The Sprint Backlog is composed of the Sprint Goal (why), the set of Product Backlog items selected for
+the Sprint (what), as well as an actionable plan for delivering the Increment (how).
+
+The Sprint Backlog is a plan by and for the Developers. It is a highly visible, real-time picture of the work
+that the Developers plan to accomplish during the Sprint in order to achieve the Sprint Goal.
+Consequently, the Sprint Backlog is updated throughout the Sprint as more is learned. It should have
+enough detail that they can inspect their progress in the Daily Scrum.
+
+**_Commitment: Sprint Goal_**
+The Sprint Goal is the single objective for the Sprint. Although the Sprint Goal is a commitment by the
+Developers, it provides flexibility in terms of the exact work needed to achieve it. The Sprint Goal also
+creates coherence and focus, encouraging the Scrum Team to work together rather than on separate
+initiatives.
+
+The Sprint Goal is created during the Sprint Planning event and then added to the Sprint Backlog. As the
+Developers work during the Sprint, they keep the Sprint Goal in mind. If the work turns out to be
+different than they expected, they collaborate with the Product Owner to negotiate the scope of the
+Sprint Backlog within the Sprint without affecting the Sprint Goal.
+
+#### Increment
+An Increment is a concrete stepping stone toward the Product Goal. Each Increment is additive to all
+prior Increments and thoroughly verified, ensuring that all Increments work together. In order to
+provide value, the Increment must be usable.
+
+Multiple Increments may be created within a Sprint. The sum of the Increments is presented at the
+Sprint Review thus supporting empiricism. However, an Increment may be delivered to stakeholders
+prior to the end of the Sprint. The Sprint Review should never be considered a gate to releasing value.
+
+Work cannot be considered part of an Increment unless it meets the Definition of Done.
+
+**_Commitment: Definition of Done_**
+
+The Definition of Done is a formal description of the state of the Increment when it meets the quality
+measures required for the product.
+
+> The moment a Product Backlog item meets the Definition of Done, an Increment is born.
+
+The Definition of Done creates transparency by providing everyone a shared understanding of what
+work was completed as part of the Increment. If a Product Backlog item does not meet the Definition of
+Done, it cannot be released or even presented at the Sprint Review. Instead, it returns to the Product
+Backlog for future consideration.
+
+If the Definition of Done for an increment is part of the standards of the organization, all Scrum Teams
+must follow it as a minimum. If it is not an organizational standard, the Scrum Team must create a
+Definition of Done appropriate for the product.
+
+The Developers are required to conform to the Definition of Done. If there are multiple Scrum Teams
+working together on a product, they must mutually define and comply with the same Definition of Done.
 
 # References
 
