@@ -27,6 +27,12 @@
                 - [Evolutionary Product Planning](#evolutionary-product-planning)
 - [Scrum](#scrum)
     - [Scrum Values](#scrum-values)
+        - [Scrum Accountabilities](#scrum-accountabilities)
+            - [Scrum Team Member](#scrum-team-member)
+            - [Characteristics of Scrum Team](#characteristics-of-scrum-team)
+            - [Developers](#developers)
+            - [The Product Owner](#the-product-owner)
+            - [The Scrum Master](#the-scrum-master)
     - [Scrum Disadvantages](#scrum-disadvantages)
 - [References](#references)
 
@@ -344,9 +350,11 @@ As stated in Merriam-Webster dictionary
 The fundamental unit of Scrum is a small team of people called as Scrum Team.
 
 #### Scrum Team Member
-- [The Scrum Master (1)](#the-scrum-master)
-- [The Product Owner (1)](#the-scrum-master)
 - [Developers (one or more)](#developers)
+- [The Product Owner (1)](#the-scrum-master)
+- [The Scrum Master (1)](#the-scrum-master)
+
+
 
 #### Characteristics of Scrum Team
 - No Sub Team
@@ -365,10 +373,7 @@ The fundamental unit of Scrum is a small team of people called as Scrum Team.
 <img src="img/scrum_scaling_b.png" height="400" width="830" alt="Scrum Scale B">
 <img src="img/scrum_scaling_c.png" height="400" width="830" alt="**Scrum Values**">
 
-#### The Scrum Master
 
-
-#### The Product Owner
 #### Developers
 Developers are the people in the Scrum Team that are committed to creating any aspect of a usable Increment each Sprint.
 
@@ -394,8 +399,126 @@ However, the Developers are always accountable for:
 
 <img src="img/developers.png" height="400" width="830" alt="Developers">
 
-## Scrum Disadvantages
+#### The Product Owner
+The Product Owner is accountable for maximizing the value of the product resulting from the work of
+the Scrum Team. How this is done may vary widely across organizations, Scrum Teams, and individuals.
 
+c
+- Developing and explicitly communicating the Product Goal;
+- Creating and clearly communicating Product Backlog items;
+- Ordering Product Backlog items; and,
+- Ensuring that the Product Backlog is transparent, visible and understood.
+- The Product Owner may do the above work or may delegate the responsibility to others. Regardless, the Product Owner remains accountable.
+- For Product Owners to succeed, the entire organization must respect their decisions.
+- These decisions are visible in the content and ordering of the Product Backlog, and through the inspectable Increment at
+the Sprint Review.
+
+The Product Owner is one person, not a committee. The Product Owner may represent the needs of
+many stakeholders in the Product Backlog. Those wanting to change the Product Backlog can do so by
+trying to convince the Product Owner.
+
+**Event Responsibility**
+- Sprint Planning
+- Daily Scrum
+- Sprint Review
+- Sprint Retrospective
+- Sprint
+
+**Artifact Responsibility**
+- Product Backlog
+- Sprint Backlog
+- Increment
+
+<img src="img/product_owner.png" height="400" width="830" alt="Product Owner">
+
+#### The Scrum Master
+The Scrum Master is accountable for establishing Scrum as defined in the Scrum Guide. They do this by
+helping everyone understand Scrum theory and practice, both within the Scrum Team and the
+organization.
+
+The Scrum Master is accountable for the Scrum Team’s effectiveness. They do this by enabling the
+Scrum Team to improve its practices, within the Scrum framework.
+Scrum Masters are true leaders who serve the Scrum Team and the larger organization.
+
+
+**General Responsibility**
+- Coaching and Mentoring.
+- Removing roadblocks.
+- Addressing team dynamics.
+- Teach Scrum.
+- Accountable for the Scrum Team’s effectiveness. They do this by enabling the Scrum Team to improve its practices, within the Scrum framework.
+- Facilitate and Timeboxing Scrum Events.
+- Ensuring a fruitful relationship between the Product Owner, Developers, and others outside the team. Reducing conflicts, and promote continuous improvement.
+- Establishing an environment where the Scrum Team can be productive and efficient.
+- Protecting the Developers from outside distractions and interruptions.
+
+Performing the above responsibilities, will probably make a good Scrum Master.
+Going beyond the responsibilities is about becoming a great Scrum Master.
+
+**Event Responsibility**
+- Sprint Planning
+- Daily Scrum
+- Sprint Review
+- Sprint Retrospective
+- Sprint
+
+**Artifact Responsibility**
+- Product Backlog
+- Sprint Backlog
+- Increment
+
+**_The Scrum Master serves the Scrum Team in several ways, including:_**
+- Coaching the team members in self-management and cross-functionality;
+- Helping the Scrum Team focus on creating high-value Increments that meet the Definition of Done;
+- Causing the removal of impediments to the Scrum Team’s progress; and,
+- Ensuring that all Scrum events take place and are positive, productive, and kept within the timebox.
+
+**_The Scrum Master serves the Product Owner in several ways, including:_**
+- Helping find techniques for effective Product Goal definition and Product Backlog management;
+- Helping the Scrum Team understand the need for clear and concise Product Backlog items;
+- Helping establish empirical product planning for a complex environment; and,
+- Facilitating stakeholder collaboration as requested or needed.
+
+**_The Scrum Master serves the organization in several ways, including:_**
+- Leading, training, and coaching the organization in its Scrum adoption;
+- Planning and advising Scrum implementations within the organization;
+- Helping employees and stakeholders understand and enact an empirical approach for complex work; and,
+- Removing barriers between stakeholders and Scrum Teams.
+
+**_What Does the ScrumMaster NOT Do?_**
+- The ScrumMaster does not manage the team
+- The ScrumMaster does not direct team-members
+- The ScrumMaster does not assign tasks
+- The ScrumMaster does not “drive the team” to hit its goals
+- The ScrumMaster does not make decisions for the team
+- The ScrumMaster does not overrule team-members
+- The ScrumMaster does not direct product strategy, decide technical issues, etc.
+
+
+<img src="img/scrum_master_more.png" height="400" width="830" alt="Scrum Master">
+
+
+### Servant Leadership
+Servant leadership is a leadership philosophy in which the leader serves. Unlike
+traditional leadership, where the primary goal of the leader is to focus only on
+the success of the organization, a servant leader shares power, decision making,
+the needs and requirements of the employees, and helps them perform as a
+high-productive team.
+
+Servant Leadership means leading the Scrum Team by serving them – removing
+high-priority blockers.
+
+Leadership is no longer a given authority but provided as a service. A Scrum
+Master accountability is not performed as ‘command and control’ leadership
+but by ‘empowering and enabling’ teams. Scrum Master role is to improve the
+efficiency of Developers, Product Owner, other Scrum Teams and, in fact the
+entire organization. The main focus of a Scrum Master is to enable an open
+mindset among various roles, units and leaders.
+
+
+
+
+## Scrum Disadvantages
 - It’s hard!
 - Makes all dysfunction visible
 - Scrum doesn’t fix anything: the team has to do it
