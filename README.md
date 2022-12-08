@@ -343,27 +343,56 @@ As stated in Merriam-Webster dictionary
 
 The fundamental unit of Scrum is a small team of people called as Scrum Team.
 
-**Scrum Team consists**
-- Scrum Master (1)
-- Product Owner (1)
-- Developer (one or more)
+#### Scrum Team Member
+- [The Scrum Master (1)](#the-scrum-master)
+- [The Product Owner (1)](#the-scrum-master)
+- [Developers (one or more)](#developers)
 
-Characteristics of Scrum Team
+#### Characteristics of Scrum Team
 - No Sub Team
 - A cohesive unit of professionals focused on one objective at a time.
 - Cross-functional.
 - Self-managed – decides who does what, when and how.
-- Typically 10 people or fewer.
-- Responsible for all product-related activities from stakeholder
-collaboration, verification, maintenance, operation, experimentation,
-research and development, and anything else that might be required.
-- Structured and empowered by the organization to manage their own
-work.
-_ The entire Scrum Team is accountable for creating a valuable, useful Increment every Sprint.
+- 10 people or fewer, smaller teams communicate better and are more productive.
+- If Scrum Teams become too large, they should consider reorganizing into multiple cohesive Scrum Teams, each focused on the same product (see Scaling Scrum image)
+- They should share the same Product Goal, Product Backlog, and Product Owner.
+- The Scrum Team is responsible for all product-related activities from stakeholder collaboration, verification, maintenance, operation, experimentation, research and development, and anything else that might be required.
+- They are structured and empowered by the organization to manage their own work.
+- Working in Sprints at a sustainable pace improves the Scrum Team’s focus and consistency.
+- The entire Scrum Team is accountable for creating a valuable, useful Increment every Sprint.
 
-<img src="img/scrum_scaling_a.png" height="400" width="830" alt="Scrum Values">
-<img src="img/scrum_scaling_b.png" height="400" width="830" alt="Scrum Values">
-<img src="img/scrum_scaling_c.png" height="400" width="830" alt="Scrum Values">
+<img src="img/scrum_scaling_a.png" height="400" width="830" alt="Scrum Scale A">
+<img src="img/scrum_scaling_b.png" height="400" width="830" alt="Scrum Scale B">
+<img src="img/scrum_scaling_c.png" height="400" width="830" alt="**Scrum Values**">
+
+#### The Scrum Master
+
+
+#### The Product Owner
+#### Developers
+Developers are the people in the Scrum Team that are committed to creating any aspect of a usable Increment each Sprint.
+
+The specific skills needed by the Developers are often broad and will vary with the domain of work.
+However, the Developers are always accountable for:
+
+**Responsibilities**
+- Creating a plan for the Sprint, the Sprint Backlog;
+- Instilling quality by adhering to a Definition of Done;
+- Adapting their plan each day toward the Sprint Goal; and,
+- Holding each other accountable as professionals.
+
+**Event Responsibility**
+- Sprint Planning
+- Daily Scrum
+- Sprint Review
+- Sprint Retrospective
+- Sprint
+
+**Artifact Responsibility**
+- Sprint Backlog
+- Increment
+
+<img src="img/developers.png" height="400" width="830" alt="Developers">
 
 ## Scrum Disadvantages
 
