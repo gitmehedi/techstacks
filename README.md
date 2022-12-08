@@ -591,7 +591,7 @@ Master should have great listening skills.
 - Partial adoption may be worse than none at all
 - If adoption fails, time will have been wasted, and some people may leave
 
-### Scrum Events
+### <span style="color: yellowgreen;">Scrum Events</span>
 The Sprint is a container for all other events. Each event in Scrum is a formal opportunity to inspect and
 adapt Scrum artifacts. These events are specifically designed to enable the transparency required.
 Failure to operate any events as prescribed results in lost opportunities to inspect and adapt. Events are
@@ -600,7 +600,7 @@ Optimally, all events are held at the same time and place to reduce complexity.
 
 There are Five Sprint Events which are describe below
 
-#### Sprint
+#### <span style="color: orange;">Sprint</span>
 Sprints are the heartbeat of Scrum, where ideas are turned into value.
 They are fixed length events of one month or less to create consistency. A new Sprint starts immediately
 after the conclusion of the previous Sprint.
