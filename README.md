@@ -36,12 +36,16 @@
             - [The Scrum Master](#the-scrum-master)
                 - [Servant Leadership](#servant-leadership)
             - [Scrum Disadvantages](#scrum-disadvantages)
-        - [Scrum Events](#scrum-events)
+        - [<span style="color: yellowgreen;">Scrum Events</span>](#span-stylecolor-yellowgreenscrum-eventsspan)
             - [Sprint](#sprint)
             - [Sprint Planning](#sprint-planning)
             - [Daily Scrum](#daily-scrum)
             - [Sprint Review](#sprint-review)
             - [Sprint Retrospective](#sprint-retrospective)
+        - [<span style="color: yellowgreen;">Scrum Artifacts</span>](#span-stylecolor-yellowgreenscrum-artifactsspan)
+            - [Product Backlog](#product-backlog)
+            - [Sprint Backlog](#sprint-backlog)
+            - [Increment](#increment)
 - [References](#references)
 
 <!-- /TOC -->
