@@ -730,6 +730,8 @@ month Sprint. For shorter Sprints, the event is usually shorter.
 
 <img src="img/sprint_retrospective.png" height="800" width="830" alt="Sprint Retrospective">
 
+> Several techniques can be leveraged
+
 ### <span style="color: yellowgreen;">Scrum Artifacts</span>
 
 #### Product Backlog
@@ -744,16 +746,33 @@ order, and size. Attributes often vary with the domain of work.
 
 The Developers who will be doing the work are responsible for the sizing. The Product Owner may
 influence the Developers by helping them understand and select trade-offs.
+
+<img src="img/product_backlog.png" height="400" width="830" alt="Sprint Retrospective">
+
 **_Commitment: Product Goal_**
 The Product Goal describes a future state of the product which can serve as a target for the Scrum Team
 to plan against. The Product Goal is in the Product Backlog. The rest of the Product Backlog emerges to
 define “what” will fulfill the Product Goal.
+
+**_Product Goal_**  
+- Describes a future state of the product.
+- Present in the Product Backlog.
+- A Product is defined as: a vehicle to deliver value. It has a clear
+boundary, known stakeholders, well-defined users or customers. A
+product could be a service, a physical product, or something more abstract.
+- A long-term objective for the Scrum Team. They must fulfil (or
+abandon) one objective before taking on the next.
+
+**_Product Backlog Refinement_**
+
+<img src="img/product_backlog_refinement.png" height="400" width="830" alt="Sprint Retrospective">
 
 >A product is a vehicle to deliver value. It has a clear boundary, known stakeholders, well-defined
 users or customers. A product could be a service, a physical product, or something more abstract.
 
 The Product Goal is the long-term objective for the Scrum Team. They must fulfill (or abandon) one
 objective before taking on the next.
+
 #### Sprint Backlog
 The Sprint Backlog is composed of the Sprint Goal (why), the set of Product Backlog items selected for
 the Sprint (what), as well as an actionable plan for delivering the Increment (how).
@@ -763,7 +782,7 @@ that the Developers plan to accomplish during the Sprint in order to achieve the
 Consequently, the Sprint Backlog is updated throughout the Sprint as more is learned. It should have
 enough detail that they can inspect their progress in the Daily Scrum.
 
-**_Commitment: Sprint Goal_**
+**_Commitment: Sprint Goal_**  
 The Sprint Goal is the single objective for the Sprint. Although the Sprint Goal is a commitment by the
 Developers, it provides flexibility in terms of the exact work needed to achieve it. The Sprint Goal also
 creates coherence and focus, encouraging the Scrum Team to work together rather than on separate
@@ -785,8 +804,7 @@ prior to the end of the Sprint. The Sprint Review should never be considered a g
 
 Work cannot be considered part of an Increment unless it meets the Definition of Done.
 
-**_Commitment: Definition of Done_**
-
+**_Commitment: Definition of Done_**  
 The Definition of Done is a formal description of the state of the Increment when it meets the quality
 measures required for the product.
 
