@@ -600,7 +600,7 @@ Optimally, all events are held at the same time and place to reduce complexity.
 
 There are Five Sprint Events which are describe below
 
-#### <span style="color: orange;">Sprint</span>
+#### Sprint
 Sprints are the heartbeat of Scrum, where ideas are turned into value.
 They are fixed length events of one month or less to create consistency. A new Sprint starts immediately
 after the conclusion of the previous Sprint.
@@ -627,13 +627,60 @@ A Sprint could be cancelled if the Sprint Goal becomes obsolete. Only the Produc
 authority to cancel the Sprint.
 
 #### Sprint Planning
+Sprint Planning initiates the Sprint by laying out the work to be performed for the Sprint. This resulting
+plan is created by the collaborative work of the entire Scrum Team.
+
+The Product Owner ensures that attendees are prepared to discuss the most important Product Backlog
+items and how they map to the Product Goal. The Scrum Team may also invite other people to attend
+Sprint Planning to provide advice.
+
+**_Sprint Planning addresses the following topics:_**
+
+**_Topic One: Why is this Sprint valuable?_**  
+
+The Product Owner proposes how the product could increase its value and utility in the current Sprint.
+The whole Scrum Team then collaborates to define a Sprint Goal that communicates why the Sprint is
+valuable to stakeholders. The Sprint Goal must be finalized prior to the end of Sprint Planning.
+
+**_Topic Two: What can be Done this Sprint?_**  
+Through discussion with the Product Owner, the Developers select items from the Product Backlog to
+include in the current Sprint. The Scrum Team may refine these items during this process, which
+increases understanding and confidence.
+
+Selecting how much can be completed within a Sprint may be challenging. However, the more the
+Developers know about their past performance, their upcoming capacity, and their Definition of Done,
+the more confident they will be in their Sprint forecasts.
+
+**_Topic Three: How will the chosen work get done?_**
+For each selected Product Backlog item, the Developers plan the work necessary to create an Increment
+that meets the Definition of Done. This is often done by decomposing Product Backlog items into
+smaller work items of one day or less. How this is done is at the sole discretion of the Developers. No
+one else tells them how to turn Product Backlog items into Increments of value.
+
+The Sprint Goal, the Product Backlog items selected for the Sprint, plus the plan for delivering them are
+together referred to as the Sprint Backlog.
+
+Sprint Planning is timeboxed to a maximum of eight hours for a one-month Sprint. For shorter Sprints,
+the event is usually shorter.
+
+<img src="img/sprint_planning.png" height="400" width="830" alt="Sprint Planning">
+
+**_Sprint Goal_**
+The Sprint Goal is the objective for the Sprint. Creates coherence and focus.
+
 
 #### Daily Scrum 
 
+<img src="img/daily_scrum.png" height="400" width="830" alt="Sprint Planning">
+
 #### Sprint Review
+
+<img src="img/sprint_review.png" height="400" width="830" alt="Sprint Planning">
 
 #### Sprint Retrospective
 
+
+<img src="img/sprint_retrospective.png" height="400" width="830" alt="Sprint Planning">
 
 
 # References
