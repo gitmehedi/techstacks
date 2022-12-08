@@ -339,11 +339,31 @@ As stated in Merriam-Webster dictionary
 
 <img src="img/scrum_framework_draw.png" height="400" width="830" alt="Scrum Values">
 
+### Scrum Accountabilities
 
+The fundamental unit of Scrum is a small team of people called as Scrum Team.
 
+**Scrum Team consists**
+- Scrum Master (1)
+- Product Owner (1)
+- Developer (one or more)
 
+Characteristics of Scrum Team
+- No Sub Team
+- A cohesive unit of professionals focused on one objective at a time.
+- Cross-functional.
+- Self-managed – decides who does what, when and how.
+- Typically 10 people or fewer.
+- Responsible for all product-related activities from stakeholder
+collaboration, verification, maintenance, operation, experimentation,
+research and development, and anything else that might be required.
+- Structured and empowered by the organization to manage their own
+work.
+_ The entire Scrum Team is accountable for creating a valuable, useful Increment every Sprint.
 
-
+<img src="img/scrum_scaling_a.png" height="400" width="830" alt="Scrum Values">
+<img src="img/scrum_scaling_b.png" height="400" width="830" alt="Scrum Values">
+<img src="img/scrum_scaling_c.png" height="400" width="830" alt="Scrum Values">
 
 ## Scrum Disadvantages
 
