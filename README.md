@@ -33,6 +33,7 @@
             - [Developers](#developers)
             - [The Product Owner](#the-product-owner)
             - [The Scrum Master](#the-scrum-master)
+        - [Servant Leadership](#servant-leadership)
     - [Scrum Disadvantages](#scrum-disadvantages)
 - [References](#references)
 
