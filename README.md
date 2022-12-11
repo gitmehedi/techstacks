@@ -860,7 +860,7 @@ So that [why they want this feature / the benefit this feature brings]
 #### Product Backlog Item Quality
 A reminder of the characteristics of a good quality Product Backlog Item.
 
-<img src="img/user_story_invest.png" alt="User Story Invest"> 
+<img src="img/user_story_invest.png" height="400" width="830" alt="User Story Invest"> 
 
 ### Epics
 A group of user stories
@@ -879,8 +879,6 @@ need to be split into multiple, smaller stories before the team can work on them
 A group of epics
 Initiatives or Projects are collections of epics that drive toward a common goal.
 
-**_Characteristics_**
-- 
 
 ### Themes
 A collection of stories by category. A basket or bucket of stories. By its nature, an epic can also be a theme in itself.
@@ -907,8 +905,6 @@ Stories should be SMART
 - R - Relevant
 - T - Time-boxed
 
-**_Characteristics_**
-- 
 
 ### Product Backlog Estimation
 Product Backlog is estimated using 2 ways
@@ -922,8 +918,62 @@ The size of a Product Backlog Item/User Story is a combination of 3 factor
 - U - Uncertainty (Lack of clarity of the User Story)
 - E - Effort
 
+##### Poker Planning
+1. Everyone creates cards with following values on them: 0, 1⁄2, 1, 2, 3, 5, 8, 13, 20, 50 (WRITE LARGE USING MARKER!)
+2. Team agrees on a backlog item to use as a “**_baseline_**” or “**_benchmark_**”, and gives it a size of “5” (item should be neither biggest nor smallest on list)
+3. Size = **Effort** x _Complexity_ x **Uncertainty**
+
+<img src="img/poker_planning.png" alt="User Story Invest"/>
+
+**_Steps to play Planning Poker_**
+1. Each team member holds a set of Planning Poker cards.
+2. The Product Owner briefly describes the Product Backlog Item/User Story to be sized.
+3. The team discusses about the User Story, asks questions and discusses their
+views. Product Owner clarifies as required.
+4. Each team member independently selects a card, to represent their size.
+5. All team members reveal their selected cards at the same time.
+6. Any outliers are discussed.
+7. This is repeated until the team reaches a consensus or maximum 3 times.
+8. The Scrum Master facilitates the session.
+
+<img src="img/poker_estimation.png" height="400" width="830" alt="User Story Invest">
+
 #### Comparative Sizing
 
+
+### Velocity – Based on Historical Data
+<img src="img/velocity.png" height="400" width="830" alt="User Story Invest">
+<img src="img/velocity_calculation.png" height="400" width="830" alt="User Story Invest">
+
+### Release Planning
+<img src="img/product_backlog_poker.png" height="400" width="830" alt="User Story Invest">
+
+- A very high-level plan for multiple Sprints (e.g. three to twelve iteration) is created during the
+Release planning.
+- It is a guideline that reflects expectations about which features will be implemented and when they
+are completed. It also serves as a base to monitor progress within the project.
+- Releases can be intermediate deliveries done during the project or the final delivery at the end.
+- To create a Release Plan the following things have to be available:
+  - A prioritized and estimated Scrum Product Backlog
+  - The (estimated) velocity of the Scrum Team
+  - Conditions of satisfaction (goals for the schedule, scope, resources)
+- Depending on the type of project (feature- or date-driven) the release plan can be
+created in different ways:
+  - If the project is feature-driven, the sum of all features within in a release can be divided by the
+expected velocity. This will then result in the number of sprints needed to complete the
+requested functionality. Selected items from product backlog for prioritize releases
+  - If the project is date-driven we can simply multiply the velocity by the number of Sprints and
+we'll get the total work that can be completed within the given timeline.
+- Like the Scrum Product Backlog the Release plan is not a static plan. It will change
+during the whole project when new knowledge is available and e.g. entries in the
+Scrum Product Backlog are changed and re-estimated. Therefore the Release Plan
+should be revisited and updated in regular intervals, e.g. after each Sprint.
+
+
+<img src="img/release_plan.png" height="400" width="830" alt="User Story Invest">
+
+### Release Burndown Chart
+<img src="img/burndown_chart.png" height="400" width="830" alt="User Story Invest">
 
 # References
 
