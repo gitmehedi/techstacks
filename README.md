@@ -831,16 +831,109 @@ Increment when it meets the quality measures required for the product.
 - The moment a Product Backlog item meets the Definition of Done, an
 Increment is born.
 
+<img src="img/definition_of_done.png" height="400" width="830" alt="Sprint Retrospective">
 
-- <img src="img/definition_of_done.png" height="400" width="830" alt="Sprint Retrospective">
+
+## Additional Information
+
+<img src="img/user_story_epics_theme_feature.png" height="400" width="830" alt="Sprint Retrospective">
+
+### User Stories
+A story is an individual feature or requirement that the business wants. 
+It is something that is deliverable (i.e. production ready) within a single sprint. A story should use the INVEST acronym.
+
+
+**_Stories are often written in a specific format_**  
+As a [end user of the required feature]  
+I want [actual thing the user wants to be able to do once the feature is live]  
+So that [why they want this feature / the benefit this feature brings]
+
+**_User Story Format_**
+
+<img src="img/user_story.png" height="200" width="830" alt="User Story"> 
+
+**_User Story Example_**
+
+<img src="img/user_story_b.png" height="200" width="830" alt="User Story"> 
+
+
+#### Product Backlog Item Quality
+A reminder of the characteristics of a good quality Product Backlog Item.
+
+<img src="img/user_story_invest.png" height="400" width="830" alt="User Story Invest"> 
+
+### Epics
+A group of user stories
+are large bodies of work that can be broken down into a number of smaller tasks (called stories).
+
+**_Characteristics_**
+- Larger user stories are referred as Epic.
+- Epics generally take more than one or two sprints to develop and test. They are usually broad in scope, short on details, and will commonly
+need to be split into multiple, smaller stories before the team can work on them.
+- Better organization
+- Improved time management
+- Clear client priorities
+
+
+### Initiatives/Projects
+A group of epics
+Initiatives or Projects are collections of epics that drive toward a common goal.
+
+**_Characteristics_**
+- 
+
+### Themes
+A collection of stories by category. A basket or bucket of stories. By its nature, an epic can also be a theme in itself.
+
+However, interestingly, one group thought that themes should refer to business goals. My view is that everything should have a goal (otherwise why are you doing it?!)
+
+An example theme: “Wishlist”.
+
+**_Characteristics_**
+- A label for organizational goals
+- Themes are large focus areas that span the organization.
+
+### Tasks
+The elements of a story. Stepping stones to take the story to ‘Done’. Tasks often follow the SMART acronym: specific, measurable, achievable, relevant, time-boxed (although what the letters stand for seems to be hotly debated).
+
+However, many teams don’t break their stories down into tasks. I have found that splitting stories into tasks encourages teams to split work horizontally, whereas we try to slice work vertically.
+
+An example task: “Put ‘Add to wishlist’ button on each product page.”
+
+Stories should be SMART
+- S - Specific
+- M - Measurable
+- A - Achievable
+- R - Relevant
+- T - Time-boxed
+
+**_Characteristics_**
+- 
+
+### Product Backlog Estimation
+Product Backlog is estimated using 2 ways
+- Relative Sizing
+- Comparative Sizing
+
+#### Relative Sizing
+The size of a Product Backlog Item/User Story is a combination of 3 factor
+> **_CUE_**
+- C - Complexity
+- U - Uncertainty (Lack of clarity of the User Story)
+- E - Effort
+
+#### Comparative Sizing
+
 
 # References
 
-* https://agilemanifesto.org/
-* https://agilemanifesto.org/principles.html
-* https://github.com/gitmehedi/techstacks/tree/scrum/resource/0500-CSM-Class-Charts.pdf
-* https://github.com/gitmehedi/techstacks/tree/scrum/resource/2020-Scrum-Guide.pdf
-* https://github.com/gitmehedi/techstacks/tree/scrum/resource/PremierAgile_CSM_Workbook_v2.1.pdf
-* https://github.com/gitmehedi/techstacks/tree/scrum/resource/scrum-short-course.pdf
-
+- https://agilemanifesto.org/
+- https://agilemanifesto.org/principles.html
+- https://github.com/gitmehedi/techstacks/tree/scrum/resource/0500-CSM-Class-Charts.pdf
+- https://github.com/gitmehedi/techstacks/tree/scrum/resource/2020-Scrum-Guide.pdf
+- https://github.com/gitmehedi/techstacks/tree/scrum/resource/PremierAgile_CSM_Workbook_v2.1.pdf
+- https://github.com/gitmehedi/techstacks/tree/scrum/resource/scrum-short-course.pdf
+- https://www.wrike.com/agile-guide/epics-stories-tasks/
+- https://www.mountaingoatsoftware.com/blog/stories-epics-and-themes
+- https://laptrinhx.com/theme-epic-story-task-3420430258/
 
