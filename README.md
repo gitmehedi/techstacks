@@ -860,7 +860,7 @@ So that [why they want this feature / the benefit this feature brings]
 #### Product Backlog Item Quality
 A reminder of the characteristics of a good quality Product Backlog Item.
 
-<img src="img/user_story_invest.png" height="400" width="830" alt="User Story Invest"> 
+<img src="img/user_story_invest.png" alt="User Story Invest"> 
 
 ### Epics
 A group of user stories
