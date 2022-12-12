@@ -13,6 +13,18 @@
 # Introduction
 
 # Installation
+Depending on operating system [Django Installation](https://www.djangoproject.com/download/) varies process.
+
+## Ubuntu
+Install on ubuntu
+```bash
+$ pip install Django==4.1.4
+```
+## Docker
+```bash
+$ docker run --name some-django-app -p 8000:8000 -d my-django-app
+```
+## Kubernetes
 
 
 
@@ -20,6 +32,5 @@
 # References
 - https://docs.djangoproject.com/en/4.1/
 - https://docs.djangoproject.com/en/4.1/contents/
-- 
 
 
