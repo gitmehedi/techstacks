@@ -1,32 +1,25 @@
 <div align="center">
-    <img src="img/logo.png" height="320" width="830" alt="Tech Stacks">
-    <h1>Tech Stacks</h1>
-    <strong>A tech stack is the combination of technologies a company uses to build and run an application or project.</strong>
+    <img src="img/logo.jpg" height="320" width="830" alt="Tech Stacks">
+    <h1>Django</h1>
+    <strong>Django is a free and open-source, Python-based web framework that follows the model–template–views architectural pattern.</strong>
 </div>
 
-
+<!-- TOC -->
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [References](#references)
 <!-- TOC -->
 
-- [Stacks](#stacks)
-    - [Message Queue](#message-queue)
-        - [Kafka](#kafka)
-        - [RabbitMQ](#rabbitmq)
-    - [Management Methodology](#management-methodology)
-        - [Scrum](#scrum)
+# Introduction
 
-<!-- /TOC -->
+# Installation
 
 
-# Stacks
-
-## Message Queue
-A message queue provides an asynchronous communications protocol,
-which is a system that puts a message onto a message queue.
-
-### [Kafka](https://github.com/gitmehedi/techstacks/tree/kafka)
-### [RabbitMQ](https://github.com/gitmehedi/techstacks/tree/rabbitmq_python)
 
 
-## Management Methodology
-### [Scrum](https://github.com/gitmehedi/techstacks/tree/scrum)
+# References
+- https://docs.djangoproject.com/en/4.1/
+- https://docs.djangoproject.com/en/4.1/contents/
+- 
+
 
