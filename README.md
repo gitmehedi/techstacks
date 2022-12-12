@@ -13,6 +13,11 @@
         - [RabbitMQ](#rabbitmq)
     - [Management Methodology](#management-methodology)
         - [Scrum](#scrum)
+    - [Programming Language](#programming-language)
+        - [Python](#python)
+        - [Django](#django)
+        - [Python](#flask)
+        - [FastAPI](#fastapi)
 
 <!-- /TOC -->
 
@@ -29,4 +34,11 @@ which is a system that puts a message onto a message queue.
 
 ## Management Methodology
 ### [Scrum](https://github.com/gitmehedi/techstacks/tree/scrum)
+
+## Programming Stacks
+### [Python](https://github.com/gitmehedi/techstacks/tree/python)
+### [Django](https://github.com/gitmehedi/techstacks/tree/django)
+### [Flask](https://github.com/gitmehedi/techstacks/tree/flask)
+### [FastAPI](https://github.com/gitmehedi/techstacks/tree/fastapi)
+
 
