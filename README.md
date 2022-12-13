@@ -28,8 +28,19 @@ $ docker run --name some-django-app -p 8000:8000 -d my-django-app
 
 
 # Django Documentation
+## 1. Getting Started
+Check Python Version 
+```bash
+$ python -m django --version
+```
 
-## 1. The Model Layer
+### Creating a Project
+Check Django Version
+```bash
+$ 
+```
+
+## 2. The Model Layer
 - Models: Introduction to models | Field types | Indexes | Meta options | Model class
 - QuerySets: Making queries | QuerySet method reference | Lookup expressions
 - Model instances: Instance methods | Accessing related objects
@@ -37,7 +48,7 @@ $ docker run --name some-django-app -p 8000:8000 -d my-django-app
 - Advanced: Managers | Raw SQL | Transactions | Aggregation | Search | Custom fields | Multiple databases | Custom lookups | Query Expressions | Conditional Expressions | Database Functions
 - Other: Supported databases | Legacy databases | Providing initial data | Optimize database access | PostgreSQL specific features
 
-## 2. The View Layer
+## 3. The View Layer
 - The basics: URLconfs | View functions | Shortcuts | Decorators | Asynchronous Support
 - Reference: Built-in Views | Request/response objects | TemplateResponse objects
 - File uploads: Overview | File objects | Storage API | Managing files | Custom storage
@@ -45,16 +56,16 @@ $ docker run --name some-django-app -p 8000:8000 -d my-django-app
 - Advanced: Generating CSV | Generating PDF
 - Middleware: Overview | Built-in middleware classes
 
-## 3. The Template Layer
+## 4. The Template Layer
 - The basics: Overview
 - For designers: Language overview | Built-in tags and filters | Humanization
 - For programmers: Template API | Custom tags and filters | Custom template backend
 
-## 4. Forms
+## 5. Forms
 - The basics: Overview | Form API | Built-in fields | Built-in widgets
 - Advanced: Forms for models | Integrating media | Formsets | Customizing validation
 
-## 5. The Development Process
+## 6. The Development Process
 - Settings: Overview | Full list of settings
 - Applications: Overview
 - Exceptions: Overview
@@ -62,12 +73,12 @@ $ docker run --name some-django-app -p 8000:8000 -d my-django-app
 - Testing: Introduction | Writing and running tests | Included testing tools | Advanced topics
 - Deployment: Overview | WSGI servers | ASGI servers | Deploying static files | Tracking code errors by email | Deployment checklist
 
-## 6. The Admin
+## 7. The Admin
 - Admin site
 - Admin actions
 - Admin documentation generator
 
-## 7. Security
+## 8. Security
 - Security overview
 - Disclosed security issues in Django
 - Clickjacking protection
@@ -75,17 +86,17 @@ $ docker run --name some-django-app -p 8000:8000 -d my-django-app
 - Cryptographic signing
 - Security Middleware
 
-## 8. Internationalization and Localization
+## 9. Internationalization and Localization
 - Overview | Internationalization | Localization | Localized web UI formatting and form input
 - Time zones
 
-## 9. Performance and Optimization
+## 10. Performance and Optimization
 - Performance and optimization overview
 
-## 10. Geographic Framework
+## 11. Geographic Framework
 - GeoDjango intends to be a world-class geographic web framework. Its goal is to make it as easy as possible to build GIS web applications and harness the power of spatially enabled data.
 
-## 11. Common Web Application Tools
+## 12. Common Web Application Tools
 - Authentication: Overview | Using the authentication system | Password management | Customizing authentication | API Reference
 - Caching
 - Logging
@@ -99,7 +110,7 @@ $ docker run --name some-django-app -p 8000:8000 -d my-django-app
 - Static files management
 - Data validation
 
-## 12. Other Core Functionalities
+## 13. Other Core Functionalities
 - Conditional content processing
 - Content types and generic relations
 - Flatpages
@@ -109,7 +120,7 @@ $ docker run --name some-django-app -p 8000:8000 -d my-django-app
 - The sites framework
 - Unicode in Django
 
-## 13. The Django Open-source Project
+## 14. The Django Open-source Project
 - Community: How to get involved | The release process | Team organization | The Django source code repository | Security policies | Mailing lists
 - Design philosophies: Overview
 - Documentation: About this documentation
@@ -117,7 +128,7 @@ $ docker run --name some-django-app -p 8000:8000 -d my-django-app
 - Django over time: API stability | Release notes and upgrading instructions | Deprecation Timeline
 
 # References
-- https://docs.djangoproject.com/en/4.1/
-- https://docs.djangoproject.com/en/4.1/contents/
+- https://docs.djangoproject.com/en/4.0/
+- https://docs.djangoproject.com/en/4.0/contents/
 
 
