@@ -103,7 +103,7 @@ Create a Database with name `PG_DATABASE`
 ```
 
 ## PSQL Help 
-```html
+```bash
 $ psql --help
 
 psql is the PostgreSQL interactive terminal.
