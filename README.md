@@ -12,6 +12,9 @@
     * [Docker](#docker)
       * [Prerequisite](#prerequisite)
   * [Tutorials](#tutorials)
+    * [1. Create Database User in PostgreSQL](#1-create-database-user-in-postgresql)
+  * [PostgreSQL Help Command Tools](#postgresql-help-command-tools)
+    * [psql --help](#psql---help)
 * [References](#references)
 <!-- TOC -->
 
@@ -102,9 +105,13 @@ Create a Database with name `PG_DATABASE`
 
 ```
 
-## PSQL Help 
+## PostgreSQL Help Command Tools 
+
+### psql
+
 ```bash
 $ psql --help
+
 
 psql is the PostgreSQL interactive terminal.
 
