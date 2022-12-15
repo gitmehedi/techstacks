@@ -14,10 +14,9 @@
   * [Tutorials](#tutorials)
     * [1. Create Database User in PostgreSQL](#1-create-database-user-in-postgresql)
   * [PostgreSQL Help Command Tools](#postgresql-help-command-tools)
-    * [psql --help](#psql---help)
+    * [psql](#psql)
 * [References](#references)
 <!-- TOC -->
-
 
 ## Introduction
 [PostgreSQL](https://www.postgresql.org/), also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance. It was originally named POSTGRES, referring to its origins as a successor to the Ingres database developed at the University of California, Berkeley.
