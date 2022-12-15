@@ -87,6 +87,12 @@ polls/
 > A project is a collection of configuration and apps for a particular website. 
 > A project can contain multiple apps. An app can be in multiple projects.
 
+### Database Setup
+Create a database in postgresql
+```bash
+$ psql -h <hostname> -p <port> -U <database_username> -d <database_name>
+> psql -h localhost -p 5432 -U odoo -d DJANGO_BLOG
+```
 
 ## 2. The Model Layer
 - Models: Introduction to models | Field types | Indexes | Meta options | Model class
