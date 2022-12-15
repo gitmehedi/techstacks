@@ -31,14 +31,62 @@ $ docker run --name some-django-app -p 8000:8000 -d my-django-app
 ## 1. Getting Started
 Check Python Version 
 ```bash
-$ python -m django --version
+$ python --version
+> Python 3.10.6
 ```
 
-### Creating a Project
+
 Check Django Version
 ```bash
-$ 
+$ python -m django --version
+> 4.0
 ```
+### Creating a Project
+```bash
+$ django-admin startproject mysite
+```
+
+```html
+mysite/
+    manage.py
+    mysite/
+        __init__.py
+        settings.py
+        urls.py
+        asgi.py
+        wsgi.py
+```
+> Changing the port  
+> $ python manage.py runserver 8080
+
+### The Development Server
+```bash
+$ python manage.py runserver
+```
+
+### Creating the App
+```bash
+$ python manage.py startapp polls
+```
+
+```html
+polls/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+```
+
+**_Projects vs. apps_**  
+> What’s the difference between a project and an app? An app is a web application that does 
+> something – e.g., a blog system, a database of public records or a small poll app. 
+> A project is a collection of configuration and apps for a particular website. 
+> A project can contain multiple apps. An app can be in multiple projects.
+
 
 ## 2. The Model Layer
 - Models: Introduction to models | Field types | Indexes | Meta options | Model class
