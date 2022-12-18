@@ -12,9 +12,12 @@
     * [Docker](#docker)
       * [Prerequisite](#prerequisite)
   * [Tutorials](#tutorials)
-    * [1. Create Database User in PostgreSQL](#1-create-database-user-in-postgresql)
+    * [1. Create Database User](#1-create-database-user)
+    * [2. Create Database](#2-create-database)
   * [PostgreSQL Help Command Tools](#postgresql-help-command-tools)
-    * [psql](#psql)
+    * [PSQL](#psql)
+    * [CREATEDB](#createdb)
+    * [CREATEUSER](#createuser)
 * [References](#references)
 <!-- TOC -->
 
@@ -59,32 +62,14 @@ $ docker compose -f postgresql.yaml -d
 ```
 
 ## Tutorials
-### 1. Create Database User in PostgreSQL
-To Create new database need to login in to postgresql database
-```bash
-# login into database 
-$ sudo -u postgres psql
-```
-Create a database with name `PG_DATABASE`
-```bash
-> create database <database_name>
-$ create database PG_DATABASE
-```
-
+### 1. Create Database User
 Create a database user with name `DJANGO` with password `mypass`
 ```bash
 > create user with <database_username> with encrypted password '<database_password>';
 $ create user with DJANGO with encrypted password 'mypass';
 ```
 
-Grant all grant all privileges on database `PG_DATABASE` to user `DJANGO`;
-```bash
-> grant all privileges on database <database_username> to <database_name>;
-$ grant all privileges on database PG_DATABASE to DJANGO;
-```
-> One nice thing about PGSQL is it comes with some utility binaries like createuser and createdb. So we will be making use of that.
-
-Create a User `DJANGO` and set password with `mypass`
+Create database_username with utility binaries like `createuser`
 ```bash
 # Create a database user
 > sudo -u postgres createuser <database_username>
@@ -93,21 +78,37 @@ $ sudo -u postgres createuser DJANGO
 # Set password for the user
 > alter user <username> with encrypted password '<password>';
 $ alter user DJANGO with encrypted password 'mypass';
-
-# Granting privileges on database
-> grant all privileges on database <dbname> to <username> ;
-$ grant all privileges on database DJANGO to mypass ;
 ```
 
-Create a Database with name `PG_DATABASE`
+### 2. Create Database
+To Create new database need to login in to postgresql database
 ```bash
-
+# login into database 
+$ sudo -u postgres psql
 ```
+
+Create a database with name `PG_DATABASE` and database_username `DJANGO`
+```bash
+> create database <database_name> OWNER <database_username>
+$ CREATE DATABASE PG_DATABASE OWNER DJANGO TABLESPACE salesspace;
+```
+
+Create database with utility binaries like `createdb`
+```bash
+> createdb <database_name> --owner <database_username>
+$ createdb PG_DATABASE --owner DJANGO
+```
+
+Grant all grant all privileges on database `PG_DATABASE` to user `DJANGO`;
+```bash
+> grant all privileges on database <database_username> to <database_name>;
+$ grant all privileges on database PG_DATABASE to DJANGO;
+```
+
 
 ## PostgreSQL Help Command Tools 
 
-### psql
-
+### PSQL
 ```bash
 $ psql --help
 
@@ -168,6 +169,85 @@ Connection options:
   -U, --username=USERNAME  database user name (default: "root")
   -w, --no-password        never prompt for password
   -W, --password           force password prompt (should happen automatically)
+```
+
+### CREATEDB
+```bash
+$ createdb --help
+
+createdb creates a PostgreSQL database.
+
+Usage:
+  createdb [OPTION]... [DBNAME] [DESCRIPTION]
+
+Options:
+  -D, --tablespace=TABLESPACE  default tablespace for the database
+  -e, --echo                   show the commands being sent to the server
+  -E, --encoding=ENCODING      encoding for the database
+  -l, --locale=LOCALE          locale settings for the database
+      --lc-collate=LOCALE      LC_COLLATE setting for the database
+      --lc-ctype=LOCALE        LC_CTYPE setting for the database
+  -O, --owner=OWNER            database user to own the new database
+  -T, --template=TEMPLATE      template database to copy
+  -V, --version                output version information, then exit
+  -?, --help                   show this help, then exit
+
+Connection options:
+  -h, --host=HOSTNAME          database server host or socket directory
+  -p, --port=PORT              database server port
+  -U, --username=USERNAME      user name to connect as
+  -w, --no-password            never prompt for password
+  -W, --password               force password prompt
+  --maintenance-db=DBNAME      alternate maintenance database
+
+By default, a database with the same name as the current user is created.
+
+Report bugs to <pgsql-bugs@lists.postgresql.org>.
+PostgreSQL home page: <https://www.postgresql.org/>
+
+```
+
+### CREATEUSER
+```bash
+$ createuser --help
+
+createuser creates a new PostgreSQL role.
+
+Usage:
+  createuser [OPTION]... [ROLENAME]
+
+Options:
+  -c, --connection-limit=N  connection limit for role (default: no limit)
+  -d, --createdb            role can create new databases
+  -D, --no-createdb         role cannot create databases (default)
+  -e, --echo                show the commands being sent to the server
+  -g, --role=ROLE           new role will be a member of this role
+  -i, --inherit             role inherits privileges of roles it is a
+                            member of (default)
+  -I, --no-inherit          role does not inherit privileges
+  -l, --login               role can login (default)
+  -L, --no-login            role cannot login
+  -P, --pwprompt            assign a password to new role
+  -r, --createrole          role can create new roles
+  -R, --no-createrole       role cannot create roles (default)
+  -s, --superuser           role will be superuser
+  -S, --no-superuser        role will not be superuser (default)
+  -V, --version             output version information, then exit
+  --interactive             prompt for missing role name and attributes rather
+                            than using defaults
+  --replication             role can initiate replication
+  --no-replication          role cannot initiate replication
+  -?, --help                show this help, then exit
+
+Connection options:
+  -h, --host=HOSTNAME       database server host or socket directory
+  -p, --port=PORT           database server port
+  -U, --username=USERNAME   user name to connect as (not the one to create)
+  -w, --no-password         never prompt for password
+  -W, --password            force password prompt
+
+Report bugs to <pgsql-bugs@lists.postgresql.org>.
+PostgreSQL home page: <https://www.postgresql.org/>
 ```
 # References
 - https://www.postgresql.org/download/linux/ubuntu/
