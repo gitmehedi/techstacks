@@ -32,7 +32,7 @@
 You will need an Ubuntu 20.04 server with a non-root superuser account. And following command
 
 #### Prerequisite
-* Ubuntu 20.04
+* [Ubuntu 20.04](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64)
 
 Install Postgresql on 
 ```bash
@@ -53,7 +53,7 @@ sudo apt-get -y install postgresql
 
 ### Docker
 #### Prerequisite
-* Ubuntu 20.04
+* [Ubuntu 20.04](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64)
 * [Docker](https://hub.docker.com/_/postgres)
 
 Run docker compose command to run kafka
@@ -106,40 +106,39 @@ $ grant all privileges on database PG_DATABASE to DJANGO;
 ```
 
 ### Essential Postgres Database Command
-1. Login PostgreSQL database using command line.
+**_1. Login PostgreSQL database using command line._**
 ```bash
 $ psql -d {database_name} -U {username_of_database}
 ```
 
-2. List all database in PostgreSQL.
+**_2. List all database in PostgreSQL._**
 ```bash
 database_name=#\l
 ```
 
-3. List all database user in PostgreSQL.
+**_3. List all database user in PostgreSQL._**
 ```bash
 database_name=#\du+
 ```
 
-4. Change PostgreSQL database user owner or Reassign one database to another.
+**_4. Change PostgreSQL database user owner or Reassign one database to another._**
 ```bash
 database_name=# ALTER DATABASE target_database OWNER TO new_owner;
 or
 database_name=# REASSIGN OWNED BY old_name TO new_name
 ```
 
-5. Change PostgreSQL user’s password.
+**_5. Change PostgreSQL user’s password._**
 ```bash
 database_name=# ALTER USER postgres with password 'very_secure_password'&lt;/span&gt;
 ```
 
-6. Give all the permissions to a user on a DB in PostgreSQL.
+**_6. Give all the permissions to a user on a DB in PostgreSQL._**
 ```bash
 database_name=# GRANT ALL PRIVILEGES ON DATABASE "database_name" to user_name;
 ```
 
-## PostgreSQL Help Command Tools 
-
+## PostgreSQL Help Command Tools
 ### PSQL
 ```bash
 $ psql --help
@@ -281,6 +280,7 @@ Connection options:
 Report bugs to <pgsql-bugs@lists.postgresql.org>.
 PostgreSQL home page: <https://www.postgresql.org/>
 ```
+
 # References
 - https://www.postgresql.org/download/linux/ubuntu/
 - https://hub.docker.com/_/postgres
