@@ -14,6 +14,7 @@
   * [Tutorials](#tutorials)
     * [1. Create Database User](#1-create-database-user)
     * [2. Create Database](#2-create-database)
+    * [Essential Postgres Database Command](#essential-postgres-database-command)
   * [PostgreSQL Help Command Tools](#postgresql-help-command-tools)
     * [PSQL](#psql)
     * [CREATEDB](#createdb)
@@ -26,7 +27,6 @@
 
 ## Installation
 [PostgreSQL Installation](https://www.postgresql.org/download/) depends on operating system like linux,ubuntu,mac,windows. We will install in major os.
-
 
 ### Ubuntu
 You will need an Ubuntu 20.04 server with a non-root superuser account. And following command
@@ -284,4 +284,10 @@ PostgreSQL home page: <https://www.postgresql.org/>
 # References
 - https://www.postgresql.org/download/linux/ubuntu/
 - https://hub.docker.com/_/postgres
+- https://angrybite.wordpress.com/2019/09/08/install-pgadmin-4-on-linux-mint/
+- http://www.postgresqltutorial.com/postgresql-administration/
+- http://www.postgresqltutorial.com/postgresql-alter-database/
+- http://www.postgresqltutorial.com/postgresql-reset-password/
+- https://www.postgresql.org/docs/current/static/sql-alterdatabase.html
+- https://stackoverflow.com/questions/22483555/give-all-the-permissions-to-a-user-on-a-db
 - https://medium.com/coding-blocks/creating-user-database-and-adding-access-on-postgresql-8bfcd2f4a91e
