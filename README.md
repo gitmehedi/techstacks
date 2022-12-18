@@ -106,29 +106,29 @@ $ grant all privileges on database PG_DATABASE to DJANGO;
 ```
 
 ### Essential Postgres Database Command
-**_1. Login PostgreSQL database using command line._**
+**_1. Login PostgreSQL database using command line_**
 ```bash
 $ psql -d {database_name} -U {username_of_database}
 ```
 
-**_2. List all database in PostgreSQL._**
+**_2. List all database in PostgreSQL_**
 ```bash
 database_name=#\l
 ```
 
-**_3. List all database user in PostgreSQL._**
+**_3. List all database user in PostgreSQL_**
 ```bash
 database_name=#\du+
 ```
 
-**_4. Change PostgreSQL database user owner or Reassign one database to another._**
+**_4. Change PostgreSQL database user owner or Reassign one database to another_**
 ```bash
 database_name=# ALTER DATABASE target_database OWNER TO new_owner;
 or
 database_name=# REASSIGN OWNED BY old_name TO new_name
 ```
 
-**_5. Change PostgreSQL user’s password._**
+**_5. Change PostgreSQL user’s password_**
 ```bash
 database_name=# ALTER USER postgres with password 'very_secure_password'&lt;/span&gt;
 ```
