@@ -105,6 +105,38 @@ Grant all grant all privileges on database `PG_DATABASE` to user `DJANGO`;
 $ grant all privileges on database PG_DATABASE to DJANGO;
 ```
 
+### Essential Postgres Database Command
+1. Login PostgreSQL database using command line.
+```bash
+$ psql -d {database_name} -U {username_of_database}
+```
+
+2. List all database in PostgreSQL.
+```bash
+database_name=#\l
+```
+
+3. List all database user in PostgreSQL.
+```bash
+database_name=#\du+
+```
+
+4. Change PostgreSQL database user owner or Reassign one database to another.
+```bash
+database_name=# ALTER DATABASE target_database OWNER TO new_owner;
+or
+database_name=# REASSIGN OWNED BY old_name TO new_name
+```
+
+5. Change PostgreSQL user’s password.
+```bash
+database_name=# ALTER USER postgres with password 'very_secure_password'&lt;/span&gt;
+```
+
+6. Give all the permissions to a user on a DB in PostgreSQL.
+```bash
+database_name=# GRANT ALL PRIVILEGES ON DATABASE "database_name" to user_name;
+```
 
 ## PostgreSQL Help Command Tools 
 
