@@ -16,17 +16,56 @@
 
 <!-- /TOC -->
 
+## Introduction
 
-# Stacks
+[React](https://react.dev/) is a free and open-source front-end JavaScript library for building user interfaces based on
+components. It is maintained by Meta and a community of individual developers and companies. React can be used to
+develop single-page, mobile, or server-rendered applications with frameworks.
 
-## Message Queue
-A message queue provides an asynchronous communications protocol,
-which is a system that puts a message onto a message queue.
+## Installation
 
-### [Kafka](https://github.com/gitmehedi/techstacks/tree/kafka)
-### [RabbitMQ](https://github.com/gitmehedi/techstacks/tree/rabbitmq_python)
+[React Installation](https://react.dev/learn/installation) depends on operating system like linux,ubuntu,mac,windows. We
+will install in major os.
 
+### Pre-requisite
 
-## Management Methodology
-### [Scrum](https://github.com/gitmehedi/techstacks/tree/scrum)
+1. Install `nodejs` and `npm` on Ubuntu OS
 
+```shell
+$ sudo apt-get install nodejs
+```
+
+2. Install `npm` on Ubuntu OS
+
+```shell
+$ sudo apt install npm
+```
+
+3. Now install `npx` using node
+
+```shell
+$ npm install -g npx
+```
+
+## Tutorials
+
+### Create a new React project using below commands, it will create a all the dependencies with default project structure.
+
+```shell
+$npx create-react-app <APP_NAME> 
+```
+> `APP_NAME` name will be any valid name.
+
+Example:
+```shell
+$ npx create-react-app quiz-apps
+```
+
+### Start React application using below command
+```shell
+$ cd quiz-apps 
+$ npm run start or npm start
+```
+
+# References
+- https://react.dev/learn/start-a-new-react-project
