@@ -6,37 +6,37 @@
 
 - [Introduction](#introduction)
 - [Installation](#installation)
-  - [Knowledge Prerequisites](#knowledge-prerequisites)
-    - [Classes](#classes)
-    - [Arrow Functions](#arrow-functions)
-    - [Variables (var,let,const)](#variables-varletconst)
-    - [Array Methods](#array-methods)
-    - [Destructuing](#destructuing)
-    - [Modules](#modules)
-    - [Ternary Operators](#ternary-operators)
-    - [Spread Operators](#spread-operators)
-  - [Software Prerequisites](#software-prerequisites)
+    - [Knowledge Prerequisites](#knowledge-prerequisites)
+        - [Classes](#classes)
+        - [Arrow Functions](#arrow-functions)
+        - [Variables (var,let,const)](#variables-varletconst)
+        - [Array Methods](#array-methods)
+        - [Destructuing](#destructuing)
+        - [Modules](#modules)
+        - [Ternary Operators](#ternary-operators)
+        - [Spread Operators](#spread-operators)
+    - [Software Prerequisites](#software-prerequisites)
 - [React Documentation](#react-documentation)
-  - [Basic Features](#basic-features)
-    - [React Components](#react-components)
-    - [React Class](#react-class)
-    - [React Props](#react-props)
-    - [React Events](#react-events)
-    - [React Conditionals](#react-conditionals)
-    - [React Lists](#react-lists)
-    - [React Forms](#react-forms)
-    - [React Router](#react-router)
-  - [Hooks](#hooks)
-    - [useState](#usestate)
-    - [useEffect](#useeffect)
-    - [useContext](#usecontext)
-    - [useRef](#useref)
-    - [useReducer](#usereducer)
-    - [useCallback](#usecallback)
-    - [useMemo](#usememo)
-    - [Custom Hooks](#custom-hooks)
-  - [Create a new React Project](#create-a-new-react-project)
-  - [Start React application using below command](#start-react-application-using-below-command)
+    - [Basic Features](#basic-features)
+        - [React Components](#react-components)
+        - [React Class](#react-class)
+        - [React Props](#react-props)
+        - [React Events](#react-events)
+        - [React Conditionals](#react-conditionals)
+        - [React Lists](#react-lists)
+        - [React Forms](#react-forms)
+        - [React Router](#react-router)
+    - [Hooks](#hooks)
+        - [useState](#usestate)
+        - [useEffect](#useeffect)
+        - [useContext](#usecontext)
+        - [useRef](#useref)
+        - [useReducer](#usereducer)
+        - [useCallback](#usecallback)
+        - [useMemo](#usememo)
+        - [Custom Hooks](#custom-hooks)
+    - [Create a new React Project](#create-a-new-react-project)
+    - [Start React application using below command](#start-react-application-using-below-command)
 - [References](#references)
 
 # Introduction
@@ -111,9 +111,11 @@ mycar.show();
 ```
 
 ### Arrow Functions
+
 Arrow functions allow us to write shorter function syntax:
 
 Previous Function Definition
+
 ```javascript
 hello = function() {
   return "Hello World!";
@@ -133,13 +135,14 @@ hello = val => "Hello " + val;
 ```
 
 ### Variables (var,let,const)
+
 In JavaScript, there are 3 scopes to define variables:
+
 - **Global Scope**: Other than Function scope or Blocking scope
 - **Function Scope**: Inside a function
 - **Block Scope**: Inside a block like loop
-  
-Before ES6, JavaScript has only one variable definition using `var`. Depending on javascript it behaves differently.
 
+Before ES6, JavaScript has only one variable definition using `var`. Depending on javascript it behaves differently.
 
 - If you use var outside of a function, it belongs to the global scope.
 - If you use var inside of a function, it belongs to that function.
@@ -149,7 +152,8 @@ Before ES6, JavaScript has only one variable definition using `var`. Depending o
 var x = 5.6;
 ```
 
-But in Es6, JavaScript introduce three keyword for variable definitions, and they are `var, let, const`, although `var` was already in javascript previously.
+But in Es6, JavaScript introduce three keyword for variable definitions, and they are `var, let, const`, although `var`
+was already in javascript previously.
 
 > var has a function scope, not a block scope.
 
@@ -163,9 +167,9 @@ If you use let inside of a block, i.e. a for loop, the variable is only availabl
 let x = 5.6;
 ```
 
->  let has a block scope.
+> let has a block scope.
 
-**const**  
+**const**
 
 `const`` is a variable that once it has been created, its value can never change.
 The keyword const is a bit misleading.
@@ -186,23 +190,26 @@ Change the properties of constant object
 const x = 5.6;
 ```
 
->  const has a block scope.
-
+> const has a block scope.
 
 ### Array Methods
-In JavaScript, arrays aren't primitives but are instead Array objects. [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) in javascript uses several methods for operations but most of them few methods mostly used in React frequently. Those methods are
+
+In JavaScript, arrays aren't primitives but are instead Array
+objects. [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) in javascript
+uses several methods for operations but most of them few methods mostly used in React frequently. Those methods are
+
 - Array.map()
 - Array.filter()
 - Array.find()
-  
-All methods takes functions as arguments. Details of theose function are in here  
 
+All methods takes functions as arguments. Details of theose function are in here
 
 [Array Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)   
 `Array.map(()=>{})`
 
 **Parameters**  
-**callbackFn**, a function to execute for each element in the array. Its return value is added as a single element in the new array.
+**callbackFn**, a function to execute for each element in the array. Its return value is added as a single element in
+the new array.
 
 **Return value**  
 A new array with each element being the result of the callback function.
@@ -223,11 +230,13 @@ const kvArray = [
 
 const reformattedArray = kvArray.map(({ key, value }) => ({ [key]: value }));
 ```
-[Array Find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) 
-`Array.find(()=>{})`  
+
+[Array Find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+`Array.find(()=>{})`
 
 **Parameters**  
-**callbackFn**, a function to execute for each element in the array. It should return a truthy value to indicate a matching element has been found, and a falsy value otherwise.
+**callbackFn**, a function to execute for each element in the array. It should return a truthy value to indicate a
+matching element has been found, and a falsy value otherwise.
 
 **Return value**  
 The first element in the array that satisfies the provided testing function. Otherwise, undefined is returned.
@@ -245,13 +254,15 @@ const result = inventory.find(({ name }) => name === "cherries");
 ```
 
 [Array Filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)  
-`Array.filter(()=>{})`  
+`Array.filter(()=>{})`
 
 **Parameters**  
-**callbackFn**, a function to execute for each element in the array. It should return a truthy value to indicate a matching element has been found, and a falsy value otherwise. 
+**callbackFn**, a function to execute for each element in the array. It should return a truthy value to indicate a
+matching element has been found, and a falsy value otherwise.
 
 **Return value**  
-A shallow copy of the given array containing just the elements that pass the test. If no elements pass the test, an empty array is returned.
+A shallow copy of the given array containing just the elements that pass the test. If no elements pass the test, an
+empty array is returned.
 
 Example
 
@@ -262,7 +273,6 @@ function isBigEnough(value) {
 
 const filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 ```
-
 
 ### Destructuing
 
@@ -277,19 +287,18 @@ const suv = vehicles[2];
 ```
 
 ### Modules
+
 JavaScript modules allow you to break up your code into separate files.
 
 This makes it easier to maintain the code-base.
 
 ES Modules rely on the import and export statements.
 
-
-
 ### Ternary Operators
+
 The ternary operator is a simplified conditional operator like if / else.
 
 `Syntax: condition ? <expression if true> : <expression if false>`
-
 
 ```javascript
 if (authenticated) {
@@ -303,9 +312,10 @@ if (authenticated) {
 authenticated ? renderApp() : renderLogin();
 ```
 
-
 ### Spread Operators
-The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+
+The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another
+array or object.
 
 ```javascript
 # Example 1
@@ -320,7 +330,6 @@ const numbers = [1, 2, 3, 4, 5, 6];
 const [one, two, ...rest] = numbers;
 
 ```
-
 
 ## Software Prerequisites
 
@@ -341,31 +350,6 @@ $ sudo apt install npm
 ```shell
 $ npm install -g npx
 ```
-
-# React Documentation
-
-## Basic Features
-### React Components
-### React Class
-### React Props
-### React Events
-### React Conditionals
-### React Lists
-### React Forms
-### React Router
-
-
-## Hooks
-React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects. React provides a bunch of standard in-built hooks
-
-### useState
-### useEffect
-### useContext
-### useRef
-### useReducer
-### useCallback
-### useMemo
-### Custom Hooks
 
 ## Create a new React Project
 
@@ -390,9 +374,94 @@ $ cd quiz-apps
 $ npm run start or npm start
 ```
 
+# React Documentation
+
+## Basic Features
+
+### React Components
+
+### React Class
+
+### React Props
+
+### React Events
+
+### React Conditionals
+
+### React Lists
+
+### React Forms
+
+### React Router
+
+## Hooks
+
+React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component.
+Hooks can be stateful and can manage side-effects. React provides a bunch of standard in-built hooks
+
+Hooks let you use different React features from your components. You can either use the built-in Hooks or combine them
+to build your own. This page lists all built-in Hooks in React.
+
+There almost 15 built-in hooks available in React.
+
+### State Hooks
+
+#### 1. useState
+
+#### 2. useReducer
+
+
+
+### Context Hooks
+
+#### 3. useContext
+
+
+
+### Ref Hooks
+
+#### 4. useRef
+#### 5. useImperativeHandle
+
+### Effect Hooks
+
+#### 6. useEffect
+
+
+### Performance Hooks
+
+#### 7. useCallback
+
+#### 8. useMemo
+
+#### 9. useTransition
+
+#### 10. useDeferredValue
+
+#### 11. useLayoutEffect
+
+### Resource Hooks
+
+#### 12. useDeferredValue
+
+### Other Hooks
+
+#### 13. useDebugValue
+
+#### 14. useId
+
+#### 15. useSyncExternalStore
+
+
+### Custom Hooks
+You can also [define your own custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component) as JavaScript functions.
+
+
+
 # References
 
 - https://react.dev/learn/start-a-new-react-project
 - https://www.w3schools.com/REACT/react_es6_array_methods.asp
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 - https://devdocs.io/react/hooks-intro
+- https://react.dev/reference/react
