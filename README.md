@@ -6,52 +6,52 @@
 
 - [Introduction](#introduction)
 - [Installation](#installation)
-  - [Knowledge Prerequisites](#knowledge-prerequisites)
-    - [Classes](#classes)
-    - [Arrow Functions](#arrow-functions)
-    - [Variables (var,let,const)](#variables-varletconst)
-    - [Array Methods](#array-methods)
-    - [Destructuing](#destructuing)
-    - [Modules](#modules)
-    - [Ternary Operators](#ternary-operators)
-    - [Spread Operators](#spread-operators)
-  - [Software Prerequisites](#software-prerequisites)
-  - [Create a new React Project](#create-a-new-react-project)
-  - [Start React application using below command](#start-react-application-using-below-command)
+    - [Knowledge Prerequisites](#knowledge-prerequisites)
+        - [Classes](#classes)
+        - [Arrow Functions](#arrow-functions)
+        - [Variables (var,let,const)](#variables-varletconst)
+        - [Array Methods](#array-methods)
+        - [Destructuing](#destructuing)
+        - [Modules](#modules)
+        - [Ternary Operators](#ternary-operators)
+        - [Spread Operators](#spread-operators)
+    - [Software Prerequisites](#software-prerequisites)
+    - [Create a new React Project](#create-a-new-react-project)
+    - [Start React application using below command](#start-react-application-using-below-command)
 - [React Documentation](#react-documentation)
-  - [Basic Features](#basic-features)
-    - [React Components](#react-components)
-    - [React Class](#react-class)
-    - [React Props](#react-props)
-    - [React Events](#react-events)
-    - [React Conditionals](#react-conditionals)
-    - [React Lists](#react-lists)
-    - [React Forms](#react-forms)
-    - [React Router](#react-router)
-  - [Hooks](#hooks)
-    - [State Hooks](#state-hooks)
-      - [1. useState](#1-usestate)
-      - [2. useReducer](#2-usereducer)
-    - [Context Hooks](#context-hooks)
-      - [3. useContext](#3-usecontext)
-    - [Ref Hooks](#ref-hooks)
-      - [4. useRef](#4-useref)
-      - [5. useImperativeHandle](#5-useimperativehandle)
-    - [Effect Hooks](#effect-hooks)
-      - [6. useEffect](#6-useeffect)
-    - [Performance Hooks](#performance-hooks)
-      - [7. useCallback](#7-usecallback)
-      - [8. useMemo](#8-usememo)
-      - [9. useTransition](#9-usetransition)
-      - [10. useDeferredValue](#10-usedeferredvalue)
-      - [11. useLayoutEffect](#11-uselayouteffect)
-    - [Resource Hooks](#resource-hooks)
-      - [12. useDeferredValue](#12-usedeferredvalue)
-    - [Other Hooks](#other-hooks)
-      - [13. useDebugValue](#13-usedebugvalue)
-      - [14. useId](#14-useid)
-      - [15. useSyncExternalStore](#15-usesyncexternalstore)
-    - [Custom Hooks](#custom-hooks)
+    - [Basic Features](#basic-features)
+        - [React Components](#react-components)
+        - [React Class](#react-class)
+        - [React Props](#react-props)
+        - [React Events](#react-events)
+        - [React Conditionals](#react-conditionals)
+        - [React Lists](#react-lists)
+        - [React Forms](#react-forms)
+        - [React Router](#react-router)
+    - [Hooks](#hooks)
+        - [State Hooks](#state-hooks)
+            - [1. useState](#1-usestate)
+            - [2. useReducer](#2-usereducer)
+        - [Context Hooks](#context-hooks)
+            - [3. useContext](#3-usecontext)
+        - [Ref Hooks](#ref-hooks)
+            - [4. useRef](#4-useref)
+            - [5. useImperativeHandle](#5-useimperativehandle)
+        - [Effect Hooks](#effect-hooks)
+            - [6. useEffect](#6-useeffect)
+        - [Performance Hooks](#performance-hooks)
+            - [7. useCallback](#7-usecallback)
+            - [8. useMemo](#8-usememo)
+            - [9. useTransition](#9-usetransition)
+            - [10. useDeferredValue](#10-usedeferredvalue)
+            - [11. useLayoutEffect](#11-uselayouteffect)
+        - [Resource Hooks](#resource-hooks)
+            - [12. useDeferredValue](#12-usedeferredvalue)
+        - [Other Hooks](#other-hooks)
+            - [13. useDebugValue](#13-usedebugvalue)
+            - [14. useId](#14-useid)
+            - [15. useSyncExternalStore](#15-usesyncexternalstore)
+        - [Custom Hooks](#custom-hooks)
 - [References](#references)
 
 # Introduction
@@ -417,31 +417,129 @@ Hooks can be stateful and can manage side-effects. React provides a bunch of sta
 Hooks let you use different React features from your components. You can either use the built-in Hooks or combine them
 to build your own. This page lists all built-in Hooks in React.
 
-There almost 15 built-in hooks available in React.
+There are 3 rules for hooks
+
+- Hooks can only be called inside React function components.
+- Hooks can only be called at the top level of a component.
+- Hooks cannot be conditional
+
+> Note: [More details about React Hooks Rules](https://devdocs.io/react/hooks-rules)
+
+
+There are 15 built-in hooks available in React.
 
 ### State Hooks
 
+State lets a component “remember” information like user input.
+
+For example, a form component can use state to store the input value, while an image gallery component can use state to
+store the selected image index.
+
+To add state to a component, use one of these Hooks
+
 #### 1. useState
 
+The React `useState` Hook allows us to track state in a function component.
+
+```javascript
+const [state, setState] = useState(initialState);
+```
+
+**Import `useState`**
+
+```javascript
+import { useState } from "react";
+```
+
+**Initialize `useState`**
+
+We initialize our state by calling useState in our function component.
+
+`useState` accepts an initial state and returns two values:
+
+The current state.
+A function that updates the state.
+
+```javascript
+import { useState } from "react";
+
+function FavoriteColor() {
+  const [color, setColor] = useState("");
+  const [cars,setCars] = useState([]);
+}
+```
+
+**Read `useState`**
+
+We can now include our state anywhere in our component.
+
+```javascript
+import { useState } from "react";
+import ReactDOM from "react-dom/client";
+
+function FavoriteColor() {
+  const [color, setColor] = useState("red");
+
+  return <h1>My favorite color is {color}!</h1>
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<FavoriteColor />);
+```
+
+**Update `useState`**
+To update our state, we use our state updater function.
+
+```javascript
+import { useState } from "react";
+import ReactDOM from "react-dom/client";
+
+function FavoriteColor() {
+  const [color, setColor] = useState("red");
+
+  return (
+    <>
+      <h1>My favorite color is {color}!</h1>
+      <button
+        type="button"
+        onClick={() => setColor("blue")}
+      >Blue</button>
+    </>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<FavoriteColor />);
+```
+
 #### 2. useReducer
-
-
+Follow Documents
+- https://www.w3schools.com/REACT/react_usereducer.asp
+- https://devdocs.io/react/hooks-reference#usereducer
+- https://react.dev/reference/react/useReducer
 
 ### Context Hooks
 
 #### 3. useContext
+React Context is a way to manage state globally.
+    
+It can be used together with the useState Hook to share state between deeply nested components more easily than with useState alone.
 
-
+Follow Documents
+- https://www.w3schools.com/REACT/react_usecontext.asp
+- https://devdocs.io/react/hooks-reference#usecontext
 
 ### Ref Hooks
 
 #### 4. useRef
+
+
+
 #### 5. useImperativeHandle
 
 ### Effect Hooks
 
 #### 6. useEffect
-
 
 ### Performance Hooks
 
@@ -467,11 +565,11 @@ There almost 15 built-in hooks available in React.
 
 #### 15. useSyncExternalStore
 
-
 ### Custom Hooks
-You can also [define your own custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component) as JavaScript functions.
 
-
+You can
+also [define your own custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component)
+as JavaScript functions.
 
 # References
 
