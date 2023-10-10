@@ -16,7 +16,25 @@
     - [Ternary Operators](#ternary-operators)
     - [Spread Operators](#spread-operators)
   - [Software Prerequisites](#software-prerequisites)
-- [Tutorials](#tutorials)
+- [React Documentation](#react-documentation)
+  - [Basic Features](#basic-features)
+    - [React Components](#react-components)
+    - [React Class](#react-class)
+    - [React Props](#react-props)
+    - [React Events](#react-events)
+    - [React Conditionals](#react-conditionals)
+    - [React Lists](#react-lists)
+    - [React Forms](#react-forms)
+    - [React Router](#react-router)
+  - [Hooks](#hooks)
+    - [useState](#usestate)
+    - [useEffect](#useeffect)
+    - [useContext](#usecontext)
+    - [useRef](#useref)
+    - [useReducer](#usereducer)
+    - [useCallback](#usecallback)
+    - [useMemo](#usememo)
+    - [Custom Hooks](#custom-hooks)
   - [Create a new React Project](#create-a-new-react-project)
   - [Start React application using below command](#start-react-application-using-below-command)
 - [References](#references)
@@ -324,7 +342,30 @@ $ sudo apt install npm
 $ npm install -g npx
 ```
 
-# Tutorials
+# React Documentation
+
+## Basic Features
+### React Components
+### React Class
+### React Props
+### React Events
+### React Conditionals
+### React Lists
+### React Forms
+### React Router
+
+
+## Hooks
+React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects. React provides a bunch of standard in-built hooks
+
+### useState
+### useEffect
+### useContext
+### useRef
+### useReducer
+### useCallback
+### useMemo
+### Custom Hooks
 
 ## Create a new React Project
 
@@ -354,3 +395,4 @@ $ npm run start or npm start
 - https://react.dev/learn/start-a-new-react-project
 - https://www.w3schools.com/REACT/react_es6_array_methods.asp
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+- https://devdocs.io/react/hooks-intro
