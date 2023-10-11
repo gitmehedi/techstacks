@@ -565,6 +565,35 @@ Follow Documents
 - https://www.w3schools.com/REACT/react_forms.asp
 
 ### React Router
+Create React App doesn't include page routing.
+
+React Router is a lightweight, fully-featured routing library for the React JavaScript library. React Router runs everywhere that React runs; on the web, on the server (using node.js), and on React Native.
+```javascript
+npm install react-router-dom
+```
+
+React Router in application using in this way
+
+```javascript
+//Import it from your react index.js file
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+//Rap your app with BrowserRouter
+<BrowserRouter>
+	<App />  
+</BrowserRouter>
+
+//Define you Routes in your app and import it on the top
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/create" element={<Create />} />
+  <Route path="/blogs/:id" element={<BlogDetails />} />
+  <Route path="*" element={<NotFound />} />
+</Routes>
+
+//Now you are all set. You can use this with
+<Link to="/create" element={Create}/>
+```
 
 Follow Documents
 
