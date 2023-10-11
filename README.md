@@ -6,52 +6,56 @@
 
 - [Introduction](#introduction)
 - [Installation](#installation)
-    - [Knowledge Prerequisites](#knowledge-prerequisites)
-        - [Classes](#classes)
-        - [Arrow Functions](#arrow-functions)
-        - [Variables (var,let,const)](#variables-varletconst)
-        - [Array Methods](#array-methods)
-        - [Destructuing](#destructuing)
-        - [Modules](#modules)
-        - [Ternary Operators](#ternary-operators)
-        - [Spread Operators](#spread-operators)
-    - [Software Prerequisites](#software-prerequisites)
-    - [Create a new React Project](#create-a-new-react-project)
-    - [Start React application using below command](#start-react-application-using-below-command)
+  - [Software Prerequisites](#software-prerequisites)
+  - [Create React App](#create-react-app)
+  - [Start React App](#start-react-app)
+  - [Geeks Prerequisites](#geeks-prerequisites)
+    - [Classes](#classes)
+    - [Arrow Functions](#arrow-functions)
+    - [Variables (var,let,const)](#variables-varletconst)
+    - [Array Methods](#array-methods)
+    - [Destructuing](#destructuing)
+    - [Modules](#modules)
+    - [Ternary Operators](#ternary-operators)
+    - [Spread Operators](#spread-operators)
 - [React Documentation](#react-documentation)
-    - [Basic Features](#basic-features)
-        - [React Components](#react-components)
-        - [React Class](#react-class)
-        - [React Props](#react-props)
-        - [React Events](#react-events)
-        - [React Conditionals](#react-conditionals)
-        - [React Lists](#react-lists)
-        - [React Forms](#react-forms)
-        - [React Router](#react-router)
-    - [Hooks](#hooks)
-        - [State Hooks](#state-hooks)
-            - [1. useState](#1-usestate)
-            - [2. useReducer](#2-usereducer)
-        - [Context Hooks](#context-hooks)
-            - [3. useContext](#3-usecontext)
-        - [Ref Hooks](#ref-hooks)
-            - [4. useRef](#4-useref)
-            - [5. useImperativeHandle](#5-useimperativehandle)
-        - [Effect Hooks](#effect-hooks)
-            - [6. useEffect](#6-useeffect)
-        - [Performance Hooks](#performance-hooks)
-            - [7. useCallback](#7-usecallback)
-            - [8. useMemo](#8-usememo)
-            - [9. useTransition](#9-usetransition)
-            - [10. useDeferredValue](#10-usedeferredvalue)
-            - [11. useLayoutEffect](#11-uselayouteffect)
-        - [Resource Hooks](#resource-hooks)
-            - [12. useDeferredValue](#12-usedeferredvalue)
-        - [Other Hooks](#other-hooks)
-            - [13. useDebugValue](#13-usedebugvalue)
-            - [14. useId](#14-useid)
-            - [15. useSyncExternalStore](#15-usesyncexternalstore)
-        - [Custom Hooks](#custom-hooks)
+  - [Basic Features](#basic-features)
+    - [React Components](#react-components)
+      - [Class Component](#class-component)
+      - [Function components](#function-components)
+    - [React Class](#react-class)
+    - [React Props](#react-props)
+    - [React Events](#react-events)
+    - [React Conditionals](#react-conditionals)
+    - [React Lists](#react-lists)
+      - [Keys](#keys)
+    - [React Forms](#react-forms)
+    - [React Router](#react-router)
+    - [React Memo](#react-memo)
+  - [Hooks](#hooks)
+    - [State Hooks](#state-hooks)
+      - [1. useState](#1-usestate)
+      - [2. useReducer](#2-usereducer)
+    - [Context Hooks](#context-hooks)
+      - [3. useContext](#3-usecontext)
+    - [Ref Hooks](#ref-hooks)
+      - [4. useRef](#4-useref)
+      - [5. useImperativeHandle](#5-useimperativehandle)
+    - [Effect Hooks](#effect-hooks)
+      - [6. useEffect](#6-useeffect)
+    - [Performance Hooks](#performance-hooks)
+      - [7. useCallback](#7-usecallback)
+      - [8. useMemo](#8-usememo)
+      - [9. useTransition](#9-usetransition)
+      - [10. useDeferredValue](#10-usedeferredvalue)
+      - [11. useLayoutEffect](#11-uselayouteffect)
+    - [Resource Hooks](#resource-hooks)
+      - [12. useDeferredValue](#12-usedeferredvalue)
+    - [Other Hooks](#other-hooks)
+      - [13. useDebugValue](#13-usedebugvalue)
+      - [14. useId](#14-useid)
+      - [15. useSyncExternalStore](#15-usesyncexternalstore)
+    - [Custom Hooks](#custom-hooks)
 - [References](#references)
 
 # Introduction
@@ -65,7 +69,50 @@ develop single-page, mobile, or server-rendered applications with frameworks.
 [React Installation](https://react.dev/learn/installation) depends on operating system like linux,ubuntu,mac,windows. We
 will install in major os.
 
-## Knowledge Prerequisites
+## Software Prerequisites
+
+1. Install `nodejs` and `npm` on Ubuntu OS
+
+```shell
+$ sudo apt-get install nodejs
+```
+
+2. Install `npm` on Ubuntu OS
+
+```shell
+$ sudo apt install npm
+```
+
+3. Now install `npx` using node
+
+```shell
+$ npm install -g npx
+```
+
+## Create React App
+
+Using below commands, it will create a all the dependencies with default project structure.
+
+```shell
+$npx create-react-app <APP_NAME> 
+```
+
+> `APP_NAME` name will be any valid name.
+
+Example:
+
+```shell
+$ npx create-react-app quiz-apps
+```
+
+## Start React App
+
+```shell
+$ cd quiz-apps 
+$ npm run start or npm start
+```
+
+## Geeks Prerequisites
 
 ECMAScript 6 which has a shorter version ES6.  
 ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of ECMAScript, it was published in 2015,
@@ -346,49 +393,6 @@ const [one, two, ...rest] = numbers;
 
 ```
 
-## Software Prerequisites
-
-1. Install `nodejs` and `npm` on Ubuntu OS
-
-```shell
-$ sudo apt-get install nodejs
-```
-
-2. Install `npm` on Ubuntu OS
-
-```shell
-$ sudo apt install npm
-```
-
-3. Now install `npx` using node
-
-```shell
-$ npm install -g npx
-```
-
-## Create a new React Project
-
-using below commands, it will create a all the dependencies with default project structure.
-
-```shell
-$npx create-react-app <APP_NAME> 
-```
-
-> `APP_NAME` name will be any valid name.
-
-Example:
-
-```shell
-$ npx create-react-app quiz-apps
-```
-
-## Start React application using below command
-
-```shell
-$ cd quiz-apps 
-$ npm run start or npm start
-```
-
 # React Documentation
 
 ## Basic Features
@@ -435,6 +439,10 @@ root.render(<Car />);
 ```
 
 ### React Class
+
+Follow Documents
+
+- https://www.w3schools.com/REACT/react_class.asp
 
 ### React Props
 
@@ -563,10 +571,12 @@ Follow Documents
 - https://www.w3schools.com/REACT/react_router.asp
 
 ### React Memo
+
 Using memo will cause React to skip rendering a component if its props have not changed.
 This can improve performance.
 
 Follow Documents
+
 - https://www.w3schools.com/REACT/react_memo.asp
 
 ## Hooks
