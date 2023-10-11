@@ -395,19 +395,179 @@ $ npm run start or npm start
 
 ### React Components
 
+Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in
+isolation and return HTML.
+
+Components come in two types
+
+- Class components
+- Function components
+
+#### Class Component
+
+A class component must include the extends React.Component statement. This statement creates an inheritance to
+React.Component, and gives your component access to React.Component's functions.
+
+```javascript
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
+```
+
+#### Function components
+
+A Function component also returns HTML, and behaves much the same way as a Class component, but Function components can
+be written using much less code, are easier to understand, and will be preferred in this tutorial.
+
+```javascript
+function Car() {
+  return <h2>Hi, I am a Car!</h2>;
+}
+```
+
+Rendering a React Components using
+
+```javascript
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Car />);
+```
+
 ### React Class
 
 ### React Props
 
+React Props are like function arguments in JavaScript and attributes in HTML.
+
+React Props are also how you pass data from one component to another, as parameters.
+
+To send props into a component, use the same syntax as HTML attributes:
+
+```javascript
+const myElement = <Car brand="Ford" />;
+```
+
+The component receives the argument as a props object:
+
+```javascript
+function Car(props) {
+  return <h2>I am a { props.brand }!</h2>;
+}
+```
+
+> Note: React Props are read-only! You will get an error if you try to change their value.
+>
+Follow Documents
+
+- https://www.w3schools.com/REACT/react_props.asp
+
 ### React Events
+
+Just like HTML DOM events, React can perform actions based on user events.
+
+React has the same events as HTML: click, change, mouseover etc.
+
+Adding Events
+React events are written in camelCase syntax:
+
+`onClick` instead of `onclick`.
+
+React event handlers are written inside curly braces:
+
+`onClick={shoot} ` instead of `onClick="shoot()"`.
+
+```javascript
+# React
+<button onClick={shoot}>Take the Shot!</button>
+
+# HTML
+<button onclick="shoot()">Take the Shot!</button>
+```
+
+**Example**
+
+```javascript
+function Football() {
+  const shoot = () => {
+    alert("Great Shot!");
+  }
+
+  return (
+    <button onClick={shoot}>Take the shot!</button>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Football />);
+```
+
+Follow Documents
+
+- https://www.w3schools.com/REACT/react_events.asp
 
 ### React Conditionals
 
+Follow Documents
+
+- https://www.w3schools.com/REACT/react_conditional_rendering.asp
+
 ### React Lists
+
+In React, you will render lists with some type of loop.
+
+The JavaScript map() array method is generally the preferred method.
+
+#### Keys
+
+Keys allow React to keep track of elements. This way, if an item is updated or removed, only that item will be
+re-rendered instead of the entire list.
+
+Keys need to be unique to each sibling. But they can be duplicated globally.
+
+```javascript
+function Car(props) {
+  return <li>I am a { props.brand }</li>;
+}
+
+function Garage() {
+  const cars = [
+    {id: 1, brand: 'Ford'},
+    {id: 2, brand: 'BMW'},
+    {id: 3, brand: 'Audi'}
+  ];
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <ul>
+        {cars.map((car) => <Car key={car.id} brand={car.brand} />)}
+      </ul>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Garage />);
+```
 
 ### React Forms
 
+Follow Documents
+
+- https://www.w3schools.com/REACT/react_forms.asp
+
 ### React Router
+
+Follow Documents
+
+- https://www.w3schools.com/REACT/react_router.asp
+
+### React Memo
+Using memo will cause React to skip rendering a component if its props have not changed.
+This can improve performance.
+
+Follow Documents
+- https://www.w3schools.com/REACT/react_memo.asp
 
 ## Hooks
 
@@ -513,7 +673,9 @@ root.render(<FavoriteColor />);
 ```
 
 #### 2. useReducer
+
 Follow Documents
+
 - https://www.w3schools.com/REACT/react_usereducer.asp
 - https://devdocs.io/react/hooks-reference#usereducer
 - https://react.dev/reference/react/useReducer
@@ -521,11 +683,14 @@ Follow Documents
 ### Context Hooks
 
 #### 3. useContext
+
 React Context is a way to manage state globally.
-    
-It can be used together with the useState Hook to share state between deeply nested components more easily than with useState alone.
+
+It can be used together with the useState Hook to share state between deeply nested components more easily than with
+useState alone.
 
 Follow Documents
+
 - https://www.w3schools.com/REACT/react_usecontext.asp
 - https://devdocs.io/react/hooks-reference#usecontext
 
@@ -533,13 +698,135 @@ Follow Documents
 
 #### 4. useRef
 
+The useRef Hook allows you to persist values between renders.
 
+It can be used to store a mutable value that does not cause a re-render when updated.
+
+It can be used to access a DOM element directly.
+
+Does Not Cause Re-renders
+If we tried to count how many times our application renders using the useState Hook, we would be caught in an infinite
+loop since this Hook itself causes a re-render.
+
+To avoid this, we can use the useRef Hook.
+
+```javascript
+import { useState, useEffect, useRef } from "react";
+import ReactDOM from "react-dom/client";
+
+function App() {
+  const [inputValue, setInputValue] = useState("");
+  const count = useRef(0);
+
+  useEffect(() => {
+    count.current = count.current + 1;
+  });
+
+  return (
+    <>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <h1>Render Count: {count.current}</h1>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+```
+
+> useRef() only returns one item. It returns an Object called current.
+
+> When we initialize useRef we set the initial value: useRef(0).
+
+
+Follow Documents
+
+- https://dmitripavlutin.com/react-useref/
+- https://www.w3schools.com/REACT/react_useref.asp
 
 #### 5. useImperativeHandle
+
+Follow Documents
+
+- https://devdocs.io/react/hooks-reference#useimperativehandle
+- https://react.dev/reference/react/useImperativeHandle
 
 ### Effect Hooks
 
 #### 6. useEffect
+
+The `useEffect` Hook allows you to perform side effects in your components.
+
+Mutations, subscriptions, timers, logging, and other side effects are not allowed inside the main body of a function
+component (referred to as React’s render phase). Doing so will lead to confusing bugs and inconsistencies in the UI.
+
+Some examples of side effects are:
+
+- fetching data
+- directly updating the DOM
+- timers
+
+useEffect accepts two arguments. The second argument is optional.
+
+`
+useEffect(<function>, <dependency>)
+`
+
+`useEffect` runs on every render. That means that when the count changes, a render happens, which then triggers another
+effect.
+
+This is not what we want. There are several ways to control when side effects run.
+
+We should always include the second parameter which accepts an array. We can optionally pass dependencies to useEffect
+in this array.
+
+```javascript
+useEffect(() => {
+  //Runs on every render
+});
+
+useEffect(() => {
+  //Runs only on the first render
+}, []);
+
+useEffect(() => {
+  //Runs on the first render
+  //And any time any dependency value changes
+}, [prop, state]);
+
+
+```
+
+So, to fix this issue, let's only run this effect on the initial render.
+
+```javascript
+import { useState, useEffect } from "react";
+import ReactDOM from "react-dom/client";
+
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  }, []); // <- add empty brackets here
+
+  return <h1>I've rendered {count} times!</h1>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Timer />);
+```
+
+Follow Documents
+
+- https://www.w3schools.com/REACT/react_useeffect.asp
+- https://devdocs.io/react/hooks-reference#useeffect
 
 ### Performance Hooks
 
