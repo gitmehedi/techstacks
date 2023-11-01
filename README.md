@@ -56,6 +56,7 @@
       - [14. useId](#14-useid)
       - [15. useSyncExternalStore](#15-usesyncexternalstore)
     - [Custom Hooks](#custom-hooks)
+- [Interview Questions](#interview-questions)
 - [References](#references)
 
 # Introduction
@@ -896,6 +897,9 @@ Follow Documents
 You can
 also [define your own custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks#extracting-your-own-custom-hook-from-a-component)
 as JavaScript functions.
+
+# Interview Questions
+Prepare for Interview [here](./interview/README.md).
 
 # References
 
