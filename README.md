@@ -19,7 +19,7 @@
   - [Knowledge Prerequisites](#knowledge-prerequisites)
 - [Features](#features)
 - [Tutorials](#tutorials)
-  - [Create New Projects for Jenkins](#create-new-projects-for-jenkins)
+  - [Create New Projects in Jenkins](#create-new-projects-in-jenkins)
 - [Interviews Questions](#interviews-questions)
 - [References](#references)
 
@@ -115,7 +115,7 @@ $ sudo ufw status
 To complete Jenkins installation you need to browse following url `http://<JENKINS_OS_IP>:8080/`.   
 > JENKINS_OS_IP: it is IP where you install your jenkins application.
 
-![Jenkins Admin Password](img/unlock_jenkins.png)
+![Jenkins Admin Password](img/jenkins_admin_password.png)
 
 Explore in jenkins configured os and copy password from there and past in input field.
 
@@ -125,23 +125,28 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 If you continue Jenkins installation you will see those ui one after another.
 
-**Plugins Installation**
+Plugins Installation
+<hr/>
 
 ![Plugins Installation](img/jenkins_plugins_install.png)
 
-**Getting Stated**
+Getting Stated
+<hr/>
 
 ![Getting Start](img/jenkins_getting_start.png)
 
-**Create Admin User**
+Create Admin User
+<hr/>
 
 ![Create Admin](img/jenkins_create_admin.png)
 
-**Instance Domain Configuration**
+Instance Domain Configuration
+<hr/>
 
 ![Instance Configuration](img/jenkins_instance_configuration.png)
 
-**Jenkins Homepage**
+Jenkins Homepage
+<hr/>
 
 ![Homepage](img/jenkins_homepage.png)
 
@@ -153,7 +158,7 @@ There are serveral knowledge requirements for Jenkins
 # Tutorials
 There are a number of tutorials available for jenkins
 
-## Create New Projects for Jenkins
+## Create New Projects in Jenkins
 
 
 
