@@ -4,34 +4,40 @@
     <strong>PostgreSQL, also known as Postgres, is a free and open-source relational database management system</strong>
 </div>
 
-<!-- TOC -->
-  * [Introduction](#introduction)
-  * [Installation](#installation)
-    * [Ubuntu](#ubuntu)
-      * [Prerequisite](#prerequisite)
-    * [Docker](#docker)
-      * [Prerequisite](#prerequisite)
-  * [Tutorials](#tutorials)
-    * [1. Create Database User](#1-create-database-user)
-    * [2. Create Database](#2-create-database)
-    * [Essential Postgres Database Command](#essential-postgres-database-command)
-  * [PostgreSQL Help Command Tools](#postgresql-help-command-tools)
-    * [PSQL](#psql)
-    * [CREATEDB](#createdb)
-    * [CREATEUSER](#createuser)
-* [References](#references)
-<!-- TOC -->
 
-## Introduction
+- [Introduction](#introduction)
+- [Installation](#installation)
+  - [Ubuntu](#ubuntu)
+    - [Prerequisite](#prerequisite)
+  - [Docker](#docker)
+    - [Prerequisite](#prerequisite-1)
+- [Tutorials](#tutorials)
+  - [1. Create Database User](#1-create-database-user)
+    - [Examples](#examples)
+  - [2. ALTER Database User Properties](#2-alter-database-user-properties)
+    - [Examples](#examples-1)
+  - [3. Create Database](#3-create-database)
+    - [Examples](#examples-2)
+  - [4. Grant Database Permission](#4-grant-database-permission)
+  - [5. Essential Postgres Database Command](#5-essential-postgres-database-command)
+- [PostgreSQL Help Command Tools](#postgresql-help-command-tools)
+  - [PSQL](#psql)
+    - [CREATEDB](#createdb)
+    - [CREATEUSER](#createuser)
+- [References](#references)
+
+
+
+# Introduction
 [PostgreSQL](https://www.postgresql.org/), also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance. It was originally named POSTGRES, referring to its origins as a successor to the Ingres database developed at the University of California, Berkeley.
 
-## Installation
+# Installation
 [PostgreSQL Installation](https://www.postgresql.org/download/) depends on operating system like linux,ubuntu,mac,windows. We will install in major os.
 
-### Ubuntu
+## Ubuntu
 You will need an Ubuntu 20.04 server with a non-root superuser account. And following command
 
-#### Prerequisite
+### Prerequisite
 * [Ubuntu 20.04](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64)
 
 Install Postgresql on 
@@ -51,8 +57,8 @@ sudo apt-get -y install postgresql
 ```
 > Mention postgres version or otherwise it will install latest version
 
-### Docker
-#### Prerequisite
+## Docker
+### Prerequisite
 * [Ubuntu 20.04](https://ubuntu.com/download/desktop/thank-you?version=22.04.1&architecture=amd64)
 * [Docker](https://hub.docker.com/_/postgres)
 
@@ -61,12 +67,44 @@ Run docker compose command to run kafka
 $ docker compose -f postgresql.yaml -d
 ```
 
-## Tutorials
-### 1. Create Database User
-Create a database user with name `DJANGO` with password `mypass`
-```bash
-> create user with <database_username> with encrypted password '<database_password>';
-$ create user with DJANGO with encrypted password 'mypass';
+
+
+# Tutorials
+
+## 1. Create Database User
+
+Database user Create template
+```shell
+CREATE USER username
+    [ WITH
+     [ SYSID uid ]
+     [ PASSWORD 'password' ] ]
+    [ CREATEDB   | NOCREATEDB ] [ CREATEUSER | NOCREATEUSER ]
+    [ IN GROUP     groupname [, ...] ]
+    [ VALID UNTIL  'abstime' ]
+```
+
+### Examples
+
+Create user `odoo` 
+```shell
+$ CREATE USER odoo;
+```
+
+Create a database user with name `odoo` with password `mypass`
+```shell
+$ CREATE USER odoo with password "123456";
+
+$ CREATE USER odoo with encrypted password "123456";
+```
+
+Create an account where the user can create databases
+```shell
+$ CREATE USER manuel WITH PASSWORD 'jw8s0F4' CREATEDB
+```
+Create a user with a password, whose account is valid until the end of 2001. Note that after one second has ticked in 2002, the account is not valid:
+```shell
+$ CREATE USER miriam WITH PASSWORD 'jw8s0F4' VALID UNTIL 'Jan 1 2002';
 ```
 
 Create database_username with utility binaries like `createuser`
@@ -74,30 +112,104 @@ Create database_username with utility binaries like `createuser`
 # Create a database user
 > sudo -u postgres createuser <database_username>
 $ sudo -u postgres createuser DJANGO
-
-# Set password for the user
-> alter user <username> with encrypted password '<password>';
-$ alter user DJANGO with encrypted password 'mypass';
 ```
 
-### 2. Create Database
+> Details are [here..](https://www.postgresql.org/docs/7.0/sql-createuser.htm)
+
+## 2. ALTER Database User Properties
+
+Database user Alter template
+```shell
+ALTER USER name [ [ WITH ] option [ ... ] ]
+
+where option can be:
+
+    CREATEDB | NOCREATEDB
+    | CREATEUSER | NOCREATEUSER 
+    | [ ENCRYPTED | UNENCRYPTED ] PASSWORD 'password' 
+    | VALID UNTIL 'abstime'
+```
+
+
+### Examples
+Change a user's password:
+```shell
+$ ALTER USER odoo WITH PASSWORD 'hu8jmn3';
+$ ALTER USER odoo WITH encrypted PASSWORD 'hu8jmn3';
+```
+
+Change the expiration date of the user's password:
+```shell
+$ ALTER USER manuel VALID UNTIL 'Jan 31 2030';
+```
+
+Change a password expiration date, specifying that the password should expire at midday on 4th May 2005 using the time zone which is one hour ahead of UTC:
+```shell
+$ ALTER USER chris VALID UNTIL 'May 4 12:00:00 2005 +1';
+```
+
+Make a password valid forever:
+```shell
+$ ALTER USER fred VALID UNTIL 'infinity';
+```
+
+Give a user the ability to create other users and new databases:
+```shell
+$ ALTER USER miriam CREATEUSER CREATEDB;
+```
+> Details are [here..](https://www.postgresql.org/docs/8.0/sql-alteruser.html)
+
+## 3. Create Database
+
+Create Database
+```shell
+CREATE DATABASE name
+    [ WITH ] [ OWNER [=] user_name ]
+           [ TEMPLATE [=] template ]
+           [ ENCODING [=] encoding ]
+           [ STRATEGY [=] strategy ] ]
+           [ LOCALE [=] locale ]
+           [ LC_COLLATE [=] lc_collate ]
+           [ LC_CTYPE [=] lc_ctype ]
+           [ ICU_LOCALE [=] icu_locale ]
+           [ ICU_RULES [=] icu_rules ]
+           [ LOCALE_PROVIDER [=] locale_provider ]
+           [ COLLATION_VERSION = collation_version ]
+           [ TABLESPACE [=] tablespace_name ]
+           [ ALLOW_CONNECTIONS [=] allowconn ]
+           [ CONNECTION LIMIT [=] connlimit ]
+           [ IS_TEMPLATE [=] istemplate ]
+           [ OID [=] oid ]
+```
+
+### Examples
+
+To create a new database:
+```shell
+$ CREATE DATABASE lusiadas;
+```
+
+To create a database sales owned by user salesapp with a default tablespace of salesspace:
+```shell
+$ CREATE DATABASE PG_DATABASE OWNER DJANGO TABLESPACE salesspace;
+```
+
+
 To Create new database need to login in to postgresql database
-```bash
+```shell
 # login into database 
 $ sudo -u postgres psql
 ```
 
-Create a database with name `PG_DATABASE` and database_username `DJANGO`
-```bash
-> create database <database_name> OWNER <database_username>
-$ CREATE DATABASE PG_DATABASE OWNER DJANGO TABLESPACE salesspace;
-```
+
 
 Create database with utility binaries like `createdb`
-```bash
+```shell
 > createdb <database_name> --owner <database_username>
 $ createdb PG_DATABASE --owner DJANGO
 ```
+
+## 4. Grant Database Permission
 
 Grant all grant all privileges on database `PG_DATABASE` to user `DJANGO`;
 ```bash
@@ -105,41 +217,26 @@ Grant all grant all privileges on database `PG_DATABASE` to user `DJANGO`;
 $ grant all privileges on database PG_DATABASE to DJANGO;
 ```
 
-### Essential Postgres Database Command
-**_1. Login PostgreSQL database using command line_**
+## 5. Essential Postgres Database Command
+
+** 1. Login PostgreSQL database using command line_**
 ```bash
 $ psql -d {database_name} -U {username_of_database}
 ```
 
-**_2. List all database in PostgreSQL_**
+** 2. List all database in PostgreSQL_**
 ```bash
 database_name=#\l
 ```
 
-**_3. List all database user in PostgreSQL_**
+** 3. List all database user in PostgreSQL_**
 ```bash
 database_name=#\du+
 ```
 
-**_4. Change PostgreSQL database user owner or Reassign one database to another_**
-```bash
-database_name=# ALTER DATABASE target_database OWNER TO new_owner;
-or
-database_name=# REASSIGN OWNED BY old_name TO new_name
-```
 
-**_5. Change PostgreSQL user’s password_**
-```bash
-database_name=# ALTER USER postgres with password 'very_secure_password'&lt;/span&gt;
-```
-
-**_6. Give all the permissions to a user on a DB in PostgreSQL._**
-```bash
-database_name=# GRANT ALL PRIVILEGES ON DATABASE "database_name" to user_name;
-```
-
-## PostgreSQL Help Command Tools
-### PSQL
+# PostgreSQL Help Command Tools
+## PSQL
 ```bash
 $ psql --help
 
