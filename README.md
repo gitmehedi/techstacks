@@ -20,6 +20,9 @@
     - [Examples](#examples-2)
   - [4. Grant Database Permission](#4-grant-database-permission)
   - [5. Essential Postgres Database Command](#5-essential-postgres-database-command)
+    - [1. Login PostgreSQL database using command line](#1-login-postgresql-database-using-command-line)
+    - [2. List all database in PostgreSQL\_\*\*](#2-list-all-database-in-postgresql_)
+    - [3. List all database user in PostgreSQL](#3-list-all-database-user-in-postgresql)
 - [PostgreSQL Help Command Tools](#postgresql-help-command-tools)
   - [PSQL](#psql)
     - [CREATEDB](#createdb)
@@ -155,7 +158,7 @@ $ ALTER USER fred VALID UNTIL 'infinity';
 
 Give a user the ability to create other users and new databases:
 ```shell
-$ ALTER USER miriam CREATEUSER CREATEDB;
+$ ALTER USER miriam WITH CREATEUSER CREATEDB;
 ```
 > Details are [here..](https://www.postgresql.org/docs/8.0/sql-alteruser.html)
 
@@ -219,21 +222,20 @@ $ grant all privileges on database PG_DATABASE to DJANGO;
 
 ## 5. Essential Postgres Database Command
 
-** 1. Login PostgreSQL database using command line_**
+### 1. Login PostgreSQL database using command line
 ```bash
 $ psql -d {database_name} -U {username_of_database}
 ```
 
-** 2. List all database in PostgreSQL_**
+### 2. List all database in PostgreSQL_**
 ```bash
 database_name=#\l
 ```
 
-** 3. List all database user in PostgreSQL_**
+### 3. List all database user in PostgreSQL
 ```bash
 database_name=#\du+
 ```
-
 
 # PostgreSQL Help Command Tools
 ## PSQL
