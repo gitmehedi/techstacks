@@ -125,27 +125,27 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 If you continue Jenkins installation you will see those ui one after another.
 
-Plugins Installation
+***Plugins Installation***
 <hr/>
 
 ![Plugins Installation](img/jenkins_plugins_install.png)
 
-Getting Stated
+***Getting Stated***
 <hr/>
 
 ![Getting Start](img/jenkins_getting_start.png)
 
-Create Admin User
+***Create Admin User***
 <hr/>
 
 ![Create Admin](img/jenkins_create_admin.png)
 
-Instance Domain Configuration
+***Instance Domain Configuration***
 <hr/>
 
 ![Instance Configuration](img/jenkins_instance_configuration.png)
 
-Jenkins Homepage
+***Jenkins Homepage***
 <hr/>
 
 ![Homepage](img/jenkins_homepage.png)
