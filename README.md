@@ -36,7 +36,76 @@ The major concepts that we have discussed above are known as pillars of OOPs. Th
 Details of are given below
 ## Abstraction
 ## Encapsulation
-The wrapping up of data and functions into a single unit is known as encapsulation. It is also known as information hiding concept.
+The wrapping up of data and method into a single unit is known as encapsulation. It is also known as information hiding concept.
+
+In a simple way, when you create a class with data and methods, you are implementing a encapsulation.
+
+Also, encapsulation allows us to restrict accessing variables and methods directly and prevent accidental data modification by creating private data members and methods within a class.
+
+
+**Access Modifiers in Python**
+
+Encapsulation can be achieved by declaring the data members and methods of a class either as private or protected. But In Python, we don’t have direct access modifiers like public, private, and protected. We can achieve this by using `single underscore` and `double underscores`.
+
+Python provides three types of access modifiers private, public, and protected.
+
+- Public Member: Accessible anywhere from outside class
+- Private Member: Accessible within the class
+- Protected Member: Accessible within the class and its subclasses
+
+Example
+
+```python
+
+class Employee:
+    def __init__(self,name,salary):
+        # Public Member (accessible within or outside of a class) 
+        self.name = name 
+
+        # Protected Member (accessible within the class and it's subclass)
+        self._project = project
+
+        # Private Member (accessible only within a class)
+        self.__salary = salary
+
+```
+
+**Examples of Encapsulation**
+
+In this example, we create an Employee class by defining employee attributes such as name and salary as an instance variable and implementing behavior using `work()` and `show()` instance methods.
+
+```python
+class Employee:
+    # constructor
+    def __init__(self, name, salary, project):
+        # data members
+        self.name = name
+        self.salary = salary
+        self.project = project
+
+    # method
+    # to display employee's details
+    def show(self):
+        # accessing public data member
+        print("Name: ", self.name, 'Salary:', self.salary)
+
+    # method
+    def work(self):
+        print(self.name, 'is working on', self.project)
+
+# creating object of a class
+emp = Employee('Jessa', 8000, 'NLP')
+
+# calling public method of the class
+emp.show()
+emp.work()
+```
+
+**Output:**
+
+> Name:  Jessa Salary: 8000  
+> Jessa is working on NLP
+
 
 
 ## Inheritance
