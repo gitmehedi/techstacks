@@ -4,6 +4,22 @@
     <strong>Object-Oriented Programming (OOP) is the term used to describe a programming approach based on objects and classes.</strong>
 </div>
 
+- [Introduction](#introduction)
+- [Pillars of OOPs](#pillars-of-oops)
+  - [Abstraction](#abstraction)
+  - [Encapsulation](#encapsulation)
+  - [Inheritance](#inheritance)
+  - [Polymorph](#polymorph)
+- [SOLID Principle](#solid-principle)
+  - [Single-Responsibility Principle](#single-responsibility-principle)
+  - [Open-Closed Principle](#open-closed-principle)
+  - [Liskov Substitution Principle](#liskov-substitution-principle)
+  - [Interface Segregation Principle](#interface-segregation-principle)
+  - [Dependency Inversion Principle](#dependency-inversion-principle)
+- [References](#references)
+  - [Source Code](#source-code)
+  - [Documentation](#documentation)
+
 
 # Introduction
 Object-oriented programming is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields, and code in the form of procedures. A common feature of objects is that methods are attached to them and can access and modify the object's data fields.
