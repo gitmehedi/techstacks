@@ -8,7 +8,9 @@
 - [Pillars of OOPs](#pillars-of-oops)
   - [Abstraction](#abstraction)
   - [Encapsulation](#encapsulation)
+    - [References:](#references)
   - [Inheritance](#inheritance)
+    - [References](#references-1)
   - [Polymorph](#polymorph)
 - [SOLID Principle](#solid-principle)
   - [Single-Responsibility Principle](#single-responsibility-principle)
@@ -16,13 +18,22 @@
   - [Liskov Substitution Principle](#liskov-substitution-principle)
   - [Interface Segregation Principle](#interface-segregation-principle)
   - [Dependency Inversion Principle](#dependency-inversion-principle)
-- [References](#references)
+- [References](#references-2)
   - [Source Code](#source-code)
   - [Documentation](#documentation)
 
 
 # Introduction
 Object-oriented programming is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields, and code in the form of procedures. A common feature of objects is that methods are attached to them and can access and modify the object's data fields.
+
+
+The OOPs concepts include the following:
+- Class
+- Object
+- Inheritance
+- Polymorphism
+- Abstraction
+- Encapsulation
 
 
 # Pillars of OOPs
@@ -106,9 +117,55 @@ emp.work()
 > Name:  Jessa Salary: 8000  
 > Jessa is working on NLP
 
-
+### References:
+- https://pynative.com/python-encapsulation/
 
 ## Inheritance
+Inheritance allows us to define a class that inherits all the methods and properties from another class.
+
+`Parent Class` is the class being inherited from, also called base class.
+
+`Child Class` is the class that inherits from another class, also called derived class.
+
+```python
+class Animal:
+
+    # attribute and method of the parent class
+    name = ""
+    
+    def eat(self):
+        print("I can eat")
+
+# inherit from Animal
+class Dog(Animal):
+
+    # new method in subclass
+    def display(self):
+        # access name attribute of superclass using self
+        print("My name is ", self.name)
+
+# create an object of the subclass
+labrador = Dog()
+
+# access superclass attribute and method 
+labrador.name = "Rohu"
+labrador.eat()
+
+# call subclass method 
+labrador.display()
+```
+
+Types of Inheritance
+
+* Single Inheritance: 
+* Multiple Inheritance: 
+* Multilevel Inheritance :
+* Hierarchical Inheritance: 
+* Hybrid Inheritance: 
+
+### References
+- https://www.geeksforgeeks.org/types-of-inheritance-python/
+
 ## Polymorph
 
 # SOLID Principle
