@@ -47,7 +47,7 @@ The major concepts that we have discussed above are known as pillars of OOPs. Th
 Details of are given below
 ## Abstraction
 ## Encapsulation
-The wrapping up of data and method into a single unit is known as encapsulation. It is also known as information hiding concept.
+The wrapping and controlling access of logically grouped data and method into a single unit called class is known as encapsulation. Controlling access can be implemented using access modifiers (public,protected,private).
 
 In a simple way, when you create a class with data and methods, you are implementing a encapsulation.
 
