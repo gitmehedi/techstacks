@@ -11,10 +11,11 @@
   - [Static Methods](#static-methods)
 - [Principal of OOPs](#principal-of-oops)
   - [Abstraction](#abstraction)
+    - [References](#references)
   - [Encapsulation](#encapsulation)
-    - [References:](#references)
+    - [References:](#references-1)
   - [Inheritance](#inheritance)
-    - [References](#references-1)
+    - [References](#references-2)
   - [Polymorphism](#polymorphism)
 - [SOLID Principle](#solid-principle)
   - [Single-Responsibility Principle](#single-responsibility-principle)
@@ -22,7 +23,7 @@
   - [Liskov Substitution Principle](#liskov-substitution-principle)
   - [Interface Segregation Principle](#interface-segregation-principle)
   - [Dependency Inversion Principle](#dependency-inversion-principle)
-- [References](#references-2)
+- [References](#references-3)
   - [Source Code](#source-code)
   - [Documentation](#documentation)
 
@@ -123,7 +124,23 @@ The major concepts that we have discussed above are known as pillars of OOPs. Th
 - Polymorphism
 
 Details of are given below
+
 ## Abstraction
+This means that we cannot create objects of an abstract class and these are only meant to be inherited. The classes that cannot be instantiated. Then an object of the derived class is used to access the features of the base class. 
+
+The abstract class is an `interface`. Interfaces in OOP enable a class to inherit data and functions from a base class by extending it. In Python, we use the `NotImplementedError` to restrict the instantiation of a class. Any class having this error inside method definitions cannot be instantiated.
+
+We can understand that an abstract class just serves as a template for other classes by defining a list of methods that the classes must implement. To use such a class, we must derive them keeping in mind that we would either be using or overriding the features specified in that class.
+
+![Abstract Image](./img/abstract.png)
+
+
+
+
+### References
+- https://www.scaler.com/topics/python/data-abstraction-in-python/
+
+
 ## Encapsulation
 The wrapping and controlling access of logically grouped data and method into a single unit called class is known as encapsulation. Controlling access can be implemented using access modifiers (public,protected,private).
 
