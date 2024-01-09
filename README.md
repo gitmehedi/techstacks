@@ -31,14 +31,12 @@
 # Introduction
 Object-oriented programming is a programming paradigm based on the concept of objects, which can contain data and code: data in the form of fields, and code in the form of procedures. A common feature of objects is that methods are attached to them and can access and modify the object's data fields.
 
+Structure of object-oriented programming
 
-The OOPs concepts include the following:
-- Class
-- Object
-- Inheritance
-- Polymorphism
-- Abstraction
-- Encapsulation
+- Class: A class is a data type that provides a framework for creating objects. You can define a class to create multiple objects without writing additional code.
+- Object: In OOP, an object represents an instance, or creation, of a class. Objects define specific data, such as properties and behaviors, to implement code.
+- Method: A method is a function that performs a task or action. For example, a method may return information about an object's data.
+- Attribute: This structure stores information about an object and defines its state. You can define an attribute as part of the class.
 
 
 # Class
@@ -441,11 +439,11 @@ object.func2()
 # SOLID Principle
 SOLID is an acronym for the first five object-oriented design (OOD) principles by Robert C. Martin
 SOLID stands for:
-- S - Single-responsiblity Principle
-- O - Open-closed Principle
-- L - Liskov Substitution Principle
-- I - Interface Segregation Principle
-- D - Dependency Inversion Principle
+- SRP - Single-responsiblity Principle
+- OCP - Open-closed Principle
+- LSP - Liskov Substitution Principle
+- ISP - Interface Segregation Principle
+- DIP - Dependency Inversion Principle
 
 ## Single-Responsibility Principle
 Single-responsibility Principle (SRP) states:
@@ -460,19 +458,19 @@ Open-closed Principle (OCP) states:
 
 
 ## Liskov Substitution Principle
-Liskov Substitution Principle states:
+Liskov Substitution Principle (LSP) states:
 
 > Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.
 
 
 ## Interface Segregation Principle
-Interface segregation principle states:
+Interface segregation principle (ISP) states:
 
 > A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.
 
 
 ## Dependency Inversion Principle
-Dependency inversion principle states:
+Dependency inversion principle (DIP) states:
 > Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.
 
 
