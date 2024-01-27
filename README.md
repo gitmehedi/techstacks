@@ -10,6 +10,22 @@
 - [ODOO (On Demand Open Object)](#odoo-on-demand-open-object)
 - [History](#history)
 - [Odoo Features](#odoo-features)
+  - [View Types](#view-types)
+    - [1. Tree or List](#1-tree-or-list)
+    - [2. Kanban](#2-kanban)
+    - [3. Form](#3-form)
+    - [4. Search](#4-search)
+    - [5. Calendar](#5-calendar)
+    - [6. Activity](#6-activity)
+    - [7. Dashboard](#7-dashboard)
+    - [8. Gantt](#8-gantt)
+    - [9. Pivot](#9-pivot)
+    - [10. Graph](#10-graph)
+    - [11. Grid](#11-grid)
+    - [12. Map](#12-map)
+    - [13. Cohort](#13-cohort)
+    - [14. Map](#14-map)
+  - [Actions Types](#actions-types)
   - [Fields Types](#fields-types)
     - [1. Char (Text)](#1-char-text)
       - [1. Char Emoji (char\_emoji)](#1-char-emoji-char_emoji)
@@ -77,6 +93,124 @@ History. In 2005, Fabien Pinckaers, the founder and current CEO of Odoo, started
 # History
 
 # Odoo Features
+## View Types
+### 1. Tree or List
+
+```xml
+
+```
+
+![Tree](img/view_tree.jpg)
+
+### 2. Kanban
+
+```xml
+
+```
+
+![Kanban](img/view_kanban.jpg)
+
+### 3. Form
+
+```xml
+
+```
+
+![Form](img/view_form.jpg)
+
+### 4. Search
+
+```xml
+
+```
+
+![Search](img/view_search.jpg)
+
+### 5. Calendar
+
+```xml
+
+```
+
+![Calendar](img/view_calendar.jpg)
+
+### 6. Activity
+
+```xml
+
+```
+
+![Activity](img/view_activity.jpg)
+
+### 7. Dashboard
+
+```xml
+
+```
+
+![Dashboard](img/view_dashboard.jpg)
+
+### 8. Gantt
+
+```xml
+
+```
+
+![Gantt](img/view_gantt.png)
+
+### 9. Pivot
+
+```xml
+
+```
+
+![Pivot](img/view_pivot.jpg)
+
+### 10. Graph
+
+```xml
+
+```
+
+![Graph](img/view_graph.jpg)
+
+### 11. Grid
+
+```xml
+
+```
+
+![Grid](img/view_grid.jpg)
+
+### 12. Map
+
+
+```xml
+
+```
+
+![Map](img/view_map.jpg)
+
+### 13. Cohort
+
+```xml
+
+```
+
+![Cohort](img/view_cohort.jpg)
+
+### 14. Map
+
+```xml
+
+```
+
+![Map](img/view_map.jpg)
+
+
+
+## Actions Types
+
 ## Fields Types
 There are 15 fields types of fields available in Odoo.
 ### 1. Char (Text)
