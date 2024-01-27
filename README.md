@@ -359,8 +359,16 @@ user can upload a pdf file, which can be viewed below.
 ![pdf_viewer](img/binary_pdf_viewer.png)
 
 
-
 ### 8. HTML
+
+```python
+description = fields.Html('Description')
+```
+
+```xml
+<field name="description" widget="html"/>
+```
+
 ### 9.  One2many
 The One2many field displays the multiple records from another model with an existing relationship to the current model.
 
