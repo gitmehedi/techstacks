@@ -12,69 +12,57 @@
 - [Odoo Features](#odoo-features)
   - [Fields Types](#fields-types)
     - [1. Char (Text)](#1-char-text)
-      - [Widgets](#widgets)
-        - [1. Char Emoji (char\_emoji)](#1-char-emoji-char_emoji)
-        - [2. URL](#2-url)
-        - [3. text](#3-text)
-        - [4. badge](#4-badge)
-        - [5. email](#5-email)
-        - [6. CopyClipboardChar](#6-copyclipboardchar)
-        - [7. image](#7-image)
-        - [7. phone](#7-phone)
-        - [8. domain](#8-domain)
+      - [1. Char Emoji (char\_emoji)](#1-char-emoji-char_emoji)
+      - [2. URL](#2-url)
+      - [3. text](#3-text)
+      - [4. badge](#4-badge)
+      - [5. email](#5-email)
+      - [6. CopyClipboardChar](#6-copyclipboardchar)
+      - [7. image](#7-image)
+      - [7. phone](#7-phone)
+      - [8. domain](#8-domain)
     - [2. Text (Multi-line)](#2-text-multi-line)
     - [3. Selection](#3-selection)
-      - [Widgets](#widgets-1)
-        - [1. badge](#1-badge)
-        - [2. priority](#2-priority)
-        - [3. radio](#3-radio)
+      - [1. badge](#1-badge)
+      - [2. priority](#2-priority)
+      - [3. radio](#3-radio)
     - [4. Numeric](#4-numeric)
       - [1. Float](#1-float)
-      - [Widgets](#widgets-2)
         - [1. Monetary](#1-monetary)
         - [2. percentage](#2-percentage)
         - [3. percentpie](#3-percentpie)
         - [4. float\_time](#4-float_time)
-        - [1. Monetary](#1-monetary-1)
       - [2. Interger](#2-interger)
-      - [Widgets](#widgets-3)
         - [1. color\_picker](#1-color_picker)
         - [2. percentpie](#2-percentpie)
         - [3. progressbar](#3-progressbar)
         - [4. handle](#4-handle)
-      - [3. Monetary](#3-monetary)
     - [5. Data / Time](#5-data--time)
       - [1. Date](#1-date)
-      - [Widgets](#widgets-4)
-        - [1. remaining\_days](#1-remaining_days)
+      - [1. remaining\_days](#1-remaining_days)
       - [2. Datetime](#2-datetime)
-      - [Widgets](#widgets-5)
-        - [1. date](#1-date-1)
-        - [2. remaining\_days](#2-remaining_days)
-        - [2. daterange](#2-daterange)
+      - [1. date](#1-date-1)
+      - [2. remaining\_days](#2-remaining_days)
+      - [2. daterange](#2-daterange)
     - [6. Boolean (Checkbox)](#6-boolean-checkbox)
-      - [Widgets](#widgets-6)
-        - [1. boolean\_toggle](#1-boolean_toggle)
-        - [2. website\_publish\_button](#2-website_publish_button)
-        - [3. boolean\_favorite](#3-boolean_favorite)
+      - [1. boolean\_toggle](#1-boolean_toggle)
+      - [2. website\_publish\_button](#2-website_publish_button)
+      - [3. boolean\_favorite](#3-boolean_favorite)
     - [7. Binary (Attachment)](#7-binary-attachment)
-      - [Widgets](#widgets-7)
-        - [1. image](#1-image)
-        - [2. pdf\_viewer](#2-pdf_viewer)
+      - [1. image](#1-image)
+      - [2. pdf\_viewer](#2-pdf_viewer)
     - [8. HTML](#8-html)
     - [9.  One2many](#9--one2many)
     - [10. Many2one](#10-many2one)
-      - [Widgets](#widgets-8)
-        - [1. badge](#1-badge-1)
-        - [2. radio](#2-radio)
-        - [3. this widget can be used in the Many2one field which has relation to the model ‘hr.employee’. It displays the avatar of the employee selected in the field](#3-this-widget-can-be-used-in-the-many2one-field-which-has-relation-to-the-model-hremployee-it-displays-the-avatar-of-the-employee-selected-in-the-field)
-        - [4. many2one\_avatar\_user](#4-many2one_avatar_user)
+      - [1. badge](#1-badge-1)
+      - [2. radio](#2-radio)
+      - [3. many2one\_avatar\_employee](#3-many2one_avatar_employee)
+      - [4. many2one\_avatar\_user](#4-many2one_avatar_user)
     - [11. Many2many](#11-many2many)
-      - [Widgets](#widgets-9)
       - [1. many2many\_tags](#1-many2many_tags)
       - [2. many2many\_checkboxes](#2-many2many_checkboxes)
-      - [3. many2many\_checkboxes](#3-many2many_checkboxes)
-    - [12. Computed](#12-computed)
+      - [3. many2many\_tags\_avatar](#3-many2many_tags_avatar)
+    - [12. Related](#12-related)
 - [Documentation](#documentation)
   - [Sources](#sources)
   - [References](#references)
@@ -96,56 +84,56 @@ There are 15 fields types of fields available in Odoo.
    ```python
    name = fields.Char('Title', required=True)
    ```
-   #### Widgets
+   **Widgets**
 
-   ##### 1. Char Emoji (char_emoji)
+   #### 1. Char Emoji (char_emoji)
    ```python
    <field name="name" widget="char_emojis"/>
    ```
    ![char_emojis](img/char_emojijs.png)
 
-   ##### 2. URL
+   #### 2. URL
    ```python
    <field name="book_url" widget="url"/>
    ```
    ![url](img/url.png)
 
-   ##### 3. text
+   #### 3. text
    ```python
    <field name="name" widget="text"/>
    ```
    ![text](img/text.png)
 
-   ##### 4. badge
+   #### 4. badge
    ```python
    <field name="name" widget="badge"/>
    ```
    ![badge](img/badge.png)
 
-   ##### 5. email
+   #### 5. email
    ```python
    <field name="name" widget="email"/>
    ```
    ![email](img/email.png)
    
-   ##### 6. CopyClipboardChar
+   #### 6. CopyClipboardChar
    ```python
    <field name="name" widget="CopyClipboardChar"/>
    ```
    ![CopyClipboardChar](img/CopyClipboardChar.png)
 
-   ##### 7. image
+   #### 7. image
    ```python
    <field name="name" widget="image"/>
    ```
    ![image](img/image.png)
 
-   ##### 7. phone
+   #### 7. phone
    ```python
    <field name="name" widget="image"/>
    ```
 
-   ##### 8. domain
+   #### 8. domain
    ```python
    <field name="name" widget="domain"/>
    ```
@@ -170,15 +158,15 @@ state = fields.Selection(STATES, string='Status')
 ```
 ![Selection](img/selection.png)
 
-#### Widgets
-##### 1. badge
+**Widgets**  
+#### 1. badge
 Displays the selected values in a rounded shape. This widget will not allow editing the value but can give a default value.
 ```python
 <field name="state" widget="badge"/>
 ```
 ![Selection](img/selection.png)
 
-##### 2. priority
+#### 2. priority
 displays star symbols instead of values. This widget is commonly used for displaying the priority of records.
 
 ```python
@@ -186,7 +174,7 @@ displays star symbols instead of values. This widget is commonly used for displa
 ```
 ![Priority](img/selection_priority.png)
 
-##### 3. radio
+#### 3. radio
 displays selection field values as radio buttons
 
 ```python
@@ -201,7 +189,7 @@ displays selection field values as radio buttons
    ```python
    price = fields. Float("Book Price")
    ```
-   #### Widgets
+   **Widgets**  
    ##### 1. Monetary
    Widget used to show float value as monetary similar to Monetary field type.
    ```python
@@ -231,17 +219,13 @@ displays selection field values as radio buttons
    ```
    ![Float Time](img/float_time.png)
 
-   ##### 1. Monetary
-   
-
-
 
    #### 2. Interger
    Integer field stores all integer values including positive, negative, or zero, without decimal values.
    ```python
    book_count = fields.Integer('Book Count')
    ```
-   #### Widgets
+   **Widgets**
    ##### 1. color_picker
    able to choose different colors for the records.
    ```python
@@ -267,8 +251,6 @@ a percentage bar. This is also used for computed fields.
    ```
    ![progressbar](img/progressbar.png)
 
-
-
    ##### 4. handle
    This widget displays a drag handle to order the records from the list view.
 
@@ -276,8 +258,6 @@ a percentage bar. This is also used for computed fields.
    <field name="sequence" widget="handle"/>
    ```
    ![handle](img/handle.png)
-
-   #### 3. Monetary
 
 ### 5. Data / Time
    #### 1. Date
@@ -287,8 +267,8 @@ a percentage bar. This is also used for computed fields.
    ```
    ![Date](img/date.png)
 
-   #### Widgets
-   ##### 1. remaining_days
+   **Widgets**
+   #### 1. remaining_days
    this widget calculates the remaining days based on the selected date.
    ```python
    <field name="published_date" widget="remaining_days"/>
@@ -302,8 +282,8 @@ a percentage bar. This is also used for computed fields.
    ```
    ![datetime](img/datetime.png)
    
-   #### Widgets
-   ##### 1. date
+   **Widgets**
+   #### 1. date
    used to display date without time.
 
    ```python
@@ -311,19 +291,16 @@ a percentage bar. This is also used for computed fields.
    ```
    ![remaining_days](img/datetime_date.png)
 
-   ##### 2. remaining_days
+   #### 2. remaining_days
    Displays the remaining number of days before the selected date (e.g., In 5 days), based on the current date and time.
 
-   ##### 2. daterange
+   #### 2. daterange
    using this widget, the user can choose a date time range like below
    ```python
    <field name="date_begin" widget="daterange" string="from" class="oe_inline" options="{'related_end_date': 'date_end'}"/>
    <field name="date_end" widget="daterange" string="To"  class="oe_inline" options="{'related_start_date': 'date_begin'}"/>
    ```
    ![Date Range](img/datetime_daterange.png)
-   
-   
-
 
 ### 6. Boolean (Checkbox)
 This field type is used when the field value will either true or false.	
@@ -333,8 +310,8 @@ published = fields.Boolean('Published')
 ![Boolean](img/boolean.png)
 
 
-#### Widgets
-##### 1. boolean_toggle
+**Widgets**
+#### 1. boolean_toggle
 This widget displays the boolean field like a toggle button.
 ```python
 <field name="published" widget="boolean_toggle"/>
@@ -342,14 +319,14 @@ This widget displays the boolean field like a toggle button.
 ![boolean_toggle](img/binary.png)
 
 
-##### 2. website_publish_button
+#### 2. website_publish_button
 This widget can be used to show if it is published on the website or not.
 ```python
 <field name="published" widget="website_publish_button"/>
 ```
 ![website_publish_button](img/website_publish_button.png)
 
-##### 3. boolean_favorite
+#### 3. boolean_favorite
  this widget will change the style of a boolean field to a star similar to "priority” widget
 ```python
 <field name="is_favourite"  widget="boolean_favorite" nolabel="1"/>
@@ -364,16 +341,16 @@ file = fields.Binary(string="File")
 ```
 ![Binary](img/binary.png)
 
-#### Widgets
+**Widgets**
 
-##### 1. image
+#### 1. image
 Using this widget, users can upload image files in the Binary field similar to the Image field type.
 ```python
 <field name="file" widget="image"/>
 ```
 ![image](img/binary_image.png)
 
-##### 2. pdf_viewer
+#### 2. pdf_viewer
 user can upload a pdf file, which can be viewed below.
 
 ```python
@@ -400,28 +377,30 @@ author_id = fields.Many2one('res.partner', string="Author")
 ```
 ![Many2one](img/many2one.png)
 
-#### Widgets
-##### 1. badge
+**Widgets**
+#### 1. badge
 the many2one field value will display like a badge. The value cannot be then edited.
 ```python
 <field name="author_id" widget="badge"/>
 ```
 ![many2one_badge](img/many2one_badge.png)
 
-##### 2. radio
+#### 2. radio
 all the values that can be selected from the Many2one field will display like radio buttons
 ```python
 <field name="author_id" widget="radio"/>
 ```
 ![many2one_radio](img/many2one_radio.png)
 
-##### 3. this widget can be used in the Many2one field which has relation to the model ‘hr.employee’. It displays the avatar of the employee selected in the field
+#### 3. many2one_avatar_employee
+this widget can be used in the Many2one field which has relation to the model ‘hr.employee’. It displays the avatar of the employee selected in the field
+
 ```python
 <field name="employee_id" widget="many2one_avatar_employee"/>
 ```
 ![many2one_avatar_employee](img/many2one_avatar_employee.png)
 
-##### 4. many2one_avatar_user
+#### 4. many2one_avatar_user
 this widget can be used in the Many2one field, which has relation to the model ‘res.users’. It displays the avatar of the user selected in the field.
 
 ```python
@@ -435,7 +414,7 @@ Many2many field type in Odoo lists multiple records from another model to the re
 ```python
 tag_ids = fields.Many2many('book.category', string='Tags')
 ```
-#### Widgets
+**Widgets**
 #### 1. many2many_tags
 Using this widget, the user can view the multiple records selected in the Many2many field, like tags.
 ```python
@@ -450,7 +429,7 @@ This widget will display the Many2many field in checkboxes.
 ```
 ![many2many_checkboxes](img/many2many_checkboxes.png)
 
-#### 3. many2many_checkboxes
+#### 3. many2many_tags_avatar
 This widget can be used in the Many2many field, which has relation to ‘res.partner’ model, and it will display the avatar of the selected contact records.
 ```python
 <field name="author_ids" widget="many2many_tags_avatar"/>
@@ -458,8 +437,7 @@ This widget can be used in the Many2many field, which has relation to ‘res.par
 ![many2many_tags_avatar](img/many2many_tags_avatar.png)
 
 
-### 12. Computed
-
+### 12. Related
 
 
 # Documentation
