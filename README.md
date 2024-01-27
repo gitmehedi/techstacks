@@ -452,5 +452,3 @@ This widget can be used in the Many2many field, which has relation to ‘res.par
 ## Sources
 ## References
 - https://www.cybrosys.com/blog/field-types-and-widgets-in-odoo-16
-- 
-
