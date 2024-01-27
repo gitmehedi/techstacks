@@ -26,6 +26,12 @@
     - [13. Cohort](#13-cohort)
     - [14. Map](#14-map)
   - [Actions Types](#actions-types)
+    - [1. Server Actions](#1-server-actions)
+    - [2. Client Actions](#2-client-actions)
+    - [3. Window Actions](#3-window-actions)
+    - [4. URL Actions](#4-url-actions)
+    - [5. Report Actions](#5-report-actions)
+    - [6. Automated Actions](#6-automated-actions)
   - [Fields Types](#fields-types)
     - [1. Char (Text)](#1-char-text)
       - [1. Char Emoji (char\_emoji)](#1-char-emoji-char_emoji)
@@ -210,6 +216,33 @@ History. In 2005, Fabien Pinckaers, the founder and current CEO of Odoo, started
 
 
 ## Actions Types
+Actions refer to the behavior of the system in response to user actions. Different types of actions in odoo are,
+### 1. Server Actions
+Server Actions (ir.actions.server)
+
+```xml
+<record id="ir_actions_server_print_report" model="ir.actions.server">
+     <field name="name">Print Sale Report</field>
+     <field name="type">ir.actions.server</field>
+     <field name="model_id" ref="sale.model_sale_order"/>
+     <field name="state">code</field>
+     <field name="code">
+             action = model.get_sale_report()
+     </field>
+</record>
+```
+
+### 2. Client Actions
+Client Actions (ir.actions.client)
+
+```xml
+
+```
+
+### 3. Window Actions
+### 4. URL Actions
+### 5. Report Actions
+### 6. Automated Actions
 
 ## Fields Types
 There are 15 fields types of fields available in Odoo.
@@ -586,3 +619,5 @@ This widget can be used in the Many2many field, which has relation to ‘res.par
 ## Sources
 ## References
 - https://www.cybrosys.com/blog/field-types-and-widgets-in-odoo-16
+- https://odootricks.tips/about/building-blocks/odoo-view-types/
+- https://www.cybrosys.com/blog/types-of-actions-in-odoo
