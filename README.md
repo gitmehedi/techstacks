@@ -27,8 +27,11 @@
     - [14. Map](#14-map)
   - [Actions Types](#actions-types)
     - [1. Server Actions](#1-server-actions)
+      - [References](#references)
     - [2. Client Actions](#2-client-actions)
+      - [References](#references-1)
     - [3. Window Actions](#3-window-actions)
+      - [References](#references-2)
     - [4. URL Actions](#4-url-actions)
     - [5. Report Actions](#5-report-actions)
     - [6. Automated Actions](#6-automated-actions)
@@ -87,7 +90,7 @@
     - [12. Related](#12-related)
 - [Documentation](#documentation)
   - [Sources](#sources)
-  - [References](#references)
+  - [References](#references-3)
 
 <!-- /TOC -->
 
@@ -221,28 +224,254 @@ Actions refer to the behavior of the system in response to user actions. Differe
 Server Actions (ir.actions.server)
 
 ```xml
-<record id="ir_actions_server_print_report" model="ir.actions.server">
-     <field name="name">Print Sale Report</field>
-     <field name="type">ir.actions.server</field>
-     <field name="model_id" ref="sale.model_sale_order"/>
-     <field name="state">code</field>
-     <field name="code">
-             action = model.get_sale_report()
-     </field>
-</record>
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="action_set_salesperson" model="ir.actions.server">
+            <field name="name">Set Salesperson</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="state">code</field>
+        </record>
+    </data>
+</odoo>
 ```
 
+> `model_id` - is the model linked to the action  
+> `name` - Name of the server action  
+> `state` - It is the type of server action.
+
+Now let’s look at the various types of server actions and their working.
+The following are the available actions to do while creating a server action.
+
+1. Execute Python Code
+2. Create a new Record
+3. Update the Record
+4. Execute several actions
+5. Send an Email
+6. Add Followers
+7. Create the Next Activity
+8. Send an SMS Text Message
+
+```xml
+# 1. Execute Python Code
+<field name="state">code</field>
+
+# 2. Create a new Record
+<field name="state">object_create</field>
+
+# 3. Update the Record
+<field name="state">object_write</field>
+
+# 4. Execute several actions
+<field name="state">multi</field>
+
+# 5. Send an Email
+<field name="state">email</field>
+
+# 6. Add Followers
+<field name="state">followers</field>
+
+# 7. Create the Next Activity
+<field name="state">next_activity</field>
+
+# 8. Send an SMS Text Message
+<field name="state">sms</field>
+```
+
+#### References
+- https://www.cybrosys.com/blog/how-to-create-configure-server-actions-in-the-odoo-15
+- https://www.odoo.com/documentation/17.0/developer/reference/backend/actions.html
+
 ### 2. Client Actions
-Client Actions (ir.actions.client)
+Client Actions (`ir.actions.client`) are basically menu-items defined in XML and the corresponding actions are handled in a widget.
+
+Step 1: Create a client action and menu in actions_view.xml within views folder
 
 ```xml
 
+<record id="action_todo_demo" model="ir.actions.client">
+    <field name="name">Todo</field>
+    <field name="tag">advanced_dashboard</field>
+    <field name="target">current</field>
+</record>
+<menuitem id="menu_todo_demo"  action="action_todo_demo"  name="Todo" />
 ```
 
+Step 2: Create a file `advance_dashboard.js` inside `static/src/js` 
+
+```javascript
+/** @odoo-module */
+import {registry} from '@web/core/registry';
+import {useService} from "@web/core/utils/hooks";
+import { Component, onWillStart } from "@odoo/owl";
+import { ControlPanel } from "@web/search/control_panel/control_panel";
+import { Dropdown } from "@web/core/dropdown/dropdown";
+import { DropdownItem } from "@web/core/dropdown/dropdown_item";
+import { SearchBar } from "@web/search/search_bar/search_bar";
+
+export class AdvancedDashboard extends Component {
+    setup() {
+        super.setup();
+        this.controlPanelDisplay = {};
+        this.action = useService("action");
+        this.orm = useService('orm');
+        onWillStart(async () => {
+            this.data = await this.orm.call('todo', 'get_values', []);
+        });
+    }
+    async loadData() {
+        console.log("Loading data....");
+        let self = this;
+        const data =  await self.orm.call('todo', 'get_values', [])
+        return data
+    }
+}
+
+AdvancedDashboard.template = "owl_application.advanced_dashboard";
+AdvancedDashboard.components = {
+    ControlPanel,
+    Dropdown,
+    DropdownItem,
+    SearchBar,
+};
+registry.category("actions").add("advanced_dashboard", AdvancedDashboard);
+```
+
+Step 3: Create a `XML` template for the `AdvancedDashboard` component
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Template for the Advanced Dashboard -->
+<templates id="template" xml:space="preserve">
+    <t t-name="owl_application.advanced_dashboard">
+        <ControlPanel display="{ 'top-right' : false }">
+            <t t-set-slot="control-panel-create-button">
+                <button t-on-click="() => loadData()" type="button" class="btn btn-primary">Load Data</button>
+            </t>
+        </ControlPanel>
+
+        <div class="row">
+            <div class="alert alert-dark" role="alert">
+                <h1 class="center">Todo Lists</h1>
+            </div>
+
+            <div class="row">
+                <table class="table">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                      </thead>
+                    <tbody>
+
+                      <t t-foreach="data" t-as="i" t-key="data_index">
+                          <tr>
+                              <th scope="row">1</th>
+                              <td><t t-esc="i.name"/></td>
+                              <td><t t-esc="i.color"/></td>
+                              <td>
+                                  <button class="btn btn-info">Edit</button>
+                                  <button class="btn btn-danger">Delete</button>
+                              </td>
+                            </tr>
+                        </t>
+                      </tbody>
+                    </table>
+            </div>
+        </div>
+	</t>
+</templates>
+```
+Step 4: Add `javascript` and `template` in `__manifest__.py` file.
+```python
+'assets': {
+    'web.assets_backend': [
+        'owl_application/static/src/js/*.js',
+        'owl_application/static/src/xml//*.xml',
+    ],
+}
+```
+
+#### References
+- https://www.cybrosys.com/blog/client-action-in-odoo-14
+- https://www.cybrosys.com/blog/types-of-actions-in-odoo
+
+
 ### 3. Window Actions
+The most common action type, used to present visualisations of a model through views: a window action defines a set of view types (and possibly specific views) for a model (and possibly specific record of the model).
+
+```python
+{
+    "type": "ir.actions.act_window",
+    "res_model": "res.partner",
+    "views": [[False, "tree"], [False, "form"]],
+    "domain": [["customer", "=", true]],
+    "target": "new",
+}
+
+# to open the form view of a specific product (obtained separately) in a new dialog:
+
+{
+    "type": "ir.actions.act_window",
+    "res_model": "product.product",
+    "views": [[False, "form"]],
+    "res_id": a_product_id,
+    "target": "new",
+}
+```
+
+In XML
+```xml
+<record model="ir.actions.act_window" id="test_action">
+    <field name="name">A Test Action</field>
+    <field name="res_model">some.model</field>
+    <field name="view_mode">graph</field>
+    <field name="view_id" ref="my_specific_view"/>
+</record>
+```
+
+Act_window views can also be defined cleanly through `ir.actions.act_window.view`.
+If you plan to allow multiple views for your model, prefer using `ir.actions.act_window.view` instead of the action `view_ids`.
+```xml
+<record model="ir.actions.act_window.view" id="test_action_tree">
+   <field name="sequence" eval="1"/>
+   <field name="view_mode">tree</field>
+   <field name="view_id" ref="view_test_tree"/>
+   <field name="act_window_id" ref="test_action"/>
+</record>
+```
+
+#### References
+- 
+
 ### 4. URL Actions
+URL Actions (`ir.actions.act_url`) allow opening a URL (website/web page) via an Odoo action. Can be customized via two fields:
+
+`url`  
+the address to open when activating the action
+
+`target`   
+- new: opens the URL in a new window/page
+- self: opens the URL in the current window/page (replaces the actual content)
+- download: redirects to a download URL
+
+```python
+{
+    "type": "ir.actions.act_url",
+    "url": "https://odoo.com",
+    "target": "self",
+}
+```
+
 ### 5. Report Actions
+Report Actions (`ir.actions.report`) triggers the printing of a report.
+
 ### 6. Automated Actions
+Automated Actions (`ir.cron`)  
+
 
 ## Fields Types
 There are 15 fields types of fields available in Odoo.
