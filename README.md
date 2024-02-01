@@ -13,8 +13,10 @@
     - [Prerequisites of Decorators](#prerequisites-of-decorators)
     - [Example](#example)
     - [References](#references)
+  - [Python Data Types](#python-data-types)
+    - [References](#references-1)
 - [Chapters](#chapters)
-- [References](#references-1)
+- [References](#references-2)
 
 
 
@@ -149,9 +151,56 @@ def ordinary():
 ordinary()  
 ```
 
-
 ### References
 - https://www.programiz.com/python-programming/decorator
+
+## Python Data Types
+Data types are the classification or categorization of data items. It represents the kind of value that tells what operations can be performed on a particular data. Since everything is an object in Python programming, data types are classes and variables are instances (objects) of these classes. 
+
+The following are the standard or built-in data types in Python:
+
+- Numeric
+  - Integer
+  - Float
+  - Complex Number 
+- Dictionary
+- Boolean
+- Set
+- Sequence Type
+  - String
+  - List
+  - Tuple      
+
+
+![Pthon Data Types](img/python_data_types.png)
+
+> Note: `type()` function is used to determine the type of data type. 
+
+
+```python
+# Numbers Data Types
+a = 5
+print("Type of a: ", type(a)) 
+  
+b = 5.0
+print("\nType of b: ", type(b)) 
+  
+c = 2 + 4j
+print("\nType of c: ", type(c)) 
+
+# Sequence Types
+
+# String Types
+String1 = 'Welcome to the Geeks World'
+print("String with the use of Single Quotes: ") 
+
+```
+
+
+
+
+### References
+- https://www.geeksforgeeks.org/python-data-types/
 
 # Chapters
 1. Whetting Your Appetite  
