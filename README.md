@@ -14,6 +14,8 @@
     - [Example](#example)
     - [References](#references)
   - [Python Data Types](#python-data-types)
+- [Interview Questions](#interview-questions)
+  - [Questions](#questions)
     - [References](#references-1)
 - [Chapters](#chapters)
 - [References](#references-2)
@@ -208,6 +210,20 @@ print("String with the use of Single Quotes: ")
 ```
 
 > Note: `type()` function is used to determine the type of data type. 
+
+# Interview Questions
+- https://www.edureka.co/blog/interview-questions/python-interview-questions/
+- 
+## Questions
+  > How is memory managed in Python?  
+
+Ans: Memory is managed in Python in the following ways:
+
+1.  Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
+2. The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.
+3. Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
+
+
 
 
 
