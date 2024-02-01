@@ -5,7 +5,8 @@
 </div>
 
 
-- [Python](#python)
+- [Introduction](#introduction)
+  - [Python Version](#python-version)
 - [Learning Index](#learning-index)
   - [Decorators](#decorators)
     - [Definition](#definition)
@@ -17,8 +18,17 @@
 
 
 
-# Python
+# Introduction
+Python is a widely used general-purpose, high level programming language. It was created by Guido van Rossum in 1991 and further developed by the Python Software Foundation. It was designed with an emphasis on code readability, and its syntax allows programmers to express their concepts in fewer lines of code.
 
+Python is a programming language that lets you work quickly and integrate systems more efficiently.
+
+
+
+## Python Version
+There are two major Python versions: Python 2 and Python 3. Both are quite different.
+- Python 2
+- Python 3
 
 # Learning Index    
 ## Decorators
