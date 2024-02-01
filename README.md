@@ -10,6 +10,7 @@
   - [Decorators](#decorators)
     - [Definition](#definition)
     - [Prerequisites of Decorators](#prerequisites-of-decorators)
+    - [Example](#example)
     - [References](#references)
 - [Chapters](#chapters)
 - [References](#references-1)
@@ -40,6 +41,7 @@ def foo(x):
 
 foo("Hi")
 ```
+> Note: `@` is used to call the decorated function more eligantly.
 
 ### Prerequisites of Decorators
 Decorator closely related to some python concepts which are basic building block for decorators.
@@ -92,6 +94,49 @@ greet = greeting("Atlantis")
 print(greet())  # prints "Hello, Atlantis!"
 
 # Output: Hello, Atlantis!
+```
+
+### Example
+
+Before Decorator `@` symbol
+```python
+def make_pretty(func):
+    # define the inner function 
+    def inner():
+        # add some additional behavior to decorated function
+        print("I got decorated")
+
+        # call original function
+        func()
+    # return the inner function
+    return inner
+
+# define ordinary function
+def ordinary():
+    print("I am ordinary")
+    
+# decorate the ordinary function
+decorated_func = make_pretty(ordinary)
+
+# call the decorated function
+decorated_func()
+```
+
+After Decorator `@` symbol
+
+```python
+def make_pretty(func):
+
+    def inner():
+        print("I got decorated")
+        func()
+    return inner
+
+@make_pretty
+def ordinary():
+    print("I am ordinary")
+
+ordinary()  
 ```
 
 
