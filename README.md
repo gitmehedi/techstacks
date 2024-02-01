@@ -6,7 +6,7 @@
 
 
 - [Introduction](#introduction)
-  - [Python Version](#python-version)
+- [Python Version](#python-version)
 - [Learning Index](#learning-index)
   - [Decorators](#decorators)
     - [Definition](#definition)
@@ -25,7 +25,7 @@ Python is a programming language that lets you work quickly and integrate system
 
 
 
-## Python Version
+# Python Version
 There are two major Python versions: Python 2 and Python 3. Both are quite different.
 - Python 2
 - Python 3
