@@ -169,12 +169,23 @@ The following are the standard or built-in data types in Python:
 - Sequence Type
   - String
   - List
-  - Tuple      
-
+  - Tuple 
 
 ![Pthon Data Types](img/python_data_types.png)
 
-> Note: `type()` function is used to determine the type of data type. 
+**1. Numbers** – They include integers, floating-point numbers, and complex numbers. eg. 1, 7.9,3+4i
+
+**2. List** – An ordered sequence of items is called a list. The elements of a list may belong to different data types. Eg. [5,’market’,2.4]
+
+**3. Tuple** – It is also an ordered sequence of elements. Unlike lists , tuples are immutable, which means they can’t be changed. Eg. (3,’tool’,1)
+
+**4. String** – A sequence of characters is called a string. They are declared within single or double-quotes. Eg. “Sana”, ‘She is going to the market’, etc.
+
+**5. Set** – Sets are a collection of unique items that are not in order. Eg. {7,6,8}
+
+**6. Dictionary** – A dictionary stores values in key and value pairs where each value can be accessed through its key. The order of items is not important. Eg. {1:’apple’,2:’mango}
+
+**7. Boolean** – There are 2 boolean values - True and False.     
 
 
 ```python
@@ -196,6 +207,7 @@ print("String with the use of Single Quotes: ")
 
 ```
 
+> Note: `type()` function is used to determine the type of data type. 
 
 
 
