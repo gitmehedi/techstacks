@@ -14,11 +14,12 @@
     - [Example](#example)
     - [References](#references)
   - [Python Data Types](#python-data-types)
-- [Interview Questions](#interview-questions)
-  - [Questions](#questions)
     - [References](#references-1)
+- [Interview Questions](#interview-questions)
+  - [References](#references-2)
+  - [Questions](#questions)
 - [Chapters](#chapters)
-- [References](#references-2)
+- [References](#references-3)
 
 
 
@@ -211,9 +212,17 @@ print("String with the use of Single Quotes: ")
 
 > Note: `type()` function is used to determine the type of data type. 
 
+
+
+### References
+- https://www.geeksforgeeks.org/python-data-types/
+
+
 # Interview Questions
+## References 
 - https://www.edureka.co/blog/interview-questions/python-interview-questions/
-- 
+  
+  
 ## Questions
   > How is memory managed in Python?  
 
@@ -226,9 +235,6 @@ Ans: Memory is managed in Python in the following ways:
 
 
 
-
-### References
-- https://www.geeksforgeeks.org/python-data-types/
 
 # Chapters
 1. Whetting Your Appetite  
