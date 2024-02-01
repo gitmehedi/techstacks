@@ -6,12 +6,99 @@
 
 
 - [Python](#python)
-- [References](#references)
+- [Learning Index](#learning-index)
+  - [Decorators](#decorators)
+    - [Definition](#definition)
+    - [Prerequisites of Decorators](#prerequisites-of-decorators)
+    - [References](#references)
+- [Chapters](#chapters)
+- [References](#references-1)
 
 
 
 # Python
 
+
+# Learning Index    
+## Decorators
+### Definition
+A decorator is a design pattern in Python that allows a user to add new functionality to an existing object without modifying its structure. In Python, everything is a object.
+
+Decorator takes a function as arguments and returns a function by adding some functionality.
+
+```python
+def our_decorator(func):
+    def function_wrapper(x):
+        print("Before calling " + func.__name__)
+        func(x)
+        print("After calling " + func.__name__)
+    return function_wrapper
+
+@our_decorator
+def foo(x):
+    print("Hi, foo has been called with " + str(x))
+
+foo("Hi")
+```
+
+### Prerequisites of Decorators
+Decorator closely related to some python concepts which are basic building block for decorators.
+- Nested Fuctions
+- Pass Functions as Arguments
+- Return a Function as Value
+
+Details also available here
+**Nested Functions**
+
+We can include one function inside another, known as a nested function. For example,
+
+```python
+def outer(x):
+    def inner(y):
+        return x + y
+    return inner
+
+add_five = outer(5)
+result = add_five(6)
+print(result)  # prints 11
+
+# Output: 11
+```
+
+**Pass Functions as Arguments**  
+
+We can pass a function as an argument to another function in Python. For Example,
+```python
+def add(x, y):
+    return x + y
+
+def calculate(func, x, y):
+    return func(x, y)
+
+result = calculate(add, 4, 6)
+print(result)  # prints 10
+```
+
+**Return a Function as a Value**  
+we can also return a function as a return value. For example,
+
+```python
+def greeting(name):
+    def hello():
+        return "Hello, " + name + "!"
+    return hello
+
+greet = greeting("Atlantis")
+print(greet())  # prints "Hello, Atlantis!"
+
+# Output: Hello, Atlantis!
+```
+
+
+### References
+- https://www.programiz.com/python-programming/decorator
+
+# Chapters
 1. Whetting Your Appetite  
 2. Using the Python Interpreter  
 2.1. Invoking the Interpreter  
@@ -150,6 +237,6 @@
 # References
 - https://docs.python.org/3.10/tutorial/index.html
 - https://mindmajix.com/top-20-python-frameworks-list
-- 
+
 
 
