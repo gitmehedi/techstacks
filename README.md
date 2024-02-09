@@ -224,13 +224,42 @@ print("String with the use of Single Quotes: ")
   
   
 ## Questions
-  > How is memory managed in Python?  
+  > 1. How is memory managed in Python?  
 
 Ans: Memory is managed in Python in the following ways:
 
 1.  Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
 2. The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.
 3. Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
+
+> 2. Q29.What is a lambda function?
+
+Ans: An anonymous function is known as a lambda function. This function can have any number of parameters but, can have just one statement.
+
+Example:
+```python
+a = lambda x,y : x+y
+print(a(5, 6))
+```
+
+> Q3: What are the generators in python?  
+
+Ans: Functions that return an iterable set of items are called generators.
+
+> Q4. What does this mean: *args, **kwargs? And why would we use it?
+
+- `*args` when we aren’t sure how many arguments are going to be passed to a function, or if we want to pass a stored list or tuple of arguments to a function. 
+  
+- `**kwargs` is used when we don’t know how many keyword arguments will be passed to a function, or it can be used to pass the values of a dictionary as keyword arguments. The identifiers args and kwargs are a convention, you could also use *bob and **billy but that would not be wise.
+
+> Q5. What are Python packages?
+
+- Modules: are python file with `.py` extension
+- Packages: are folder with containing many python files with a special `__init__.py` file.
+
+
+
+
 
 
 
