@@ -908,3 +908,6 @@ Prepare for Interview [here](./interview/README.md).
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 - https://devdocs.io/react/hooks-intro
 - https://react.dev/reference/react
+- https://state-updates.vercel.app/
+- https://jsx-notes.vercel.app/
+  
