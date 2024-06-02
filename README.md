@@ -5,28 +5,25 @@
 </div>
 
 <!-- TOC -->
-
 * [Introduction](#introduction)
 * [Installation](#installation)
-    * [Prerequisites](#prerequisites)
-    * [Steps of Installation](#steps-of-installation)
-        * [Step 1: Update System](#step-1-update-system)
-        * [Step 2: Install Nginx](#step-2-install-nginx)
-        * [Step 3: Verify Nginx Installation](#step-3-verify-nginx-installation)
-        * [Step 4: Start and Enable Nginx Service](#step-4-start-and-enable-nginx-service)
-        * [Step 5: Configure Firewall](#step-5-configure-firewall)
-        * [Step 6: Manage Nginx Process](#step-6-manage-nginx-process)
+  * [Prerequisites](#prerequisites)
+  * [Steps of Installation](#steps-of-installation)
+    * [Step 1: Update System](#step-1-update-system)
+    * [Step 2: Install Nginx](#step-2-install-nginx)
+    * [Step 3: Verify Nginx Installation](#step-3-verify-nginx-installation)
+    * [Step 4: Start and Enable Nginx Service](#step-4-start-and-enable-nginx-service)
+    * [Step 5: Configure Firewall](#step-5-configure-firewall)
+    * [Step 6: Manage Nginx Process](#step-6-manage-nginx-process)
 * [Configuration](#configuration)
-    * [Create a Nginx Configuration](#create-a-nginx-configuration)
+  * [Create a Nginx Configuration](#create-a-nginx-configuration)
 * [Blogs](#blogs)
-    * [Blog 1: Starting, Stopping, and Reloading Configuration](#blog-1-starting-stopping-and-reloading-configuration)
-    * [Blog 2: Configuration File’s Structure](#blog-2-configuration-files-structure)
-    * [Blog 3: Setting Up a Simple Proxy Server](#blog-3-setting-up-a-simple-proxy-server)
-    * [Blog 4: Setting Up FastCGI Proxying](#blog-4-setting-up-fastcgi-proxying)
-    * [Configure SSL for Nginx Configuration](#configure-ssl-for-nginx-configuration)
-    * [# Questions](#-questions)
+  * [Blog 1: Starting, Stopping, and Reloading Configuration](#blog-1-starting-stopping-and-reloading-configuration)
+  * [Blog 2: Configuration File’s Structure](#blog-2-configuration-files-structure)
+  * [Blog 3: Setting Up a Simple Proxy Server](#blog-3-setting-up-a-simple-proxy-server)
+  * [Blog 4: Setting Up FastCGI Proxying](#blog-4-setting-up-fastcgi-proxying)
+  * [Blog 5: Configure SSL for Nginx Configuration](#blog-5-configure-ssl-for-nginx-configuration)
 * [References](#references)
-
 <!-- TOC -->
 
 # Introduction
