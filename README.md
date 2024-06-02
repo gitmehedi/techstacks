@@ -5,28 +5,21 @@
 </div>
 
 
-<!-- TOC -->
-
-- [Stacks](#stacks)
-    - [Message Queue](#message-queue)
-        - [Kafka](#kafka)
-        - [RabbitMQ](#rabbitmq)
-    - [Management Methodology](#management-methodology)
-        - [Scrum](#scrum)
-
-<!-- /TOC -->
 
 
 # Stacks
-
-## Message Queue
-A message queue provides an asynchronous communications protocol,
-which is a system that puts a message onto a message queue.
-
-### [Kafka](https://github.com/gitmehedi/techstacks/tree/kafka)
-### [RabbitMQ](https://github.com/gitmehedi/techstacks/tree/rabbitmq_python)
-
-
-## Management Methodology
-### [Scrum](https://github.com/gitmehedi/techstacks/tree/scrum)
-
+## [NGINX](https://github.com/gitmehedi/techstacks/tree/nginx)
+## [GIS](https://github.com/gitmehedi/techstacks/tree/gis)
+## [React](https://github.com/gitmehedi/techstacks/tree/react)
+## [Scrum](https://github.com/gitmehedi/techstacks/tree/scrum)
+## [RabbitMQ](https://github.com/gitmehedi/techstacks/tree/rabbitmq)
+## [Python](https://github.com/gitmehedi/techstacks/tree/python)
+## [PostgreSQL](https://github.com/gitmehedi/techstacks/tree/postgresql)
+## [OOP](https://github.com/gitmehedi/techstacks/tree/oop)
+## [ODOO](https://github.com/gitmehedi/techstacks/tree/odoo)
+## [Kafka](https://github.com/gitmehedi/techstacks/tree/kafka)
+## [Jenkins](https://github.com/gitmehedi/techstacks/tree/jenkins)
+## [Flask](https://github.com/gitmehedi/techstacks/tree/flask)
+## [Django](https://github.com/gitmehedi/techstacks/tree/django)
+## [FashAPI](https://github.com/gitmehedi/techstacks/tree/fastapi)
+## [XPath](https://github.com/gitmehedi/techstacks/tree/xpath)
