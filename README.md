@@ -529,9 +529,6 @@ Add the following line to the end of the file:
 $ 30 4 1 * * sudo cerbot renew --quiet
 ```
 
-# Questions
-- 
-
 # References
 - https://nginx.org/en/docs/beginners_guide.html
 - https://tecadmin.net/installing-nginx-on-linux/
