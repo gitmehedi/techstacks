@@ -5,17 +5,20 @@
 </div>
 
 <!-- TOC -->
-
 * [Introduction](#introduction)
 * [Installation](#installation)
-    * [Prerequisites](#prerequisites)
-    * [Steps of Installation](#steps-of-installation)
-        * [Step 1: Update System](#step-1-update-system)
+  * [Prerequisites](#prerequisites)
+  * [Steps of Installation](#steps-of-installation)
+    * [Step 1: Update System](#step-1-update-system)
+    * [Step 2: Install Nginx](#step-2-install-nginx)
+    * [Step 3: Verify Nginx Installation](#step-3-verify-nginx-installation)
+    * [Step 4: Start and Enable Nginx Service](#step-4-start-and-enable-nginx-service)
+    * [Step 5: Configure Firewall](#step-5-configure-firewall)
+    * [Step 6: Manage Nginx Process](#step-6-manage-nginx-process)
 * [Configuration](#configuration)
 * [Blogs](#blogs)
 * [Questions](#questions)
 * [References](#references)
-
 <!-- TOC -->
 
 # Introduction
