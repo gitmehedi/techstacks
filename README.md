@@ -528,5 +528,5 @@ $ 30 4 1 * * sudo cerbot renew --quiet
 
 # References
 - https://nginx.org/en/docs/beginners_guide.html
-- https://tecadmin.net/installing-nginx-on-linux/
+- https://tecadmin.net/installing-nginx-on-linux
 
