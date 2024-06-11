@@ -5,11 +5,39 @@
 </div>
 
 <!-- TOC -->
-
 * [Introduction](#introduction)
 * [Installation](#installation)
-* [References](#references)
-
+  * [Ubuntu](#ubuntu)
+  * [Docker](#docker)
+  * [Kubernetes](#kubernetes)
+* [Django Documentation](#django-documentation)
+  * [1. Getting Started](#1-getting-started)
+    * [Creating a Project](#creating-a-project)
+    * [The Development Server](#the-development-server)
+    * [Creating the App](#creating-the-app)
+    * [Database Setup](#database-setup)
+  * [2. The Model Layer](#2-the-model-layer)
+  * [3. The View Layer](#3-the-view-layer)
+  * [4. The Template Layer()](#4-the-template-layer--)
+  * [5. Forms](#5-forms)
+  * [6. The Development Process](#6-the-development-process)
+  * [7. The Admin](#7-the-admin)
+  * [8. Security](#8-security)
+  * [9. Internationalization and Localization](#9-internationalization-and-localization)
+  * [10. Performance and Optimization](#10-performance-and-optimization)
+  * [11. Geographic Framework](#11-geographic-framework)
+  * [12. Common Web Application Tools](#12-common-web-application-tools)
+  * [13. Other Core Functionalities](#13-other-core-functionalities)
+  * [14. The Django Open-source Project](#14-the-django-open-source-project)
+* [Blogs](#blogs)
+  * [Django User Authentication](#django-user-authentication)
+    * [Create a new User](#create-a-new-user)
+    * [Create a superuser](#create-a-superuser)
+    * [Changing passwords](#changing-passwords)
+    * [Authenticating a User](#authenticating-a-user)
+    * [Logout a User](#logout-a-user)
+    * [References](#references)
+* [References](#references-1)
 <!-- TOC -->
 
 # Introduction
@@ -60,13 +88,13 @@ $ django-admin startproject mysite
 
 ```html
 mysite/
-    manage.py
-    mysite/
-        __init__.py
-        settings.py
-        urls.py
-        asgi.py
-        wsgi.py
+manage.py
+mysite/
+__init__.py
+settings.py
+urls.py
+asgi.py
+wsgi.py
 ```
 
 > Changing the port  
@@ -86,14 +114,14 @@ $ python manage.py startapp polls
 
 ```html
 polls/
-    __init__.py
-    admin.py
-    apps.py
-    migrations/
-        __init__.py
-    models.py
-    tests.py
-    views.py
+__init__.py
+admin.py
+apps.py
+migrations/
+__init__.py
+models.py
+tests.py
+views.py
 ```
 
 **_Projects vs. apps_**
@@ -218,6 +246,108 @@ $ psql -h <hostname> -p <port> -U <database_username> -d <database_name>
 - Third-party distributions: Overview
 - Django over time: API stability | Release notes and upgrading instructions | Deprecation Timeline
 
+# Blogs
+
+## Django User Authentication
+
+In django, the user model is a built-in feature provided by `django.contrib.auth` that handles
+user functionality
+
+- `authentication`
+- `authorization`
+- `login`
+- `logout`
+- `create_user`
+- `User`
+
+The default `User` Model provided by Django has several fields which store user information. You can create custom user
+model if the default user model doesn't meet your requirements.
+User models contains several fields
+
+- username
+- password
+- email
+- first_name
+- last_name
+- is_active
+- is_staff
+- is_superuser
+- last_login
+- date_joined
+
+Function we can do with django user model
+
+### Create a new User
+Django user model `User` can create new user or singup for new user
+
+```shell
+from django.contrib.auth import models
+
+# create new user or signup new user
+user = models.User.Objects.create_user({
+  username= 'john',
+  email= 'john@email.com',
+  password= 'complex_password',
+})
+
+# Accessing user fields
+print(user.username)
+print(user.email)
+print(user.is_active)
+```
+
+### Create a superuser
+To create a superuser in django, commandline instruction is more used than functional creation
+```shell
+# regular user creation command
+$ python manage.py createsuper
+
+# specify username and email 
+$ python manage.py createsuperuser --username=joe --email=joe@example.com
+```
+> Note: Before run superuser command, activate virtual environment for this project
+
+### Changing passwords
+Django provides `set_password()` for changing the password programmatically
+```shell
+from django.contrib.auth.models import User
+
+def password_change_view(request):
+    user = User.objects.get(username="john")
+    user.set_password('new password')
+    user.save()
+```
+
+### Authenticating a User
+After signup or creating a new user, authentication is first step to login in the system
+To implement authentication following steps are necessary
+```shell
+from django.contrib.auth import authentication,login
+
+def authentication_view(reuqest):
+    username = request.POST['username']
+    password = request.POST['password']
+    
+    user = authentication(request,username=username,password=password)
+    
+    if user is not None:
+        login(request,user)
+        # Redirect to a successful page
+    else:
+        # Return an invalid login error message
+```
+
+### Logout a User
+Django provides a logout function for logout from django application
+```shell
+from django.contrib.auth import logout
+
+def logout_view(request):
+    logout(request)
+    # Redirect to a success page
+```
+### References
+- https://docs.djangoproject.com/en/5.0/topics/auth/default/#user-objects
 # References
 
 - https://docs.djangoproject.com/en/4.0/
