@@ -37,6 +37,12 @@
     * [Authenticating a User](#authenticating-a-user)
     * [Logout a User](#logout-a-user)
     * [References](#references)
+  * [User Permission Model](#user-permission-model)
+    * [Permission Model Fields](#permission-model-fields)
+    * [Assigning Permissions to Users](#assigning-permissions-to-users)
+    * [Checking the User Permissions](#checking-the-user-permissions)
+    * [Set Permission in Views](#set-permission-in-views)
+    * [Set Custom Permission](#set-custom-permission)
 * [References](#references-1)
 <!-- TOC -->
 
@@ -278,6 +284,7 @@ User models contains several fields
 Function we can do with django user model
 
 ### Create a new User
+
 Django user model `User` can create new user or singup for new user
 
 ```shell
@@ -297,7 +304,9 @@ print(user.is_active)
 ```
 
 ### Create a superuser
+
 To create a superuser in django, commandline instruction is more used than functional creation
+
 ```shell
 # regular user creation command
 $ python manage.py createsuper
@@ -305,10 +314,13 @@ $ python manage.py createsuper
 # specify username and email 
 $ python manage.py createsuperuser --username=joe --email=joe@example.com
 ```
+
 > Note: Before run superuser command, activate virtual environment for this project
 
 ### Changing passwords
+
 Django provides `set_password()` for changing the password programmatically
+
 ```shell
 from django.contrib.auth.models import User
 
@@ -319,8 +331,10 @@ def password_change_view(request):
 ```
 
 ### Authenticating a User
+
 After signup or creating a new user, authentication is first step to login in the system
 To implement authentication following steps are necessary
+
 ```shell
 from django.contrib.auth import authentication,login
 
@@ -338,7 +352,9 @@ def authentication_view(reuqest):
 ```
 
 ### Logout a User
+
 Django provides a logout function for logout from django application
+
 ```shell
 from django.contrib.auth import logout
 
@@ -346,8 +362,82 @@ def logout_view(request):
     logout(request)
     # Redirect to a success page
 ```
+
 ### References
+
 - https://docs.djangoproject.com/en/5.0/topics/auth/default/#user-objects
+
+## User Permission Model
+
+Django permission system is designed to manage user access control by defining what users can and can't do. It is built
+into the `django.contrib.auth` framework and works along with `user` and `group` model. Permission can be assigned to
+individual `users` or `group` of users
+
+### Permission Model Fields
+
+Following fields are available in permission model
+
+- name: A human readable name for the permission.
+- codename: A unique identifier for the permission.
+- content-type: Links the permission to a specific model.
+
+### Assigning Permissions to Users
+
+You can assign permission to users directly using the `user_permissions` attribute
+
+```shell
+from django.contrib.auth import User,Permission
+
+# get a user
+user = User.Objects.get(username='john')
+
+# assign the permission to the user
+permission = Permission.Objects.get(codename='can_publish')
+user.user_permissions.add(permission)
+```
+
+### Checking the User Permissions
+
+Check if a user has a specific permission using the  `has_perm` method
+
+```shell
+if user.has_perm('blog.can_publish'):
+    print("User has the permission")
+else:
+    print("User does not have the permission")
+```
+
+### Set Permission in Views
+
+You can use the `permission_required` decorator to restrict access to views based on permissions.
+
+```shell
+from django.contrib.auth.decorators import permission_required
+from django.shortcuts import render
+
+@permission_required('blog.can_publish', raise_exception=True)
+def permission_view(request):
+    return render(request, 'permission_template.html')
+```
+
+### Set Custom Permission
+
+If the default permissions(`add, change, delete, view`) are not sufficient, you can define custom permissions are in
+your models.
+
+```shell
+from django.db import models
+
+class Blog(models.Model):
+    name = models.CharField(max_length=100)
+    
+    class Meta:
+        permission = [
+          ('can_publish','Can Publish'),
+          ('can_view_statistics','Can View Statistics'),
+        ]
+```
+
 # References
 
 - https://docs.djangoproject.com/en/4.0/
