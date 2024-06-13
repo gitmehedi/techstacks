@@ -17,19 +17,22 @@
     * [Creating the App](#creating-the-app)
     * [Database Setup](#database-setup)
 * [Blogs](#blogs)
-  * [Django User Authentication](#django-user-authentication)
+  * [1. Django User Authentication](#1-django-user-authentication)
     * [Create a new User](#create-a-new-user)
     * [Create a superuser](#create-a-superuser)
     * [Changing passwords](#changing-passwords)
     * [Authenticating a User](#authenticating-a-user)
     * [Logout a User](#logout-a-user)
     * [References](#references)
-  * [User Permission Model](#user-permission-model)
+  * [2. User Permission Model](#2-user-permission-model)
     * [Permission Model Fields](#permission-model-fields)
     * [Assigning Permissions to Users](#assigning-permissions-to-users)
     * [Checking the User Permissions](#checking-the-user-permissions)
     * [Set Permission in Views](#set-permission-in-views)
     * [Set Custom Permission](#set-custom-permission)
+  * [3. Deploy Django Application in Production](#3-deploy-django-application-in-production)
+    * [Prerequisite](#prerequisite)
+    * [Installation and Configuration](#installation-and-configuration)
 * [Django Site Documentation](#django-site-documentation)
   * [2. The Model Layer](#2-the-model-layer)
   * [3. The View Layer](#3-the-view-layer)
@@ -148,7 +151,7 @@ $ psql -h <hostname> -p <port> -U <database_username> -d <database_name>
 
 # Blogs
 
-## Django User Authentication
+## 1. Django User Authentication
 
 In django, the user model is a built-in feature provided by `django.contrib.auth` that handles
 user functionality
@@ -261,7 +264,7 @@ def logout_view(request):
 
 - https://docs.djangoproject.com/en/5.0/topics/auth/default/#user-objects
 
-## User Permission Model
+## 2. User Permission Model
 
 Django permission system is designed to manage user access control by defining what users can and can't do. It is built
 into the `django.contrib.auth` framework and works along with `user` and `group` model. Permission can be assigned to
@@ -332,8 +335,152 @@ class Blog(models.Model):
         ]
 ```
 
-# Django Site Documentation
+## 3. Deploy Django Application in Production
 
+Development of Django application with default settings helps developer for faster development with proper `debug`
+message. But in production it will helps unwanted user with inside information and regular user will annoyed due to
+unnecessary information.
+
+So deploy application in production has some major prerequisite and instruction to follow
+### Prerequisite
+- Ubuntu/Linux
+- Python (3.12)
+- Django 5.0 LTS
+- PostgresSQL 14.0
+- Nginx 
+- Certbot
+
+> Note: Version mentioned with software are changed according to time and dependency.
+
+###  Installation and Configuration
+
+<h3> Install Ubuntu/Linux </h3>
+
+Choose VM or provider to install desired Ubuntu version
+```shell
+$ apt update -y
+$ lsb_release -a
+```
+
+<h3> Install Python and Virtual Environment </h3>
+
+Install Python in OS
+```shell
+$ apt update -y
+```
+
+Install Virtual Environment and configure it
+
+```shell
+# install virtual environment package for ubuntu
+$ sudo apt-get install -y python3-venv
+
+# create virtual environment to your desired location
+$ python3 -m venv /path/<folder_name>
+
+# activate virtual environment for project
+$ source /path/<folder_name>/bin/activate
+```
+
+<h3> Install Django </h3>
+Django is python based web application framework which is in the latest version Django==5.0. It also need to install in virtual environment.
+
+```shell
+$ pip install Django==5.0
+```
+
+<h3> Install PostgresSQL </h3>
+PostgreSQL version 14.0
+
+```shell
+$ sudo apt-get install postgresql@14
+```
+
+<h3> Install NGINX </h3>
+
+```shell
+$ apt-get update -y
+$ apt-get install nginx -y
+```
+
+<h3>Install Certbot</h3>
+
+To install Certbot it also depends on several package and configuration, which are given in details
+
+```shell
+$ sudo apt-get update -y
+$ sudo apt install snapd -y
+$ sudo snap install core; snap refresh core
+$ sudo snap install --classic certbot
+$ sudo apt-get install python3-certbot-nginx -y
+```
+
+Configure Nginx and Certbot
+
+Create a nginx file for FotoNut domain in /etc/nginx/sites-available/api.apps.conf and content of the file will be
+
+```nginx configuration
+server {
+        listen 80;
+        server_name fnb.leanmonk.com;
+
+        client_body_buffer_size 200K;
+        client_header_buffer_size 2k;
+        client_max_body_size 100M;
+        large_client_header_buffers 3 1k;
+
+        client_body_timeout 5s;
+        client_header_timeout 5s;
+
+        location = /favicon.ico { access_log off; log_not_found off; }
+
+        location /static {
+                alias /fotonut/backend/staticfiles;
+        }
+
+        location /media {
+                alias /fotonut/backend/media;
+        }
+
+        location / {
+                include proxy_params;
+                proxy_pass http://unix:/run/fnb.sock;
+        }
+}
+```
+
+Create a symbolic link for FotoNut application using ln
+
+```shell
+# create symbolic link
+$ ln -s /etc/nginx/sites-available/fnb.fotonut.conf /etc/nginx/sites-enabled/fnb.fotonut.conf
+
+# check configuration link
+$ nginx -t
+
+# reload nginx configuration
+$ nginx -s reload
+
+# restart nginx for impose all changed configuration
+$ systemctl restart nginx
+```
+
+Configure SSL for FotoNut application using certbot
+
+```shell
+$ sudo certbot --nginx -d fnb.leanmonk.com --noninteractive --agree-tos --email info.fotonut@fotonut.com --redirect
+```
+
+Automatic SSL certificate renewal crontab job
+
+```shell
+$ sudo crontab -e
+
+# Add the following line to the end of the file:
+30 4 1 * * sudo cerbot renew --quiet
+```
+
+# Django Site Documentation
 
 ## 2. [The Model Layer](https://docs.djangoproject.com/en/4.2/#the-model-layer)
 
@@ -441,7 +588,6 @@ class Blog(models.Model):
 - Documentation: About this documentation
 - Third-party distributions: Overview
 - Django over time: API stability | Release notes and upgrading instructions | Deprecation Timeline
-
 
 # References
 
