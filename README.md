@@ -16,19 +16,6 @@
     * [The Development Server](#the-development-server)
     * [Creating the App](#creating-the-app)
     * [Database Setup](#database-setup)
-  * [2. The Model Layer](#2-the-model-layer)
-  * [3. The View Layer](#3-the-view-layer)
-  * [4. The Template Layer()](#4-the-template-layer--)
-  * [5. Forms](#5-forms)
-  * [6. The Development Process](#6-the-development-process)
-  * [7. The Admin](#7-the-admin)
-  * [8. Security](#8-security)
-  * [9. Internationalization and Localization](#9-internationalization-and-localization)
-  * [10. Performance and Optimization](#10-performance-and-optimization)
-  * [11. Geographic Framework](#11-geographic-framework)
-  * [12. Common Web Application Tools](#12-common-web-application-tools)
-  * [13. Other Core Functionalities](#13-other-core-functionalities)
-  * [14. The Django Open-source Project](#14-the-django-open-source-project)
 * [Blogs](#blogs)
   * [Django User Authentication](#django-user-authentication)
     * [Create a new User](#create-a-new-user)
@@ -43,6 +30,20 @@
     * [Checking the User Permissions](#checking-the-user-permissions)
     * [Set Permission in Views](#set-permission-in-views)
     * [Set Custom Permission](#set-custom-permission)
+* [Django Site Documentation](#django-site-documentation)
+  * [2. The Model Layer](#2-the-model-layer)
+  * [3. The View Layer](#3-the-view-layer)
+  * [4. The Template Layer()](#4-the-template-layer--)
+  * [5. Forms](#5-forms)
+  * [6. The Development Process](#6-the-development-process)
+  * [7. The Admin](#7-the-admin)
+  * [8. Security](#8-security)
+  * [9. Internationalization and Localization](#9-internationalization-and-localization)
+  * [10. Performance and Optimization](#10-performance-and-optimization)
+  * [11. Geographic Framework](#11-geographic-framework)
+  * [12. Common Web Application Tools](#12-common-web-application-tools)
+  * [13. Other Core Functionalities](#13-other-core-functionalities)
+  * [14. The Django Open-source Project](#14-the-django-open-source-project)
 * [References](#references-1)
 <!-- TOC -->
 
@@ -144,113 +145,6 @@ Create a database in postgresql
 $ psql -h <hostname> -p <port> -U <database_username> -d <database_name>
 > psql -h localhost -p 5432 -U odoo -d DJANGO_BLOG
 ```
-
-## 2. [The Model Layer](https://docs.djangoproject.com/en/4.2/#the-model-layer)
-
-- Models: Introduction to models | Field types | Indexes | Meta options | Model class
-- QuerySets: Making queries | QuerySet method reference | Lookup expressions
-- Model instances: Instance methods | Accessing related objects
-- Migrations: Introduction to Migrations | Operations reference | SchemaEditor | Writing migrations
-- Advanced: Managers | Raw SQL | Transactions | Aggregation | Search | Custom fields | Multiple databases | Custom
-  lookups | Query Expressions | Conditional Expressions | Database Functions
-- Other: Supported databases | Legacy databases | Providing initial data | Optimize database access | PostgreSQL
-  specific features
-
-## 3. [The View Layer](https://docs.djangoproject.com/en/4.2/#the-view-layer)
-
-- The basics: URLconfs | View functions | Shortcuts | Decorators | Asynchronous Support
-- Reference: Built-in Views | Request/response objects | TemplateResponse objects
-- File uploads: Overview | File objects | Storage API | Managing files | Custom storage
-- Class-based views: Overview | Built-in display views | Built-in editing views | Using mixins | API reference |
-  Flattened index
-- Advanced: Generating CSV | Generating PDF
-- Middleware: Overview | Built-in middleware classes
-
-## 4. [The Template Layer()](https://docs.djangoproject.com/en/4.2/#the-template-layer)
-
-- The basics: Overview
-- For designers: Language overview | Built-in tags and filters | Humanization
-- For programmers: Template API | Custom tags and filters | Custom template backend
-
-## 5. [Forms](https://docs.djangoproject.com/en/4.2/#forms)
-
-- The basics: Overview | Form API | Built-in fields | Built-in widgets
-- Advanced: Forms for models | Integrating media | Formsets | Customizing validation
-
-## 6. [The Development Process](https://docs.djangoproject.com/en/4.2/#the-development-process)
-
-- Settings: Overview | Full list of settings
-- Applications: Overview
-- Exceptions: Overview
-- django-admin and manage.py: Overview | Adding custom commands
-- Testing: Introduction | Writing and running tests | Included testing tools | Advanced topics
-- Deployment: Overview | WSGI servers | ASGI servers | Deploying static files | Tracking code errors by email |
-  Deployment checklist
-
-## 7. [The Admin](https://docs.djangoproject.com/en/4.2/#the-admin)
-
-- Admin site
-- Admin actions
-- Admin documentation generator
-
-## 8. [Security](https://docs.djangoproject.com/en/4.2/#security)
-
-- Security overview
-- Disclosed security issues in Django
-- Clickjacking protection
-- Cross Site Request Forgery protection
-- Cryptographic signing
-- Security Middleware
-
-## 9. [Internationalization and Localization](https://docs.djangoproject.com/en/4.2/#performance-and-optimization)
-
-- Overview | Internationalization | Localization | Localized web UI formatting and form input
-- Time zones
-
-## 10. [Performance and Optimization](https://docs.djangoproject.com/en/4.2/#performance-and-optimization)
-
-- Performance and optimization overview
-
-## 11. [Geographic Framework](https://docs.djangoproject.com/en/4.2/#geographic-framework)
-
-- GeoDjango intends to be a world-class geographic web framework. Its goal is to make it as easy as possible to build
-  GIS web applications and harness the power of spatially enabled data.
-
-## 12. [Common Web Application Tools](https://docs.djangoproject.com/en/4.2/#common-web-application-tools)
-
-- Authentication: Overview | Using the authentication system | Password management | Customizing authentication | API
-  Reference
-- Caching
-- Logging
-- Sending emails
-- Syndication feeds (RSS/Atom)
-- Pagination
-- Messages framework
-- Serialization
-- Sessions
-- Sitemaps
-- Static files management
-- Data validation
-
-## 13. [Other Core Functionalities](https://docs.djangoproject.com/en/4.2/#other-core-functionalities)
-
-- Conditional content processing
-- Content types and generic relations
-- Flatpages
-- Redirects
-- Signals
-- System check framework
-- The sites framework
-- Unicode in Django
-
-## 14. [The Django Open-source Project](https://docs.djangoproject.com/en/4.2/#the-django-open-source-project)
-
-- Community: How to get involved | The release process | Team organization | The Django source code repository |
-  Security policies | Mailing lists
-- Design philosophies: Overview
-- Documentation: About this documentation
-- Third-party distributions: Overview
-- Django over time: API stability | Release notes and upgrading instructions | Deprecation Timeline
 
 # Blogs
 
@@ -437,6 +331,117 @@ class Blog(models.Model):
           ('can_view_statistics','Can View Statistics'),
         ]
 ```
+
+# Django Site Documentation
+
+
+## 2. [The Model Layer](https://docs.djangoproject.com/en/4.2/#the-model-layer)
+
+- Models: Introduction to models | Field types | Indexes | Meta options | Model class
+- QuerySets: Making queries | QuerySet method reference | Lookup expressions
+- Model instances: Instance methods | Accessing related objects
+- Migrations: Introduction to Migrations | Operations reference | SchemaEditor | Writing migrations
+- Advanced: Managers | Raw SQL | Transactions | Aggregation | Search | Custom fields | Multiple databases | Custom
+  lookups | Query Expressions | Conditional Expressions | Database Functions
+- Other: Supported databases | Legacy databases | Providing initial data | Optimize database access | PostgreSQL
+  specific features
+
+## 3. [The View Layer](https://docs.djangoproject.com/en/4.2/#the-view-layer)
+
+- The basics: URLconfs | View functions | Shortcuts | Decorators | Asynchronous Support
+- Reference: Built-in Views | Request/response objects | TemplateResponse objects
+- File uploads: Overview | File objects | Storage API | Managing files | Custom storage
+- Class-based views: Overview | Built-in display views | Built-in editing views | Using mixins | API reference |
+  Flattened index
+- Advanced: Generating CSV | Generating PDF
+- Middleware: Overview | Built-in middleware classes
+
+## 4. [The Template Layer()](https://docs.djangoproject.com/en/4.2/#the-template-layer)
+
+- The basics: Overview
+- For designers: Language overview | Built-in tags and filters | Humanization
+- For programmers: Template API | Custom tags and filters | Custom template backend
+
+## 5. [Forms](https://docs.djangoproject.com/en/4.2/#forms)
+
+- The basics: Overview | Form API | Built-in fields | Built-in widgets
+- Advanced: Forms for models | Integrating media | Formsets | Customizing validation
+
+## 6. [The Development Process](https://docs.djangoproject.com/en/4.2/#the-development-process)
+
+- Settings: Overview | Full list of settings
+- Applications: Overview
+- Exceptions: Overview
+- django-admin and manage.py: Overview | Adding custom commands
+- Testing: Introduction | Writing and running tests | Included testing tools | Advanced topics
+- Deployment: Overview | WSGI servers | ASGI servers | Deploying static files | Tracking code errors by email |
+  Deployment checklist
+
+## 7. [The Admin](https://docs.djangoproject.com/en/4.2/#the-admin)
+
+- Admin site
+- Admin actions
+- Admin documentation generator
+
+## 8. [Security](https://docs.djangoproject.com/en/4.2/#security)
+
+- Security overview
+- Disclosed security issues in Django
+- Clickjacking protection
+- Cross Site Request Forgery protection
+- Cryptographic signing
+- Security Middleware
+
+## 9. [Internationalization and Localization](https://docs.djangoproject.com/en/4.2/#performance-and-optimization)
+
+- Overview | Internationalization | Localization | Localized web UI formatting and form input
+- Time zones
+
+## 10. [Performance and Optimization](https://docs.djangoproject.com/en/4.2/#performance-and-optimization)
+
+- Performance and optimization overview
+
+## 11. [Geographic Framework](https://docs.djangoproject.com/en/4.2/#geographic-framework)
+
+- GeoDjango intends to be a world-class geographic web framework. Its goal is to make it as easy as possible to build
+  GIS web applications and harness the power of spatially enabled data.
+
+## 12. [Common Web Application Tools](https://docs.djangoproject.com/en/4.2/#common-web-application-tools)
+
+- Authentication: Overview | Using the authentication system | Password management | Customizing authentication | API
+  Reference
+- Caching
+- Logging
+- Sending emails
+- Syndication feeds (RSS/Atom)
+- Pagination
+- Messages framework
+- Serialization
+- Sessions
+- Sitemaps
+- Static files management
+- Data validation
+
+## 13. [Other Core Functionalities](https://docs.djangoproject.com/en/4.2/#other-core-functionalities)
+
+- Conditional content processing
+- Content types and generic relations
+- Flatpages
+- Redirects
+- Signals
+- System check framework
+- The sites framework
+- Unicode in Django
+
+## 14. [The Django Open-source Project](https://docs.djangoproject.com/en/4.2/#the-django-open-source-project)
+
+- Community: How to get involved | The release process | Team organization | The Django source code repository |
+  Security policies | Mailing lists
+- Design philosophies: Overview
+- Documentation: About this documentation
+- Third-party distributions: Overview
+- Django over time: API stability | Release notes and upgrading instructions | Deprecation Timeline
+
 
 # References
 
