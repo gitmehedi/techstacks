@@ -5,49 +5,51 @@
 </div>
 
 <!-- TOC -->
+
 * [Introduction](#introduction)
 * [Installation](#installation)
-  * [Ubuntu](#ubuntu)
-  * [Docker](#docker)
-  * [Kubernetes](#kubernetes)
+    * [Ubuntu](#ubuntu)
+    * [Docker](#docker)
+    * [Kubernetes](#kubernetes)
 * [Django Documentation](#django-documentation)
-  * [1. Getting Started](#1-getting-started)
-    * [Creating a Project](#creating-a-project)
-    * [The Development Server](#the-development-server)
-    * [Creating the App](#creating-the-app)
-    * [Database Setup](#database-setup)
+    * [1. Getting Started](#1-getting-started)
+        * [Creating a Project](#creating-a-project)
+        * [The Development Server](#the-development-server)
+        * [Creating the App](#creating-the-app)
+        * [Database Setup](#database-setup)
 * [Blogs](#blogs)
-  * [1. Django User Authentication](#1-django-user-authentication)
-    * [Create a new User](#create-a-new-user)
-    * [Create a superuser](#create-a-superuser)
-    * [Changing passwords](#changing-passwords)
-    * [Authenticating a User](#authenticating-a-user)
-    * [Logout a User](#logout-a-user)
-    * [References](#references)
-  * [2. User Permission Model](#2-user-permission-model)
-    * [Permission Model Fields](#permission-model-fields)
-    * [Assigning Permissions to Users](#assigning-permissions-to-users)
-    * [Checking the User Permissions](#checking-the-user-permissions)
-    * [Set Permission in Views](#set-permission-in-views)
-    * [Set Custom Permission](#set-custom-permission)
-  * [3. Deploy Django Application in Production](#3-deploy-django-application-in-production)
-    * [Prerequisite](#prerequisite)
-    * [Installation and Configuration](#installation-and-configuration)
+    * [1. Django User Authentication](#1-django-user-authentication)
+        * [Create a new User](#create-a-new-user)
+        * [Create a superuser](#create-a-superuser)
+        * [Changing passwords](#changing-passwords)
+        * [Authenticating a User](#authenticating-a-user)
+        * [Logout a User](#logout-a-user)
+        * [References](#references)
+    * [2. User Permission Model](#2-user-permission-model)
+        * [Permission Model Fields](#permission-model-fields)
+        * [Assigning Permissions to Users](#assigning-permissions-to-users)
+        * [Checking the User Permissions](#checking-the-user-permissions)
+        * [Set Permission in Views](#set-permission-in-views)
+        * [Set Custom Permission](#set-custom-permission)
+    * [3. Deploy Django Application in Production](#3-deploy-django-application-in-production)
+        * [Prerequisite](#prerequisite)
+        * [Installation and Configuration](#installation-and-configuration)
 * [Django Site Documentation](#django-site-documentation)
-  * [2. The Model Layer](#2-the-model-layer)
-  * [3. The View Layer](#3-the-view-layer)
-  * [4. The Template Layer()](#4-the-template-layer--)
-  * [5. Forms](#5-forms)
-  * [6. The Development Process](#6-the-development-process)
-  * [7. The Admin](#7-the-admin)
-  * [8. Security](#8-security)
-  * [9. Internationalization and Localization](#9-internationalization-and-localization)
-  * [10. Performance and Optimization](#10-performance-and-optimization)
-  * [11. Geographic Framework](#11-geographic-framework)
-  * [12. Common Web Application Tools](#12-common-web-application-tools)
-  * [13. Other Core Functionalities](#13-other-core-functionalities)
-  * [14. The Django Open-source Project](#14-the-django-open-source-project)
+    * [2. The Model Layer](#2-the-model-layer)
+    * [3. The View Layer](#3-the-view-layer)
+    * [4. The Template Layer()](#4-the-template-layer--)
+    * [5. Forms](#5-forms)
+    * [6. The Development Process](#6-the-development-process)
+    * [7. The Admin](#7-the-admin)
+    * [8. Security](#8-security)
+    * [9. Internationalization and Localization](#9-internationalization-and-localization)
+    * [10. Performance and Optimization](#10-performance-and-optimization)
+    * [11. Geographic Framework](#11-geographic-framework)
+    * [12. Common Web Application Tools](#12-common-web-application-tools)
+    * [13. Other Core Functionalities](#13-other-core-functionalities)
+    * [14. The Django Open-source Project](#14-the-django-open-source-project)
 * [References](#references-1)
+
 <!-- TOC -->
 
 # Introduction
@@ -335,28 +337,98 @@ class Blog(models.Model):
         ]
 ```
 
-## 3. Deploy Django Application in Production
+## 3. User Group Model
+
+In Django, the Group model is part of the `django.contrib.auth` module and is used group users and manage permissions
+collectively. By assigning permission to a group, you can manage what `users` within that group can or can't do without
+having to set permissions individually for each user.
+
+### Group Models Fields
+
+- name: The name of the Group
+- permissions: The permission assign to a group. Each permission specifies what actions members of the group can
+  perform.
+
+### Creating a Group
+You can create a group using the Django admin interface or using this code
+```shell
+from django.contrib.auth import Group
+
+# create a new group
+editors_group = Group.objects.create(name='Editors')
+```
+### Assigning Permissions to a Group
+Permissions can be assigned to a group, allowing all users in that group to inherit those permissions.
+
+```shell
+from django.contrib.auth.models import Group, Permissions
+
+# create a new group
+editors_group = Groups.objects.create(name='Editors')
+
+# get the permission
+permission = Permissions.objects.get(codename='can_publish')
+
+# assign the permission to the group
+editors_group.permission.add(permission)
+```
+
+### Adding Users to a Group
+Users can be added to groups, and they will inherit all permissions assigned to the group.
+
+```shell
+from django.contrib.auth.models import Group,Users,Permission
+
+# create a new group
+editors_group = Group.objects.create(name='Editors')
+
+# get a user
+user = User.objects.create(name='john')
+
+# add the user to the group
+editors_group.user_set.add(user)
+```
+
+### Checking Group Membership
+You can check if a user is part of a group
+```shell
+from django.shortcuts import render
+
+def my_view(request):
+    if request.user.group.filter(name='Editors').exists():
+        print("User is an editor")
+    else:
+        print("User is not a editor")
+    
+    return render(request, "index.html")
+```
+
+
+## 5. Deploy Django Application in Production
 
 Development of Django application with default settings helps developer for faster development with proper `debug`
 message. But in production it will helps unwanted user with inside information and regular user will annoyed due to
 unnecessary information.
 
 So deploy application in production has some major prerequisite and instruction to follow
+
 ### Prerequisite
+
 - Ubuntu/Linux
 - Python (3.12)
 - Django 5.0 LTS
 - PostgresSQL 14.0
-- Nginx 
+- Nginx
 - Certbot
 
 > Note: Version mentioned with software are changed according to time and dependency.
 
-###  Installation and Configuration
+### Installation and Configuration
 
 <h3> Install Ubuntu/Linux </h3>
 
 Choose VM or provider to install desired Ubuntu version
+
 ```shell
 $ apt update -y
 $ lsb_release -a
@@ -365,6 +437,7 @@ $ lsb_release -a
 <h3> Install Python and Virtual Environment </h3>
 
 Install Python in OS
+
 ```shell
 $ apt update -y
 ```
