@@ -39,7 +39,10 @@
   * [4. AbstractUser Model](#4-abstractuser-model)
     * [AbstractUser Model Fields](#abstractuser-model-fields)
     * [Extending the AbstractUser Model](#extending-the-abstractuser-model)
-  * [5. Deploy Django Application in Production](#5-deploy-django-application-in-production)
+  * [5. AbstractBaseUser](#5-abstractbaseuser)
+    * [AbstractBaseUser Model Fields](#abstractbaseuser-model-fields)
+    * [Creating Custom User Model](#creating-custom-user-model)
+  * [6. Deploy Django Application in Production](#6-deploy-django-application-in-production)
     * [Prerequisite](#prerequisite)
     * [Installation and Configuration](#installation-and-configuration)
 * [Django Site Documentation](#django-site-documentation)
@@ -485,7 +488,86 @@ class CustomUserAdmin(UserAdmin):
     list_display = ['username','email','first_name','last_name','is_staff','phone_number','address']
 ```
 
-## 5. Deploy Django Application in Production
+## 5. AbstractBaseUser
+
+AbstractBaseUser is a base class provided by Django for creating custom user models. It provides the core implementation
+of the user model, including hashed password storage and methods for password handling, but does not include fields like
+username, email, or other profile information. This allows maximum flexibility when creating custom user models.
+
+### AbstractBaseUser Model Fields
+
+AbstractBaseUser model includes following fields
+
+- `password`: Stores the hashed password of the user
+- `last_login`: Stores the date and time of the user's last login.
+
+### Creating Custom User Model
+
+1. Create a new manager for custom user, that inherit BaseUserManager
+
+```shell
+from django.contrib.auth.models import BaseUserManager
+
+class CustomUserManager(BaseUserManager):
+    def create_user(self,email,password,**extra_fields):
+        if not email:
+            raise ValueError('The Email Field must be set')
+        email = self.normalize_email(email)
+        user = self.model(email=email, **extra_fields)
+        user.set_password(password)
+        user.save(using=self.db)
+        
+        return user
+        
+    def create_superuser(self, email,password, **extra_fields):
+        extra_fields.set_default('is_staff', True)
+        extra_fields.set_default('is_superuser', True)
+        
+        return self.create_user(email, password, **extra_fields)
+```
+
+2. Create a new model that inherits from AbstractBaseUser and PermissionsMixin, Define the necessary fields and
+   implement a custom manager to handle user creation.
+
+```shell
+from django.contrib.auth.models import AbstractBaseuser,PermissionMixin
+from django.db import models
+
+class CustomUser(AbstractBaseuser,PermissionMixin):
+    email = models.EmailField(unique)
+    first_name = models.CharField(max_length=30, blank=True)
+    last_name = models.CharField(max_length=30, blank=True)
+    is_staff = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+    date_joined = models.DateTimeField(auto_now_add=True)
+    
+    objects = CustomUserManager()
+    
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+    
+    def __str__(self):
+        return self.email
+```
+
+3. In your settings, specify the custom user model by setting AUTH_USER_MODEL
+
+```shell
+AUTH_USER_MODEL = 'myapp.CustomUser'
+```
+
+4. Create and Apply Migrations
+
+```shell
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
+> AbstractBaseUser in Django is a powerful tool for creating custom user models. By inheriting from AbstractBaseUser and
+> PermissionMixin, and implementing your own user manager, you can create a user model that fits the specific needs of
+> your application.
+
+## 6. Deploy Django Application in Production
 
 Development of Django application with default settings helps developer for faster development with proper `debug`
 message. But in production it will helps unwanted user with inside information and regular user will annoyed due to
