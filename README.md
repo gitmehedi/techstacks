@@ -350,14 +350,18 @@ having to set permissions individually for each user.
   perform.
 
 ### Creating a Group
+
 You can create a group using the Django admin interface or using this code
+
 ```shell
 from django.contrib.auth import Group
 
 # create a new group
 editors_group = Group.objects.create(name='Editors')
 ```
+
 ### Assigning Permissions to a Group
+
 Permissions can be assigned to a group, allowing all users in that group to inherit those permissions.
 
 ```shell
@@ -374,6 +378,7 @@ editors_group.permission.add(permission)
 ```
 
 ### Adding Users to a Group
+
 Users can be added to groups, and they will inherit all permissions assigned to the group.
 
 ```shell
@@ -390,7 +395,9 @@ editors_group.user_set.add(user)
 ```
 
 ### Checking Group Membership
+
 You can check if a user is part of a group
+
 ```shell
 from django.shortcuts import render
 
@@ -403,6 +410,73 @@ def my_view(request):
     return render(request, "index.html")
 ```
 
+## 4. AbstractUser Model
+
+AbstractUser is base class provided by Django for creating custom user models. This class is useful when you want to
+extend the default user model by adding extra fields or methods, rather than starting from scratch.
+
+### AbstractUser Model Fields
+
+This AbstractUser Model include various fields
+
+- username
+- first_name
+- last_name
+- email
+- password
+- is_staff
+- is_active
+- is_superuser
+- last_login
+- date_joined
+
+### Extending the AbstractUser Model
+
+1. Define the Custom User model in `models.py`
+
+```shell
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+
+class CustomUser(AbstractUser):
+    phone_number = models.CharFeild(max_length=15, blank=True)
+    address = models.CharFeild(max_length=225, blank=True)
+    
+    def __str__(self):
+        return self.username
+```
+
+2. In your settings, specify the custom user model by setting AUTH_USER_MODEL
+
+```shell
+AUTH_USER_MODEL = 'myapp.CustomUser'
+```
+
+3. Create and Apply Migrations
+
+```shell
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
+4. Create a custom admin class to handle the custom user model in the admin interface.
+
+```shell
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+from .model import CustomUser
+
+@admin.register(CustomUser):
+class CustomUserAdmin(UserAdmin):
+    model= CustomUser
+    fieldsets = UserAdmin.fieldsets + (
+      (None, {'fields': ('phone_number','address')})
+    )
+    fieldsets = UserAdmin.add_fieldsets + (
+      (None, {'fields': ('phone_number','address')})
+    )
+    list_display = ['username','email','first_name','last_name','is_staff','phone_number','address']
+```
 
 ## 5. Deploy Django Application in Production
 
