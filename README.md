@@ -5,61 +5,63 @@
 </div>
 
 <!-- TOC -->
+
 * [Introduction](#introduction)
 * [Installation](#installation)
-  * [Ubuntu](#ubuntu)
-  * [Docker](#docker)
-  * [Kubernetes](#kubernetes)
+    * [Ubuntu](#ubuntu)
+    * [Docker](#docker)
+    * [Kubernetes](#kubernetes)
 * [Django Documentation](#django-documentation)
-  * [1. Getting Started](#1-getting-started)
-    * [Creating a Project](#creating-a-project)
-    * [The Development Server](#the-development-server)
-    * [Creating the App](#creating-the-app)
-    * [Database Setup](#database-setup)
+    * [1. Getting Started](#1-getting-started)
+        * [Creating a Project](#creating-a-project)
+        * [The Development Server](#the-development-server)
+        * [Creating the App](#creating-the-app)
+        * [Database Setup](#database-setup)
 * [Blogs](#blogs)
-  * [1. Django User Authentication](#1-django-user-authentication)
-    * [Create a new User](#create-a-new-user)
-    * [Create a superuser](#create-a-superuser)
-    * [Changing passwords](#changing-passwords)
-    * [Authenticating a User](#authenticating-a-user)
-    * [Logout a User](#logout-a-user)
-    * [References](#references)
-  * [2. User Permission Model](#2-user-permission-model)
-    * [Permission Model Fields](#permission-model-fields)
-    * [Assigning Permissions to Users](#assigning-permissions-to-users)
-    * [Checking the User Permissions](#checking-the-user-permissions)
-    * [Set Permission in Views](#set-permission-in-views)
-    * [Set Custom Permission](#set-custom-permission)
-  * [3. User Group Model](#3-user-group-model)
-    * [Group Models Fields](#group-models-fields)
-    * [Creating a Group](#creating-a-group)
-    * [Assigning Permissions to a Group](#assigning-permissions-to-a-group)
-    * [Adding Users to a Group](#adding-users-to-a-group)
-    * [Checking Group Membership](#checking-group-membership)
-  * [4. AbstractUser Model](#4-abstractuser-model)
-    * [AbstractUser Model Fields](#abstractuser-model-fields)
-    * [Extending the AbstractUser Model](#extending-the-abstractuser-model)
-  * [5. AbstractBaseUser](#5-abstractbaseuser)
-    * [AbstractBaseUser Model Fields](#abstractbaseuser-model-fields)
-    * [Creating Custom User Model](#creating-custom-user-model)
-  * [6. Deploy Django Application in Production](#6-deploy-django-application-in-production)
-    * [Prerequisite](#prerequisite)
-    * [Installation and Configuration](#installation-and-configuration)
+    * [1. Django User Authentication](#1-django-user-authentication)
+        * [Create a new User](#create-a-new-user)
+        * [Create a superuser](#create-a-superuser)
+        * [Changing passwords](#changing-passwords)
+        * [Authenticating a User](#authenticating-a-user)
+        * [Logout a User](#logout-a-user)
+        * [References](#references)
+    * [2. User Permission Model](#2-user-permission-model)
+        * [Permission Model Fields](#permission-model-fields)
+        * [Assigning Permissions to Users](#assigning-permissions-to-users)
+        * [Checking the User Permissions](#checking-the-user-permissions)
+        * [Set Permission in Views](#set-permission-in-views)
+        * [Set Custom Permission](#set-custom-permission)
+    * [3. User Group Model](#3-user-group-model)
+        * [Group Models Fields](#group-models-fields)
+        * [Creating a Group](#creating-a-group)
+        * [Assigning Permissions to a Group](#assigning-permissions-to-a-group)
+        * [Adding Users to a Group](#adding-users-to-a-group)
+        * [Checking Group Membership](#checking-group-membership)
+    * [4. AbstractUser Model](#4-abstractuser-model)
+        * [AbstractUser Model Fields](#abstractuser-model-fields)
+        * [Extending the AbstractUser Model](#extending-the-abstractuser-model)
+    * [5. AbstractBaseUser](#5-abstractbaseuser)
+        * [AbstractBaseUser Model Fields](#abstractbaseuser-model-fields)
+        * [Creating Custom User Model](#creating-custom-user-model)
+    * [6. Deploy Django Application in Production](#6-deploy-django-application-in-production)
+        * [Prerequisite](#prerequisite)
+        * [Installation and Configuration](#installation-and-configuration)
 * [Django Site Documentation](#django-site-documentation)
-  * [2. The Model Layer](#2-the-model-layer)
-  * [3. The View Layer](#3-the-view-layer)
-  * [4. The Template Layer()](#4-the-template-layer--)
-  * [5. Forms](#5-forms)
-  * [6. The Development Process](#6-the-development-process)
-  * [7. The Admin](#7-the-admin)
-  * [8. Security](#8-security)
-  * [9. Internationalization and Localization](#9-internationalization-and-localization)
-  * [10. Performance and Optimization](#10-performance-and-optimization)
-  * [11. Geographic Framework](#11-geographic-framework)
-  * [12. Common Web Application Tools](#12-common-web-application-tools)
-  * [13. Other Core Functionalities](#13-other-core-functionalities)
-  * [14. The Django Open-source Project](#14-the-django-open-source-project)
+    * [2. The Model Layer](#2-the-model-layer)
+    * [3. The View Layer](#3-the-view-layer)
+    * [4. The Template Layer()](#4-the-template-layer--)
+    * [5. Forms](#5-forms)
+    * [6. The Development Process](#6-the-development-process)
+    * [7. The Admin](#7-the-admin)
+    * [8. Security](#8-security)
+    * [9. Internationalization and Localization](#9-internationalization-and-localization)
+    * [10. Performance and Optimization](#10-performance-and-optimization)
+    * [11. Geographic Framework](#11-geographic-framework)
+    * [12. Common Web Application Tools](#12-common-web-application-tools)
+    * [13. Other Core Functionalities](#13-other-core-functionalities)
+    * [14. The Django Open-source Project](#14-the-django-open-source-project)
 * [References](#references-1)
+
 <!-- TOC -->
 
 # Introduction
@@ -715,6 +717,135 @@ $ sudo crontab -e
 # Add the following line to the end of the file:
 30 4 1 * * sudo cerbot renew --quiet
 ```
+
+## Types of Django Form
+
+Forms in Django is a powerful way to handle user input, validate data, and create forms that can be used to create and
+update models.
+There are 2 types of Django Form.
+
+- **Forms**: Basic forms used for handling and validating user input.
+- **ModelForms**: Forms that are tied to a Django model, making it easy to create and update model instances.
+
+### Create a BASIC FORM
+
+To create a basic form, you need to define a form class that inherits from `django.forms.Form`
+
+```shell
+from django import forms
+
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    message = forms.CharField(widget=forms.Textarea)
+```
+
+> We define a class named ContactForm that inherits from forms.Form, and inside this class we defined all the fields for
+> our contact form.
+
+
+To use the form, you need to create a view that handles both `GET` (displaying the form) and `POST` (processing the form
+submission) requests.
+
+```shell
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from .forms import ContactForm
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # process the data in form.cleaned_data
+            return HttpResposenRedirec('/thanks')
+        else:
+            form = ContactForm()
+    return render(request, 'contact.html', {'form': form})
+```
+
+### Rendering Form in a Template
+
+In the template, you can use Django's form rendering shortcuts to display the form
+
+```shell
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Send</button>
+</form>
+```
+
+## Django Form Fields
+
+Django provides a wide variety of form fields that can be used to create forms and handle user input. Here are the
+detailed overview of the most commonly used form fields in Django.
+
+1. CharField (`forms.CharField`)
+2. IntegerField
+3. FloatField
+4. DecimalField
+5. BooleanField
+6. DateField
+7. TimeField
+8. DateTimeField
+9. EmailField
+10. URLField
+11. SlugField
+12. UUIDField
+13. IPAddressField
+14. GenericIPAddressField
+15. ChoiceField
+16. MultipleChoiceField
+17. FileField
+18. ImageField
+19. TimeInput
+20. DurationField
+21. SplitDateTimeField
+22. SplitHiddenDateTimeField
+23. JSONField
+24. RegexField
+25. ComboField
+26. MultiValueField
+27. NullBooleanField
+
+## Django Fields Arguments
+
+In Django each Form Field class constructors take at least these arguments. Some Field classes take additional,
+field-specific arguments, but the following should always be accepted.
+
+1. `required`: It determines whether the field is mandatory. If set to `False`, the field can be left empty.
+
+```shell
+username = forms.CharField(required=False)
+```
+
+2. `label`: The label for the field. If not provided, Django generates a label from the field name.
+
+```shell
+email = forms.EmailField(label="Email Address")
+```
+
+3. `initial`: The initial value for the field when the form is rendered.
+```shell
+age = forms.IntegerField(initial=18)
+```
+4. `widget`: Specifies the widget to use when rendering this field
+```shell
+birth_date = forms.DateField(widget=forms.SelectDateWidget)
+```
+5. `help_text`: An optional string to display next to the field to help the user understand whats expected.
+```shell
+password = forms.CharField(widget=forms.forms.PasswordInput, help_text='Enter a strong password.')
+```
+6. error_message: A dictionary of error messages to override the default messages.
+```shell
+
+```
+7. validators: A list of validation functions to run for this field.
+8. localize: Enables localization of the field's data.
+9. disabled: If `True`, the field will be displayed as disabled (non-editable).
+10. label_suffix: A string to append to the label. If not provided, the form's `label_suffix` is used.
+11. template_name: 
 
 # Django Site Documentation
 
