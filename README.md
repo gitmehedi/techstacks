@@ -267,6 +267,7 @@ to maintain session data on the user; making it a stateless authentication mecha
   store.
 
 ![jwt-token.png](img%2Fjwt-token.png)
+
 ![jwt-token-refresh.png](img/jwt-token-refresh.png)
 ![jwt-authentication-algorithm.png](img/jwt-authentication-algorithm.png)
 ![jwt-atuthentication-pros.png](img/jwt-atuthentication-pros.png)
