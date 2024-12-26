@@ -57,8 +57,9 @@ Additionally, as the signature is calculated using the header and the payload, y
 hasn't been tampered with.
 
 # JWT Structure
-
 In its compact form, JSON Web Tokens consist of three parts separated by dots (.),
+
+![jwt_structure.png](img/jwt_structure.png)
 
 - Header
 - Payload
