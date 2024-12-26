@@ -4,6 +4,31 @@
     <strong>An open standard that allows two parties to securely share information in a JSON format.</strong>
 </div>
 
+
+<!-- TOC -->
+* [Introduction](#introduction)
+  * [When should you use JSON Web Tokens?](#when-should-you-use-json-web-tokens)
+* [What is the JSON Web Token structure?](#what-is-the-json-web-token-structure)
+  * [Header](#header)
+  * [Payload](#payload)
+    * [Registered Claims](#registered-claims)
+    * [Public Claims](#public-claims)
+    * [Private Claims](#private-claims)
+  * [Signature](#signature)
+* [How do JSON Web Tokens work?](#how-do-json-web-tokens-work)
+* [Why should we use JSON Web Tokens?](#why-should-we-use-json-web-tokens)
+* [Authentication](#authentication)
+  * [Session Based Authentication](#session-based-authentication)
+    * [Session-based Authentication Key Points](#session-based-authentication-key-points)
+    * [How it works:](#how-it-works)
+    * [Drawbacks of session-based authentication](#drawbacks-of-session-based-authentication)
+  * [JWT Based Authentication](#jwt-based-authentication)
+    * [Key points about JWT-based authentication:](#key-points-about-jwt-based-authentication)
+    * [How it works:](#how-it-works-1)
+    * [Benefits of JWT-based authentication:](#benefits-of-jwt-based-authentication)
+* [References](#references)
+<!-- TOC -->
+
 # Introduction
 
 JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely
