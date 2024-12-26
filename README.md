@@ -186,8 +186,6 @@ in, storing their identity information on the server and sending a session ID (o
 allowing the server to recognize them across subsequent requests without requiring repeated logins; essentially, the
 server keeps track of a user's login status within a specific session timeframe.
 
-
-
 ### Session-based Authentication Key Points
 
 **Server-side storage:**  
@@ -206,18 +204,22 @@ Unlike token-based authentication, session-based authentication is considered "s
 maintain information about the active sessions.
 
 ### How it works:
+
 ![session-based-authentication.png](img/session-based-authentication.png)
+
 - **Login**: User submits their credentials (username and password) to the server.
 - **Validation**: The server verifies the credentials against its database.
-- **Session Creation**: If credentials are valid, the server creates a new session, stores user information, and generates a
-unique session ID.
+- **Session Creation**: If credentials are valid, the server creates a new session, stores user information, and
+  generates a
+  unique session ID.
 - **Session ID Sent to Client**: The session ID is sent back to the user's device usually as a cookie.
 - **Subsequent Requests**: When the user makes further requests, the browser automatically sends the session ID cookie,
-allowing the server to identify the user and grant access.
+  allowing the server to identify the user and grant access.
 
 ![session-storage.png](img/session-storage.png)
 
 ### Drawbacks of session-based authentication
+
 **Scalability concerns:**  
 Managing large numbers of sessions on a server can be challenging, especially with high traffic.
 
@@ -228,11 +230,52 @@ If a session cookie is compromised, an attacker could potentially impersonate th
 
 ## JWT Based Authentication
 
+"JWT-based authentication" refers to a method of user authentication where a secure token called a "JSON Web Token" (
+JWT) is used to verify a user's identity and grant access to resources, essentially acting as a self-contained,
+digitally signed piece of information that can be transmitted between a client and server without requiring the server
+to maintain session data on the user; making it a stateless authentication mechanism.
 
+### Key points about JWT-based authentication:
 
+- **Token structure:**  
+  A JWT is a compact string containing three parts: header (metadata about the token), payload (user information), and
+  signature (cryptographic verification).
+- **Stateless nature:**  
+  Unlike traditional session-based authentication, JWTs do not require the server to store session information, as all
+  necessary data is embedded within the token itself.
+- **Security:**  
+  The signature on the JWT ensures that the token hasn't been tampered with during transmission, providing security for
+  the user information.
 
+### How it works:
+![jwt-based-authentication.png](img/jwt-based-authentication.png)
+
+- When a user logs in, the server generates a JWT containing user claims (e.g., username, roles) and signs it with a
+  secret key.
+- The JWT is then sent to the client, which stores it (usually in a cookie or local storage).
+- On subsequent requests, the client sends the JWT to the server.
+- The server verifies the signature of the JWT to validate its authenticity and extract the user information.
+
+### Benefits of JWT-based authentication:
+
+- Scalability:
+  Since no session data is stored on the server, JWTs can easily scale across multiple servers.
+- Improved Performance:
+  No need to perform database lookups for session information on every request.
+- Decentralized Authentication:
+  JWTs can be used by different applications or services to verify user identity without relying on a central session
+  store.
+
+![jwt-token.png](img%2Fjwt-token.png)
+![jwt-token-refresh.png](img/jwt-token-refresh.png)
+![jwt-authentication-algorithm.png](img/jwt-authentication-algorithm.png)
+![jwt-atuthentication-pros.png](img/jwt-atuthentication-pros.png)
+![jwt-algorithm-2.png](img/jwt-algorithm-2.png)
+![jwt-algorithm-1.png](img/jwt-algorithm-1.png)
+![jwt-algorithm.png](img/jwt-algorithm.png)
 
 # References
 
 - https://jwt.io/introduction
 - https://www.youtube.com/watch?v=fyTxwIa-1U0
+- https://blog.logto.io/token-based-authentication-vs-session-based-authentication
