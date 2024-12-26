@@ -158,7 +158,8 @@ use cookies.
 
 # Why should we use JSON Web Tokens?
 
-Let's talk about the benefits of **JSON Web Tokens (JWT)** when compared to **Simple Web Tokens (SWT)** and **Security Assertion
+Let's talk about the benefits of **JSON Web Tokens (JWT)** when compared to **Simple Web Tokens (SWT)** and **Security
+Assertion
 Markup Language Tokens (SAML)**.
 
 As JSON is less verbose than XML, when it is encoded its size is also smaller, making JWT more compact than SAML. This
@@ -175,12 +176,63 @@ Regarding usage, JWT is used at Internet scale. This highlights the ease of clie
 on multiple platforms, especially mobile.
 
 # Authentication
+
 Authentication is a process that verifies the identity of a user or system before granting access to resources
 
 ## Session Based Authentication
 
+Session-based authentication is a method where a server creates and manages a unique "session" for each user who logs
+in, storing their identity information on the server and sending a session ID (often via a cookie) to the user's device,
+allowing the server to recognize them across subsequent requests without requiring repeated logins; essentially, the
+server keeps track of a user's login status within a specific session timeframe.
+
+
+
+### Session-based Authentication Key Points
+
+**Server-side storage:**  
+The session data, including the user ID and other relevant information, is stored on the server.
+
+**Session ID:**  
+When a user logs in, the server generates a unique session ID and sends it to the user's device, usually through a
+cookie.
+
+**Cookie-based verification:**  
+When the user makes a request, the browser automatically includes the session ID cookie, which the server then verifies
+against its stored sessions to identify the user.
+
+**Stateful authentication:**  
+Unlike token-based authentication, session-based authentication is considered "stateful" because the server needs to
+maintain information about the active sessions.
+
+### How it works:
+![session-based-authentication.png](img/session-based-authentication.png)
+- **Login**: User submits their credentials (username and password) to the server.
+- **Validation**: The server verifies the credentials against its database.
+- **Session Creation**: If credentials are valid, the server creates a new session, stores user information, and generates a
+unique session ID.
+- **Session ID Sent to Client**: The session ID is sent back to the user's device usually as a cookie.
+- **Subsequent Requests**: When the user makes further requests, the browser automatically sends the session ID cookie,
+allowing the server to identify the user and grant access.
+
+![session-storage.png](img/session-storage.png)
+
+### Drawbacks of session-based authentication
+**Scalability concerns:**  
+Managing large numbers of sessions on a server can be challenging, especially with high traffic.
+
+**Security risks:**  
+If a session cookie is compromised, an attacker could potentially impersonate the user.
+
+![session-authentication-pros.png](img/session-authentication-pros.png)
+
 ## JWT Based Authentication
 
+
+
+
+
 # References
+
 - https://jwt.io/introduction
 - https://www.youtube.com/watch?v=fyTxwIa-1U0
