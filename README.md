@@ -6,28 +6,30 @@
 
 
 <!-- TOC -->
+
 * [Introduction](#introduction)
     * [Authorization](#authorization)
     * [Information Exchange](#information-exchange)
 * [JWT Structure](#jwt-structure)
-  * [Header](#header)
-  * [Payload](#payload)
-    * [Registered Claims](#registered-claims)
-    * [Public Claims](#public-claims)
-    * [Private Claims](#private-claims)
-  * [Signature](#signature)
+    * [Header](#header)
+    * [Payload](#payload)
+        * [Registered Claims](#registered-claims)
+        * [Public Claims](#public-claims)
+        * [Private Claims](#private-claims)
+    * [Signature](#signature)
 * [JWT Working Mechanism](#jwt-working-mechanism)
 * [JWT Necessity](#jwt-necessity)
 * [Authentication](#authentication)
-  * [Session Based Authentication](#session-based-authentication)
-    * [Key Points](#key-points)
-    * [How It Works](#how-it-works)
-    * [Drawbacks](#drawbacks)
-  * [JWT Based Authentication](#jwt-based-authentication)
-    * [Key Points](#key-points-1)
-    * [How It Works](#how-it-works-1)
-    * [Benefits:](#benefits)
+    * [Session Based Authentication](#session-based-authentication)
+        * [Key Points](#key-points)
+        * [How It Works](#how-it-works)
+        * [Drawbacks](#drawbacks)
+    * [JWT Based Authentication](#jwt-based-authentication)
+        * [Key Points](#key-points-1)
+        * [How It Works](#how-it-works-1)
+        * [Benefits:](#benefits)
 * [References](#references)
+
 <!-- TOC -->
 
 # Introduction
@@ -38,6 +40,7 @@ digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or
 ECDSA.
 
 # JWT Usage
+
 **When should you use JSON Web Tokens?**
 
 Here are some scenarios where JSON Web Tokens are useful:
@@ -57,6 +60,7 @@ Additionally, as the signature is calculated using the header and the payload, y
 hasn't been tampered with.
 
 # JWT Structure
+
 In its compact form, JSON Web Tokens consist of three parts separated by dots (.),
 
 ![jwt_structure.png](img/jwt_structure.png)
@@ -255,10 +259,10 @@ maintain information about the active sessions.
 
 ### Drawbacks
 
-**Scalability concerns:**  
+**Scalability Concerns:**  
 Managing large numbers of sessions on a server can be challenging, especially with high traffic.
 
-**Security risks:**  
+**Security Risks:**  
 If a session cookie is compromised, an attacker could potentially impersonate the user.
 
 ![session-authentication-pros.png](img/session-authentication-pros.png)
