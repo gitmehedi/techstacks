@@ -211,7 +211,7 @@ in, storing their identity information on the server and sending a session ID (o
 allowing the server to recognize them across subsequent requests without requiring repeated logins; essentially, the
 server keeps track of a user's login status within a specific session timeframe.
 
-### Session-based Authentication Key Points
+### Key Points
 
 **Server-side storage:**  
 The session data, including the user ID and other relevant information, is stored on the server.
@@ -228,7 +228,7 @@ against its stored sessions to identify the user.
 Unlike token-based authentication, session-based authentication is considered "stateful" because the server needs to
 maintain information about the active sessions.
 
-### How it works:
+### How It Works
 
 ![session-based-authentication.png](img/session-based-authentication.png)
 
@@ -260,7 +260,7 @@ JWT) is used to verify a user's identity and grant access to resources, essentia
 digitally signed piece of information that can be transmitted between a client and server without requiring the server
 to maintain session data on the user; making it a stateless authentication mechanism.
 
-### Key points about JWT-based authentication:
+### Key Points
 
 - **Token structure:**  
   A JWT is a compact string containing three parts: header (metadata about the token), payload (user information), and
@@ -272,7 +272,7 @@ to maintain session data on the user; making it a stateless authentication mecha
   The signature on the JWT ensures that the token hasn't been tampered with during transmission, providing security for
   the user information.
 
-### How it works:
+### How It Works
 ![jwt-based-authentication.png](img/jwt-based-authentication.png)
 
 - When a user logs in, the server generates a JWT containing user claims (e.g., username, roles) and signs it with a
@@ -281,7 +281,7 @@ to maintain session data on the user; making it a stateless authentication mecha
 - On subsequent requests, the client sends the JWT to the server.
 - The server verifies the signature of the JWT to validate its authenticity and extract the user information.
 
-### Benefits of JWT-based authentication:
+### Benefits:
 
 - Scalability:
   Since no session data is stored on the server, JWTs can easily scale across multiple servers.
@@ -291,7 +291,7 @@ to maintain session data on the user; making it a stateless authentication mecha
   JWTs can be used by different applications or services to verify user identity without relying on a central session
   store.
 
-![jwt-token.png](img%2Fjwt-token.png)
+![jwt-token.png](img/jwt-token.png)
 
 ![jwt-token-refresh.png](img/jwt-token-refresh.png)
 ![jwt-authentication-algorithm.png](img/jwt-authentication-algorithm.png)
