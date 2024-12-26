@@ -8,24 +8,26 @@
 <!-- TOC -->
 * [Introduction](#introduction)
   * [When should you use JSON Web Tokens?](#when-should-you-use-json-web-tokens)
-* [What is the JSON Web Token structure?](#what-is-the-json-web-token-structure)
+    * [Authorization](#authorization)
+    * [Information Exchange](#information-exchange)
+* [JWT Structure](#jwt-structure)
   * [Header](#header)
   * [Payload](#payload)
     * [Registered Claims](#registered-claims)
     * [Public Claims](#public-claims)
     * [Private Claims](#private-claims)
   * [Signature](#signature)
-* [How do JSON Web Tokens work?](#how-do-json-web-tokens-work)
-* [Why should we use JSON Web Tokens?](#why-should-we-use-json-web-tokens)
+* [JWT Working Mechanism](#jwt-working-mechanism)
+* [JWT Necessity](#jwt-necessity)
 * [Authentication](#authentication)
   * [Session Based Authentication](#session-based-authentication)
-    * [Session-based Authentication Key Points](#session-based-authentication-key-points)
-    * [How it works:](#how-it-works)
-    * [Drawbacks of session-based authentication](#drawbacks-of-session-based-authentication)
+    * [Key Points](#key-points)
+    * [How It Works](#how-it-works)
+    * [Drawbacks](#drawbacks)
   * [JWT Based Authentication](#jwt-based-authentication)
-    * [Key points about JWT-based authentication:](#key-points-about-jwt-based-authentication)
-    * [How it works:](#how-it-works-1)
-    * [Benefits of JWT-based authentication:](#benefits-of-jwt-based-authentication)
+    * [Key Points](#key-points-1)
+    * [How It Works](#how-it-works-1)
+    * [Benefits:](#benefits)
 * [References](#references)
 <!-- TOC -->
 
@@ -40,16 +42,21 @@ ECDSA.
 
 Here are some scenarios where JSON Web Tokens are useful:
 
-- **Authorization**: Once the user logged in, it generates and return a JWT token, and each subsequent request will
-  include
-  the JWT token in every request to allowing user to access routes, services, and resources that are permitted with that
-  token. **_Single Sign On_** is a feature that widely uses JWT.
-- **Information Exchange**: JSON Web Tokens are a good way of securely transmitting information between parties. Because
-  JWTs can be signed—for example, using public/private key pairs—you can be sure the senders are who they say they are.
-  Additionally, as the signature is calculated using the header and the payload, you can also verify that the content
-  hasn't been tampered with.
+### Authorization
 
-# What is the JSON Web Token structure?
+Once the user logged in, it generates and return a JWT token, and each subsequent request will
+include the JWT token in every request to allowing user to access routes, services, and resources that are permitted
+with that
+token. **_Single Sign On_** is a feature that widely uses JWT.
+
+### Information Exchange
+
+JSON Web Tokens are a good way of securely transmitting information between parties. Because
+JWTs can be signed—for example, using public/private key pairs—you can be sure the senders are who they say they are.
+Additionally, as the signature is calculated using the header and the payload, you can also verify that the content
+hasn't been tampered with.
+
+# JWT Structure
 
 In its compact form, JSON Web Tokens consist of three parts separated by dots (.),
 
@@ -152,7 +159,7 @@ The following shows a JWT that has the previous header and payload encoded, and 
 
 <img src="img/encoded-jwt.png" alt="Encoded JWT">
 
-# How do JSON Web Tokens work?
+# JWT Working Mechanism
 
 In **authentication**, when the user successfully logs in using their credentials, a JSON Web Token will be returned.
 Since
@@ -181,7 +188,9 @@ use cookies.
 > Do note that with signed tokens, all the information contained within the token is exposed to users or other parties,
 > even though they are unable to change it. This means you should not put secret information within the token.
 
-# Why should we use JSON Web Tokens?
+# JWT Necessity
+
+Why should we use JSON Web Tokens?
 
 Let's talk about the benefits of **JSON Web Tokens (JWT)** when compared to **Simple Web Tokens (SWT)** and **Security
 Assertion
@@ -243,7 +252,7 @@ maintain information about the active sessions.
 
 ![session-storage.png](img/session-storage.png)
 
-### Drawbacks of session-based authentication
+### Drawbacks
 
 **Scalability concerns:**  
 Managing large numbers of sessions on a server can be challenging, especially with high traffic.
@@ -273,6 +282,7 @@ to maintain session data on the user; making it a stateless authentication mecha
   the user information.
 
 ### How It Works
+
 ![jwt-based-authentication.png](img/jwt-based-authentication.png)
 
 - When a user logs in, the server generates a JWT containing user claims (e.g., username, roles) and signs it with a
