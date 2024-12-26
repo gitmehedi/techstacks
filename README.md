@@ -174,6 +174,13 @@ a natural document-to-object mapping. This makes it easier to work with JWT than
 Regarding usage, JWT is used at Internet scale. This highlights the ease of client-side processing of the JSON Web token
 on multiple platforms, especially mobile.
 
-# References
+# Authentication
+Authentication is a process that verifies the identity of a user or system before granting access to resources
 
+## Session Based Authentication
+
+## JWT Based Authentication
+
+# References
 - https://jwt.io/introduction
+- https://www.youtube.com/watch?v=fyTxwIa-1U0
