@@ -7,7 +7,6 @@
 
 <!-- TOC -->
 * [Introduction](#introduction)
-  * [When should you use JSON Web Tokens?](#when-should-you-use-json-web-tokens)
     * [Authorization](#authorization)
     * [Information Exchange](#information-exchange)
 * [JWT Structure](#jwt-structure)
@@ -38,7 +37,8 @@ transmitting information between parties as a JSON object. This information can 
 digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or
 ECDSA.
 
-## When should you use JSON Web Tokens?
+# JWT Usage
+**When should you use JSON Web Tokens?**
 
 Here are some scenarios where JSON Web Tokens are useful:
 
