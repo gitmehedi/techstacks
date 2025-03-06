@@ -6,93 +6,107 @@
 
 
 <!-- TOC -->
-
-- [ODOO (On Demand Open Object)](#odoo-on-demand-open-object)
-- [History](#history)
-- [Odoo Features](#odoo-features)
-  - [View Types](#view-types)
-    - [1. Tree or List](#1-tree-or-list)
-    - [2. Kanban](#2-kanban)
-    - [3. Form](#3-form)
-    - [4. Search](#4-search)
-    - [5. Calendar](#5-calendar)
-    - [6. Activity](#6-activity)
-    - [7. Dashboard](#7-dashboard)
-    - [8. Gantt](#8-gantt)
-    - [9. Pivot](#9-pivot)
-    - [10. Graph](#10-graph)
-    - [11. Grid](#11-grid)
-    - [12. Map](#12-map)
-    - [13. Cohort](#13-cohort)
-    - [14. Map](#14-map)
-  - [Actions Types](#actions-types)
-    - [1. Server Actions](#1-server-actions)
-      - [References](#references)
-    - [2. Client Actions](#2-client-actions)
-      - [References](#references-1)
-    - [3. Window Actions](#3-window-actions)
-      - [References](#references-2)
-    - [4. URL Actions](#4-url-actions)
-    - [5. Report Actions](#5-report-actions)
-    - [6. Automated Actions](#6-automated-actions)
-  - [Fields Types](#fields-types)
-    - [1. Char (Text)](#1-char-text)
-      - [1. Char Emoji (char\_emoji)](#1-char-emoji-char_emoji)
-      - [2. URL](#2-url)
-      - [3. text](#3-text)
-      - [4. badge](#4-badge)
-      - [5. email](#5-email)
-      - [6. CopyClipboardChar](#6-copyclipboardchar)
-      - [7. image](#7-image)
-      - [7. phone](#7-phone)
-      - [8. domain](#8-domain)
-    - [2. Text (Multi-line)](#2-text-multi-line)
-    - [3. Selection](#3-selection)
-      - [1. badge](#1-badge)
-      - [2. priority](#2-priority)
-      - [3. radio](#3-radio)
-    - [4. Numeric](#4-numeric)
-      - [1. Float](#1-float)
-        - [1. Monetary](#1-monetary)
-        - [2. percentage](#2-percentage)
-        - [3. percentpie](#3-percentpie)
-        - [4. float\_time](#4-float_time)
-      - [2. Interger](#2-interger)
-        - [1. color\_picker](#1-color_picker)
-        - [2. percentpie](#2-percentpie)
-        - [3. progressbar](#3-progressbar)
-        - [4. handle](#4-handle)
-    - [5. Data / Time](#5-data--time)
-      - [1. Date](#1-date)
-      - [1. remaining\_days](#1-remaining_days)
-      - [2. Datetime](#2-datetime)
-      - [1. date](#1-date-1)
-      - [2. remaining\_days](#2-remaining_days)
-      - [2. daterange](#2-daterange)
-    - [6. Boolean (Checkbox)](#6-boolean-checkbox)
-      - [1. boolean\_toggle](#1-boolean_toggle)
-      - [2. website\_publish\_button](#2-website_publish_button)
-      - [3. boolean\_favorite](#3-boolean_favorite)
-    - [7. Binary (Attachment)](#7-binary-attachment)
-      - [1. image](#1-image)
-      - [2. pdf\_viewer](#2-pdf_viewer)
-    - [8. HTML](#8-html)
-    - [9.  One2many](#9--one2many)
-    - [10. Many2one](#10-many2one)
-      - [1. badge](#1-badge-1)
-      - [2. radio](#2-radio)
-      - [3. many2one\_avatar\_employee](#3-many2one_avatar_employee)
-      - [4. many2one\_avatar\_user](#4-many2one_avatar_user)
-    - [11. Many2many](#11-many2many)
-      - [1. many2many\_tags](#1-many2many_tags)
-      - [2. many2many\_checkboxes](#2-many2many_checkboxes)
-      - [3. many2many\_tags\_avatar](#3-many2many_tags_avatar)
-    - [12. Related](#12-related)
-- [Documentation](#documentation)
-  - [Sources](#sources)
-  - [References](#references-3)
-
-<!-- /TOC -->
+* [ODOO (On Demand Open Object)](#odoo-on-demand-open-object)
+* [History](#history)
+* [Odoo Features](#odoo-features)
+  * [View Types](#view-types)
+    * [1. Tree or List](#1-tree-or-list)
+    * [2. Kanban](#2-kanban)
+    * [3. Form](#3-form)
+    * [4. Search](#4-search)
+    * [5. Calendar](#5-calendar)
+    * [6. Activity](#6-activity)
+    * [7. Dashboard](#7-dashboard)
+    * [8. Gantt](#8-gantt)
+    * [9. Pivot](#9-pivot)
+    * [10. Graph](#10-graph)
+    * [11. Grid](#11-grid)
+    * [12. Map](#12-map)
+    * [13. Cohort](#13-cohort)
+    * [14. Map](#14-map)
+  * [Actions Types](#actions-types)
+    * [1. Server Actions](#1-server-actions)
+      * [References](#references)
+    * [2. Client Actions](#2-client-actions)
+      * [References](#references-1)
+    * [3. Window Actions](#3-window-actions)
+  * [#### References](#-references)
+    * [4. URL Actions](#4-url-actions)
+    * [5. Report Actions](#5-report-actions)
+    * [6. Automated Actions](#6-automated-actions)
+  * [Fields Types](#fields-types)
+    * [1. Char (Text)](#1-char-text)
+      * [1. Char Emoji (char_emoji)](#1-char-emoji-char_emoji)
+      * [2. URL](#2-url)
+      * [3. text](#3-text)
+      * [4. badge](#4-badge)
+      * [5. email](#5-email)
+      * [6. CopyClipboardChar](#6-copyclipboardchar)
+      * [7. image](#7-image)
+      * [7. phone](#7-phone)
+      * [8. domain](#8-domain)
+    * [2. Text (Multi-line)](#2-text-multi-line)
+    * [3. Selection](#3-selection)
+      * [1. badge](#1-badge)
+      * [2. priority](#2-priority)
+      * [3. radio](#3-radio)
+    * [4. Numeric](#4-numeric)
+      * [1. Float](#1-float)
+        * [1. Monetary](#1-monetary)
+        * [2. percentage](#2-percentage)
+        * [3. percentpie](#3-percentpie)
+        * [4. float_time](#4-float_time)
+      * [2. Interger](#2-interger)
+        * [1. color_picker](#1-color_picker)
+        * [2. percentpie](#2-percentpie)
+        * [3. progressbar](#3-progressbar)
+        * [4. handle](#4-handle)
+    * [5. Data / Time](#5-data--time)
+      * [1. Date](#1-date)
+      * [1. remaining_days](#1-remaining_days)
+      * [2. Datetime](#2-datetime)
+      * [1. date](#1-date-1)
+      * [2. remaining_days](#2-remaining_days)
+      * [2. daterange](#2-daterange)
+    * [6. Boolean (Checkbox)](#6-boolean-checkbox)
+      * [1. boolean_toggle](#1-boolean_toggle)
+      * [2. website_publish_button](#2-website_publish_button)
+      * [3. boolean_favorite](#3-boolean_favorite)
+    * [7. Binary (Attachment)](#7-binary-attachment)
+      * [1. image](#1-image)
+      * [2. pdf_viewer](#2-pdf_viewer)
+    * [8. HTML](#8-html)
+    * [9.  One2many](#9-one2many)
+    * [10. Many2one](#10-many2one)
+      * [1. badge](#1-badge-1)
+      * [2. radio](#2-radio)
+      * [3. many2one_avatar_employee](#3-many2one_avatar_employee)
+      * [4. many2one_avatar_user](#4-many2one_avatar_user)
+    * [11. Many2many](#11-many2many)
+      * [1. many2many_tags](#1-many2many_tags)
+      * [2. many2many_checkboxes](#2-many2many_checkboxes)
+      * [3. many2many_tags_avatar](#3-many2many_tags_avatar)
+    * [12. Related](#12-related)
+* [Documentation](#documentation)
+  * [Tutorials](#tutorials)
+    * [1. Registry Types in OWL Framework](#1-registry-types-in-owl-framework)
+      * [Components](#components)
+      * [Services](#services)
+      * [Hooks](#hooks)
+      * [Fields & Field Formatters](#fields--field-formatters)
+      * [Views & View Renderers](#views--view-renderers)
+      * [Menus & Actions](#menus--actions)
+    * [2. Common Recordset Operations in Odoo](#2-common-recordset-operations-in-odoo)
+      * [1. Browsing Records](#1-browsing-records)
+      * [2. Searching for Records](#2-searching-for-records)
+      * [3. Creating Records](#3-creating-records)
+      * [6. Counting Records](#6-counting-records)
+      * [7. Filtering a Recordset](#7-filtering-a-recordset)
+      * [8. Mapping Over a Recordset](#8-mapping-over-a-recordset)
+      * [9. Sorting a Recordset](#9-sorting-a-recordset)
+  * [Sources](#sources)
+  * [References](#references-2)
+<!-- TOC -->
 
 
 # ODOO (On Demand Open Object)
@@ -845,6 +859,242 @@ This widget can be used in the Many2many field, which has relation to ‘res.par
 
 
 # Documentation
+## Tutorials
+### 1. Registry Types in OWL Framework
+The OWL framework in Odoo uses different registry types, which are managed within registry or env. These include:
+
+#### Components
+
+- OWL components are registered using the registry object.
+- Used for UI elements (e.g., widgets, modals, buttons).
+
+```javascript import { registry } from "@web/core/registry";
+import { Component } from "@odoo/owl";
+
+class MyComponent extends Component {
+    static template = "my_module.MyComponent";
+}
+
+registry.category("actions").add("my_component", MyComponent);
+```
+#### Services
+
+- Services handle global functionality like session management, notifications, and RPC calls.
+- Registered in registry.category("services").
+- 
+```javascript
+import { registry } from "@web/core/registry";
+
+const myService = {
+    start(env) {
+        return {
+            logMessage: (msg) => console.log("Service:", msg),
+        };
+    },
+};
+
+registry.category("services").add("my_service", myService);
+```
+To use the service in a component:
+
+```javascript
+import { useService } from "@web/core/utils/hooks";
+
+class MyComponent extends Component {
+    setup() {
+        this.myService = useService("my_service");
+        this.myService.logMessage("Hello from OWL!");
+    }
+}
+```
+#### Hooks
+
+- Custom hooks can be registered for state management, data fetching, etc.
+- Useful for encapsulating logic and reusing across components.
+
+```javascript
+import { registry } from "@web/core/registry";
+
+function useCustomHook() {
+    return { message: "This is a custom hook" };
+}
+
+registry.category("hooks").add("useCustomHook", useCustomHook);
+```
+Using the custom hook in a component:
+```javascript
+import { useCustomHook } from "@web/core/hooks";
+
+class MyComponent extends Component {
+    setup() {
+        this.data = useCustomHook();
+        console.log(this.data.message);
+    }
+}
+```
+#### Fields & Field Formatters
+
+- Used for customizing how fields are rendered in form or list views.
+- Registered under "fields" and "field_formatters" categories.
+```javascript
+import { registry } from "@web/core/registry";
+
+const MyFieldWidget = {
+    name: "MyFieldWidget",
+    component: MyComponent,
+};
+
+registry.category("fields").add("my_field_widget", MyFieldWidget);
+```
+
+#### Views & View Renderers
+
+- Used for customizing how different views (list, form, kanban) are displayed.
+- Registered under "views".
+
+```javascript
+import { registry } from "@web/core/registry";
+
+const MyListView = {
+    name: "my_list_view",
+    component: MyListComponent,
+};
+
+registry.category("views").add("list", MyListView);
+```
+#### Menus & Actions
+
+- Menus and actions are registered dynamically under "actions".
+- 
+```javascript
+
+registry.category("actions").add("my_custom_action", {
+    name: "Custom Action",
+    component: MyComponent,
+});
+```
+
+**Conclusion**
+The OWL registry is a powerful system that organizes different types of objects like:
+
+- Components (registry.category("actions"))
+- Services (registry.category("services"))
+- Hooks (registry.category("hooks"))
+- Fields (registry.category("fields"))
+- Views (registry.category("views"))
+- Menus/Actions (registry.category("actions"))
+### 2. Common Recordset Operations in Odoo
+
+#### 1. Browsing Records
+```python
+
+records = self.env['model.name'].browse([1, 2, 3])
+print(records.name)
+```
+- browse() is used to create a recordset for given IDs without querying the database.
+#### 2. Searching for Records
+```python
+records = self.env['model.name'].search([('field_name', '=', 'value')])
+```
+- Returns all matching records.
+
+```python
+record = self.env['model.name'].search([('field_name', '=', 'value')], limit=1)
+# limit=1 fetches only one record.
+```
+#### 3. Creating Records
+```python
+record = self.env['model.name'].create({
+    'field_name': 'value',
+    'another_field': 10
+})
+```
+- Creates a new record.
+- 
+4. Writing (Updating) Records
+```python
+record.write({'field_name': 'new_value'})
+```
+- Updates an existing record.
+
+```python
+records.write({'field_name': 'new_value'})
+```
+- Updates multiple records in a recordset.
+
+5. Deleting Records
+6. 
+```python
+record.unlink()
+```
+Deletes a single record.
+
+```python
+records.unlink()
+```
+Deletes multiple records in a recordset.
+#### 6. Counting Records
+
+```python
+count = self.env['model.name'].search_count([('field_name', '=', 'value')])
+```
+- Returns the number of matching records.
+
+#### 7. Filtering a Recordset
+
+```python
+filtered_records = records.filtered(lambda r: r.field_name == 'value')
+```
+- Returns a subset of records based on a condition.
+
+#### 8. Mapping Over a Recordset
+```python
+names = records.mapped('field_name')
+```
+- Extracts values from records.
+
+```python
+mapped_data = records.mapped(lambda r: r.name.upper())
+```
+- Transforms values in records.
+
+#### 9. Sorting a Recordset
+
+```python
+sorted_records = records.sorted(key=lambda r: r.field_name)
+```
+- Sorts records by a field.
+
+```python
+sorted_desc = records.sorted(key=lambda r: r.field_name, reverse=True)
+```
+- Sorts in descending order.
+Example: Full Recordset Usage
+
+```python
+Edit
+class ExampleModel(models.Model):
+    _name = 'example.model'
+
+    name = fields.Char()
+    value = fields.Integer()
+
+    def example_method(self):
+        # Search for records
+        records = self.env['example.model'].search([('value', '>', 10)])
+
+        # Filter records
+        high_value_records = records.filtered(lambda r: r.value > 50)
+
+        # Map record values
+        names = high_value_records.mapped('name')
+
+        # Sort records
+        sorted_records = high_value_records.sorted(key=lambda r: r.value, reverse=True)
+
+        return sorted_records
+```
+
 ## Sources
 ## References
 - https://www.cybrosys.com/blog/field-types-and-widgets-in-odoo-16
