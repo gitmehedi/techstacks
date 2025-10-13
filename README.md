@@ -4,14 +4,14 @@
     <strong>A certification course that helps to manage better project.</strong>
 </div>
 
-# Introduction
-
+<!-- TOC -->
+* [Blog](#blog)
+  * [Chapter 1](#chapter-1)
+* [References](#references)
+<!-- TOC -->
 
 # Blog
 ## Chapter 1
-
-
-
 
 
 # References
